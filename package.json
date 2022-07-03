@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "miui": "^0.0.2",
+    "react-miui": "^0.15.9"
+  }
+}
