@@ -7,7 +7,7 @@ function MatrixBackground({ timeout = 50 }) {
         const context = canvas.current.getContext('2d');
 
         const width = document.body.offsetWidth;
-        const height = 2000;
+        const height = document.body.offsetHeight;
         canvas.current.width = width;
         canvas.current.height = height;
 

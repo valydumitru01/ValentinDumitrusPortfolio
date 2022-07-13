@@ -1,6 +1,7 @@
 import Sidebar from "./SideBar.js";
 import Main from "./Main.js";
 import MatrixBackgroud from "./DigitalRain";
+import '../css/App.css';
 
 import {
   BrowserRouter,
@@ -11,6 +12,7 @@ function App() {
   return (
     <>
       <MatrixBackgroud timeout={70}/>
+      <div style={{marginLeft:"50%"}}>
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main />}>
@@ -19,6 +21,7 @@ function App() {
         </Route>
       </Routes>
       </BrowserRouter>
+      </div>
       <Sidebar />
     </>
   );
