@@ -1,14 +1,25 @@
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
+import Sidebar from "./SideBar.js";
+import Main from "./Main.js";
+import MatrixBackgroud from "./DigitalRain";
 
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 function App() {
   return (
     <>
-    <FormGroup>
-    <FormControlLabel control={<Switch defaultChecked />} label="Label" />
-    <FormControlLabel disabled control={<Switch />} label="Disabled" />
-    </FormGroup>
+      <MatrixBackgroud timeout={70}/>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main />}>
+          <Route path="expenses" element={<Main/>} />
+          <Route path="invoices" element={<Main/>} />
+        </Route>
+      </Routes>
+      </BrowserRouter>
+      <Sidebar />
     </>
   );
 }
