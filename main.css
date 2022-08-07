@@ -14,9 +14,12 @@
     margin-top: 0.7em;
 }
 
+body {
+    font-family: 'Titillium Web';
+    font-size: 1.3em;
 
+}
 .center-text {
-    font-size: 1.4em;
     text-align: justify;
     text-justify: inter-word;
 }
@@ -26,13 +29,12 @@
         width: 70vw;
     }
 
-    .center-text {
+    body {
         font-size: 1.1em;
+    
     }
+    
 }
 
 
-body {
-    font-family: 'Titillium Web';
 
-}
