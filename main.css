@@ -28,7 +28,7 @@ body {
     font-size: 2em;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     .portrait {
         width: 70vw;
     }
