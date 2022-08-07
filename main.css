@@ -1,16 +1,16 @@
-
 .portrait {
     width: 50vw;
 }
 
-.portrait:nth-child(1){
+.portrait:nth-child(1) {
     border: 0.5em solid black;
     box-shadow:
-    0 0 0 0.2em hsla(0, 0%, 0%, 0.5),
-    0 0 0 0.5em hsla(0, 0%, 0%, 0.5),
-    0 0 0 0.7em hsla(0, 0%, 0%, 0.2);
+        0 0 0 0.2em hsla(0, 0%, 0%, 0.5),
+        0 0 0 0.5em hsla(0, 0%, 0%, 0.5),
+        0 0 0 0.7em hsla(0, 0%, 0%, 0.2);
 }
-.portrait:nth-child(2){
+
+.portrait:nth-child(2) {
     margin-top: 0.7em;
 }
 
@@ -19,11 +19,14 @@ body {
     font-size: 1.3em;
 
 }
+
 .center-text {
     text-align: justify;
     text-justify: inter-word;
 }
-
+.contact-logo {
+    font-size: 2em;
+}
 @media only screen and (max-width: 800px) {
     .portrait {
         width: 70vw;
@@ -31,10 +34,12 @@ body {
 
     body {
         font-size: 1.1em;
-    
+
     }
-    
+
+    .contact-logo {
+        font-size: 1.5em;
+    }
+
 }
-
-
 
