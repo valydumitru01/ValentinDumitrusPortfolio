@@ -36,7 +36,21 @@ body {
 .custom-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
-
+#projects-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+    gap: 1em;
+    margin: 1em;
+}
+.card{
+    width: 80%;
+}
+@media only screen and (max-width: 1500px) {
+    #projects-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
 @media only screen and (max-width: 1000px) {
     .portrait {
         width: 70vw;
@@ -54,5 +68,8 @@ body {
     .contact-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+    }
+    #projects-container{
+        grid-template-columns: 1fr;
     }
 }
