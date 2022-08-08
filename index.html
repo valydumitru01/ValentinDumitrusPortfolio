@@ -47,10 +47,11 @@
 
     $("#footer").load("components/footer.html")
     loadPage()
-
+    
     function goTo(where) {
         window.history.replaceState(where, "", url);
-        location.reload()
+        loadPage()
+        $(".page-title").html( where.charAt(0).toUpperCase() + where.slice(1))
     }
 
     function loadPage() {
@@ -63,6 +64,7 @@
             $("#body").empty()
             $("#body").load("components/pages/" + history.state + ".html")
         }
+        $(".page-title").html( history.state.charAt(0).toUpperCase() + history.state.slice(1))
     }
 
 </script>
