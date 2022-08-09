@@ -42,6 +42,11 @@
 
 <script>
     var url = new URL(window.location)
+    var pageTitles={}
+    pageTitles['home'] = "Home"
+    pageTitles['aboutme'] = "About Me"
+    pageTitles['hobbies'] = "Hobbies"
+    pageTitles['myprojects'] = "My Projects"
 
     $("#header").load("components/header.html")
 
@@ -51,20 +56,20 @@
     function goTo(where) {
         window.history.replaceState(where, "", url);
         loadPage()
-        $(".page-title").html( where.charAt(0).toUpperCase() + where.slice(1))
     }
 
     function loadPage() {
-        console.log(window.state)
         if (history.state === null || history.state===undefined) {
             window.history.pushState("home","",url)
             $("#body").empty()
-            $("#body").load("components/pages/home.html")
+            $("#body").load("components/pages/home.html",()=>{$(".page-title").html(pageTitles[history.state])})
         }else{
             $("#body").empty()
-            $("#body").load("components/pages/" + history.state + ".html")
+            $("#body").load("components/pages/" + history.state + ".html",()=>{$(".page-title").html(pageTitles[history.state])})
         }
-        $(".page-title").html( history.state.charAt(0).toUpperCase() + history.state.slice(1))
+        
+        console.log(pageTitles[history.state])
+        console.log(history.state)
     }
 
 </script>
