@@ -1,0 +1,14 @@
+
+@import url("footer.css");
+@import url("nav.css");
+@import url("pages/home.css");
+@import url("pages/aboutme.css");
+@import url("pages/myhobbies.css");
+@import url("pages/myprojects.css");
+
+body {
+    font-family: 'Titillium Web';
+    font-size: 1.3em;
+
+}
+
