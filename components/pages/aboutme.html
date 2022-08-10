@@ -1,5 +1,66 @@
-<div
-    style="text-align: center;  width: 99%;  margin:1%; display: flex; align-items: center;flex-direction: column;">
-    <img style="margin-top: 1em;" class="portrait" src="media/myportrait.png" alt="Photo of myself" />
-    <p class="fst-italic text-end portrait">Valentin Dumitru's Portrait ;)</p>
-</div>
+<article id="aboutme">
+    <div
+        style="text-align: center;  width: 99%;  margin:1%; display: flex; align-items: center;flex-direction: column; ">
+        <img style="margin-top: 1em;" class="portrait" src="media/myportrait.png" alt="Photo of myself" />
+        <p class="fst-italic text-end portrait">Valentin Dumitru's Portrait ;)</p>
+    </div>
+    <div style="margin-right: 15vw;margin-left: 15vw; text-align: justify;">
+        <h2>
+            Introduction
+        </h2>
+        <p>
+            Hi! I'm Valentin Dumitru, a student who is one year from becoming a software engineer. I will solve almost all your problems, except the
+            ones I will not solve, which are most of them. I only solve software problems. And I solve them better if I
+            enjoy solving them, and the ones that I enjoy the most are visual problems such as front end or graphics
+            related. I work hard and I enjoy working in hard working teams.
+        </p>
+        <h2>
+            Creativity
+        </h2>
+        <p>
+            I've always been creative. Since when I was little I was drawing and imagining stuff, and they always said
+            that I had too much imagination. They were wrong. No amount of imagination is too much.
+        </p>
+        <div class="images row" style="overflow: scroll; height: 50vh;" >
+            <div class="column">
+                <img src="media/drawings/bird.jpg">
+                <img src="media/drawings/demon.jpg">
+                <img src="media/drawings/dragon_painting.jpg">
+                <img src="media/drawings/sword.jpg">
+              </div>
+              <div class="column">
+                <img src="media/drawings/dragonforce.jpg">
+                <img src="media/drawings/embers.jpg">
+                <img src="media/drawings/eye.jpg">
+                <img src="media/drawings/tiger_painting.jpg">
+              </div>
+              <div class="column">
+                <img src="media/drawings/minimalist_painting.jpg">
+                <img src="media/drawings/mom.jpg">
+                <img src="media/drawings/oldman.jpg">
+                <img src="media/drawings/treant.jpg">
+              </div>
+              <div class="column">
+                <img src="media/drawings/poppies_painting.jpg">
+                <img src="media/drawings/skull.jpg">
+                <img src="media/drawings/statue.jpg">
+                <img src="media/drawings/womanbrain.jpg">
+              </div>
+        </div>
+
+        <div id="image-viewer">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="full-image">
+        </div>
+    </div>
+</article>
+<script>
+    $(".images img").click(function () {
+        $("#full-image").attr("src", $(this).attr("src"));
+        $('#image-viewer').show();
+    });
+
+    $("#image-viewer .close").click(function () {
+        $('#image-viewer').hide();
+    });
+</script>

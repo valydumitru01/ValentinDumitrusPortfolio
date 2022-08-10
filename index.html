@@ -42,32 +42,32 @@
 
 <script>
     var url = new URL(window.location)
-    var pageTitles={}
+    var pageTitles = {}
     pageTitles['home'] = "Home"
     pageTitles['aboutme'] = "About Me"
-    pageTitles['hobbies'] = "Hobbies"
+    pageTitles['myexperience'] = "My Experience"
     pageTitles['myprojects'] = "My Projects"
 
     $("#header").load("components/header.html")
 
     $("#footer").load("components/footer.html")
     loadPage()
-    
+
     function goTo(where) {
         window.history.replaceState(where, "", url);
         loadPage()
     }
 
     function loadPage() {
-        if (history.state === null || history.state===undefined) {
-            window.history.pushState("home","",url)
+        if (history.state === null || history.state === undefined) {
+            window.history.pushState("home", "", url)
             $("#body").empty()
-            $("#body").load("components/pages/home.html",()=>{$(".page-title").html(pageTitles[history.state])})
-        }else{
+            $("#body").load("components/pages/home.html", () => { $(".page-title").html(pageTitles[history.state]) })
+        } else {
             $("#body").empty()
-            $("#body").load("components/pages/" + history.state + ".html",()=>{$(".page-title").html(pageTitles[history.state])})
+            $("#body").load("components/pages/" + history.state + ".html", () => { $(".page-title").html(pageTitles[history.state]) })
         }
-        
+
         console.log(pageTitles[history.state])
         console.log(history.state)
     }

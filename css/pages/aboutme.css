@@ -1,5 +1,5 @@
 .portrait {
-    width: 50vw;
+    width: 20vw;
 }
 
 .portrait:nth-child(1) {
@@ -15,7 +15,13 @@
 }
 @media only screen and (max-width: 1500px) {
     .portrait {
-        width: 70vw;
+        width: 30vw;
+    }
+
+}
+@media only screen and (max-width: 1000px) {
+    .portrait {
+        width: 50vw;
     }
 
 }
