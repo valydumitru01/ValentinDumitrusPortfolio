@@ -1,0 +1,148 @@
+<div id="skill-graph">
+
+</div>
+<script>
+  //Order in which they go
+
+
+
+  const config = {
+    displayModeBar: false, // this is the line that hides the bar.
+  };
+
+  function drawGraph() {
+    const N_LANGUAGES = 10;
+    const IMG_NAMES = ['javascript', 'java', 'c++', 'csharp', "php", "SQL", "c", "python", "typescript", "css"]
+    const PATH = "media/brands/";
+    const IMG_TYPE=".png";
+    var data = [
+      {
+        x: ['javascript', 'java', 'c++', 'c#', "php", "SQL", "c", "python", "typescript", "css"],
+        y: [100, 100, 50, 35, 30, 60, 20, 80, 40, 85],
+        type: 'bar',
+      }
+    ];
+
+    const layout = {
+      title: 'Skill of programming languages (in % of self confidence)',
+      showlegend: false,
+      yaxis: { fixedrange: true },
+      xaxis: { fixedrange: true },
+      images: [
+        {
+          x: 0.06,
+          y: -0.3,
+          sizex: 0.2,
+          sizey: 0.2,
+          source: PATH + IMG_NAMES[0] + IMG_TYPE,
+          xanchor: "right",
+          xref: "paper",
+          yanchor: "bottom",
+          yref: "paper"
+        },
+        {
+          x: 0.16,
+          y: -0.3,
+          sizex: 0.2,
+          sizey: 0.2,
+          source: PATH + IMG_NAMES[1] + IMG_TYPE,
+          xanchor: "right",
+          xref: "paper",
+          yanchor: "bottom",
+          yref: "paper"
+        },
+        {
+          x: 0.26,
+          y: -0.3,
+          sizex: 0.2,
+          sizey: 0.2,
+          source: PATH + IMG_NAMES[2] + IMG_TYPE,
+          xanchor: "right",
+          xref: "paper",
+          yanchor: "bottom",
+          yref: "paper"
+        },
+        {
+          x: 0.37,
+          y: -0.3,
+          sizex: 0.2,
+          sizey: 0.2,
+          source: PATH + IMG_NAMES[3] + IMG_TYPE,
+          xanchor: "right",
+          xref: "paper",
+          yanchor: "bottom",
+          yref: "paper"
+        },
+        {
+          x: 0.47,
+          y: -0.3,
+          sizex: 0.2,
+          sizey: 0.2,
+          source: PATH + IMG_NAMES[4] + IMG_TYPE,
+          xanchor: "right",
+          xref: "paper",
+          yanchor: "bottom",
+          yref: "paper"
+        },
+        {
+          x: 0.56,
+          y: -0.3,
+          sizex: window.innerWidth / 10000,
+          sizey: window.innerWidth / 10000,
+          source: PATH + IMG_NAMES[5] + IMG_TYPE,
+          xanchor: "right",
+          xref: "paper",
+          yanchor: "bottom",
+          yref: "paper"
+        },
+        {
+          x: 0.65,
+          y: -0.3,
+          sizex: 0.2,
+          sizey: 0.2,
+          source: PATH + IMG_NAMES[6] + IMG_TYPE,
+          xanchor: "right",
+          xref: "paper",
+          yanchor: "bottom",
+          yref: "paper"
+        },
+        {
+          x: 0.76,
+          y: -0.3,
+          sizex: 0.2,
+          sizey: 0.2,
+          source: PATH + IMG_NAMES[7] + IMG_TYPE,
+          xanchor: "right",
+          xref: "paper",
+          yanchor: "bottom",
+          yref: "paper"
+        },
+        {
+          x: 0.87,
+          y: -0.3,
+          sizex: 0.2,
+          sizey: 0.2,
+          source: PATH + IMG_NAMES[8] + IMG_TYPE,
+          xanchor: "right",
+          xref: "paper",
+          yanchor: "bottom",
+          yref: "paper"
+        },
+        {
+          x: 0.96,
+          y: -0.3,
+          sizex: 0.2,
+          sizey: 0.2,
+          source: PATH + IMG_NAMES[9] + IMG_TYPE,
+          xanchor: "right",
+          xref: "paper",
+          yanchor: "bottom",
+          yref: "paper"
+        }
+      ],
+    };
+    Plotly.newPlot('skill-graph', data, layout, config);
+  }
+  drawGraph()
+  window.onresize = drawGraph
+</script>

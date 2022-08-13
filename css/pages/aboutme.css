@@ -5,9 +5,9 @@
 .portrait:nth-child(1) {
     border: 0.5em solid black;
     box-shadow:
-    0 0 3em 0.2em hsla(0, 0%, 0%, 0.7),
-    0 0 3em 0.5em hsla(0, 0%, 0%, 0.6),
-    0 0 3em 0.7em hsla(0, 0%, 0%, 0.5);
+        0 0 3em 0.2em hsla(0, 0%, 0%, 0.7),
+        0 0 3em 0.5em hsla(0, 0%, 0%, 0.6),
+        0 0 3em 0.7em hsla(0, 0%, 0%, 0.5);
 
 }
 
@@ -27,4 +27,75 @@
         width: 50vw;
     }
 
+}
+
+#strength-and-weaknesses-table {
+    width: 100%;
+    width: 100%;
+
+
+}
+
+#strength-and-weaknesses-table-img {
+    background-repeat: no-repeat;
+}
+
+.strength-tile {
+    background-color: white;
+    border-bottom: 0.1em solid rgb(33, 37, 41);
+}
+
+.weakness-tile {
+    background-color: rgb(33, 37, 41);
+    color: white;
+
+    border-bottom: 0.1em solid white;
+}
+
+#weakness-header-tile {
+    color: white;
+    background-color: rgb(33, 37, 41);
+    width: 50%;
+    border-bottom: 0.5em solid white;
+    border-top: 0.5em solid rgb(33, 37, 41);
+}
+
+#strength-header-tile {
+    border-left: 0.5em solid rgb(33, 37, 41);
+    border-bottom: 0.5em solid rgb(33, 37, 41);
+    border-top: 0.5em solid rgb(33, 37, 41);
+    background-color: white;
+}
+
+#weakness-header-tile {
+    border-bottom: 0.5em solid white;
+    border-top: 0.5em solid rgb(33, 37, 41);
+}
+
+.tile {
+    padding-left: 1em;
+}
+
+#yin-yang {
+    height: 5em;
+    position: relative;
+    top: -5em;
+    -webkit-filter: drop-shadow(10px 10px 10px #222);
+    filter: drop-shadow(1px 1px 11px white);
+}
+
+#strengths-and-weaknesses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #0c63e4;
+    background-color: rgb(33, 37, 41);
+    
+}
+
+.accordion-button:not(.collapsed) h2{
+    color: white;
 }
