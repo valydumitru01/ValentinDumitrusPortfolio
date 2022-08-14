@@ -55,6 +55,7 @@
 
     function goTo(where) {
         window.history.replaceState(where, "", url);
+
         loadPage()
     }
 
@@ -71,7 +72,12 @@
         console.log(pageTitles[history.state])
         console.log(history.state)
     }
-
+    const navLinks = document.querySelectorAll('.nav-item')
+    const menuToggle = document.getElementById('navbarSupportedContent')
+    const bsCollapse = new bootstrap.Collapse(menuToggle)
+    navLinks.forEach((l) => {
+        l.addEventListener('click', () => { bsCollapse.toggle() })
+    })
 </script>
 
 </html>
