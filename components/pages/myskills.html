@@ -2,9 +2,6 @@
 
 </div>
 <script>
-  //Order in which they go
-
-
 
   const config = {
     displayModeBar: false, // this is the line that hides the bar.
@@ -12,134 +9,51 @@
 
   function drawGraph() {
     const N_LANGUAGES = 10;
-    const IMG_NAMES = ['javascript', 'java', 'c++', 'csharp', "php", "SQL", "c", "python", "typescript", "css"]
+    const IMG_NAMES = ['javascript', 'java', 'c++', 'csharp', "php", "sql", "c", "python", "typescript", "css"]
     const PATH = "media/brands/";
     const IMG_TYPE=".png";
+    var values=[         100,    100,    50,   35,    30,    60,  20,       80,           40,    85]
+    var labels=['javascript', 'java', 'c++', 'c#', "php", "SQL", "c", "python", "typescript", "css"]
+    var colors=[]
+    for (let i = 0; i < N_LANGUAGES; i++) {
+      //The intention is that the max value results in 33,37,41 which is black
+      var r=(33*(100/values[i]))
+      var g=(37*(100/values[i]))
+      var b=(41*(100/values[i]))
+      colors.push("rgb("+r+","+g+","+b+")")
+      
+    }
+    console.log(colors)
     var data = [
       {
-        x: ['javascript', 'java', 'c++', 'c#', "php", "SQL", "c", "python", "typescript", "css"],
-        y: [100, 100, 50, 35, 30, 60, 20, 80, 40, 85],
+        x: labels,
+        y: values,
         type: 'bar',
+        marker:{
+          color: colors
+        },
       }
     ];
-
+    var images_layout=[]
+    for (let i = 0; i < N_LANGUAGES; i++) {
+      images_layout.push({
+          x:i/N_LANGUAGES +0.05,
+          y: values[i]/100,
+          sizex: window.innerWidth / 7000,
+          sizey: window.innerWidth / 7000,
+          source: PATH + IMG_NAMES[i] + IMG_TYPE,
+          xanchor: "center",
+          xref: "paper",
+          yanchor: "bottom",
+          yref: "paper"
+      })
+    }
     const layout = {
       title: 'Skill of programming languages (in % of self confidence)',
       showlegend: false,
       yaxis: { fixedrange: true },
       xaxis: { fixedrange: true },
-      images: [
-        {
-          x: 0.06,
-          y: -0.3,
-          sizex: 0.2,
-          sizey: 0.2,
-          source: PATH + IMG_NAMES[0] + IMG_TYPE,
-          xanchor: "right",
-          xref: "paper",
-          yanchor: "bottom",
-          yref: "paper"
-        },
-        {
-          x: 0.16,
-          y: -0.3,
-          sizex: 0.2,
-          sizey: 0.2,
-          source: PATH + IMG_NAMES[1] + IMG_TYPE,
-          xanchor: "right",
-          xref: "paper",
-          yanchor: "bottom",
-          yref: "paper"
-        },
-        {
-          x: 0.26,
-          y: -0.3,
-          sizex: 0.2,
-          sizey: 0.2,
-          source: PATH + IMG_NAMES[2] + IMG_TYPE,
-          xanchor: "right",
-          xref: "paper",
-          yanchor: "bottom",
-          yref: "paper"
-        },
-        {
-          x: 0.37,
-          y: -0.3,
-          sizex: 0.2,
-          sizey: 0.2,
-          source: PATH + IMG_NAMES[3] + IMG_TYPE,
-          xanchor: "right",
-          xref: "paper",
-          yanchor: "bottom",
-          yref: "paper"
-        },
-        {
-          x: 0.47,
-          y: -0.3,
-          sizex: 0.2,
-          sizey: 0.2,
-          source: PATH + IMG_NAMES[4] + IMG_TYPE,
-          xanchor: "right",
-          xref: "paper",
-          yanchor: "bottom",
-          yref: "paper"
-        },
-        {
-          x: 0.56,
-          y: -0.3,
-          sizex: window.innerWidth / 10000,
-          sizey: window.innerWidth / 10000,
-          source: PATH + IMG_NAMES[5] + IMG_TYPE,
-          xanchor: "right",
-          xref: "paper",
-          yanchor: "bottom",
-          yref: "paper"
-        },
-        {
-          x: 0.65,
-          y: -0.3,
-          sizex: 0.2,
-          sizey: 0.2,
-          source: PATH + IMG_NAMES[6] + IMG_TYPE,
-          xanchor: "right",
-          xref: "paper",
-          yanchor: "bottom",
-          yref: "paper"
-        },
-        {
-          x: 0.76,
-          y: -0.3,
-          sizex: 0.2,
-          sizey: 0.2,
-          source: PATH + IMG_NAMES[7] + IMG_TYPE,
-          xanchor: "right",
-          xref: "paper",
-          yanchor: "bottom",
-          yref: "paper"
-        },
-        {
-          x: 0.87,
-          y: -0.3,
-          sizex: 0.2,
-          sizey: 0.2,
-          source: PATH + IMG_NAMES[8] + IMG_TYPE,
-          xanchor: "right",
-          xref: "paper",
-          yanchor: "bottom",
-          yref: "paper"
-        },
-        {
-          x: 0.96,
-          y: -0.3,
-          sizex: 0.2,
-          sizey: 0.2,
-          source: PATH + IMG_NAMES[9] + IMG_TYPE,
-          xanchor: "right",
-          xref: "paper",
-          yanchor: "bottom",
-          yref: "paper"
-        }
-      ],
+      images: images_layout
     };
     Plotly.newPlot('skill-graph', data, layout, config);
   }
