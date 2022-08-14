@@ -2,18 +2,6 @@
     width: 20vw;
 }
 
-.portrait:nth-child(1) {
-    border: 0.5em solid black;
-    box-shadow:
-        0 0 3em 0.2em hsla(0, 0%, 0%, 0.7),
-        0 0 3em 0.5em hsla(0, 0%, 0%, 0.6),
-        0 0 3em 0.7em hsla(0, 0%, 0%, 0.5);
-
-}
-
-.portrait:nth-child(2) {
-    margin-top: 0.7em;
-}
 
 @media only screen and (max-width: 1500px) {
     .portrait {
@@ -28,6 +16,11 @@
     }
 
 }
+
+
+/**----------------- Strengths and weaknesses table -------------------**/
+
+
 
 #strength-and-weaknesses-table {
     width: 100%;
@@ -93,9 +86,178 @@
 .accordion-button:not(.collapsed) {
     color: #0c63e4;
     background-color: rgb(33, 37, 41);
-    
+
 }
 
-.accordion-button:not(.collapsed) h2{
+.accordion-button:not(.collapsed) h2 {
     color: white;
+}
+
+
+
+
+
+
+/**----------------- Portrait Frame -------------------**/
+
+.paper {
+    box-shadow: 0 0 0.5em 0 rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ddd;
+    background-size: cover;
+    background-clip: content-box;
+    box-sizing: border-box;
+    position: relative;
+    margin: auto;
+
+
+}
+
+.paper:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 50px solid transparent;
+    border-bottom: 50px solid rgb(33, 37, 41);
+    bottom: -60px;
+    right: -65px;
+    box-shadow: 0px 10px 5px -9px black;
+    transform: rotate(135deg);
+}
+
+.paper:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 50px solid transparent;
+    border-top: 50px solid rgb(33, 37, 41);
+    top: -60px;
+    left: -65px;
+    box-shadow: 0px -10px 5px -9px black;
+    transform: rotate(135deg);
+}
+
+.portrait {
+    height: 100%;
+    object-fit: cover;
+}
+
+.portrait {
+    background: #fff;
+    border-radius: 2px;
+}
+
+
+
+.frame {
+    background-image: url("/media/aboutme/portrait_background.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    background-color: rgb(33, 37, 41);
+    border: solid 5vmin #eee;
+    border-bottom-color: #fff;
+    border-left-color: #eee;
+    border-radius: 2px;
+    border-right-color: #eee;
+    border-top-color: #ddd;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 10vh 10vw;
+    height: 80vh;
+    padding: 8vmin;
+    position: relative;
+    text-align: center;
+}
+
+.frame:before {
+    border-radius: 2px;
+    bottom: -2vmin;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .25) inset;
+    content: "";
+    left: -2vmin;
+    position: absolute;
+    right: -2vmin;
+    top: -2vmin;
+}
+
+.frame:after {
+    border-radius: 2px;
+    bottom: -2.5vmin;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .25);
+    content: "";
+    left: -2.5vmin;
+    position: absolute;
+    right: -2.5vmin;
+    top: -2.5vmin;
+}
+
+.falling-animation {
+    animation: drop 5s ease forwards, 1s pulse 5s ease forwards;
+    animation-iteration-count: initial;
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(15%) rotate(0.1rad);
+    }
+
+    20% {
+        opacity: 100%;
+        transform: translateY(2%) rotate(0.1rad);
+    }
+
+    25% {
+        transform: translateY(0%) rotate(0.1rad);
+    }
+
+    50% {
+        transform: rotate(0.1rad);
+    }
+
+    75% {
+        transform: rotate(0.1rad);
+    }
+
+    80% {
+        transform: rotate(-0.03rad);
+    }
+
+    95% {
+        transform: rotate(-0.03rad);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 1em rgba(0, 0, 0, 0);
+    }
+
+    95% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    100% {
+
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
+    }
+}
+#signature{
+    font-family: 'Brittany Signature', sans-serif;
+    font-style: italic;
+    position: relative;
+    top: -10%;
+    transform: rotate(-0.5rad);
+    right: 5%;
+    color: black;
+    font-size: 1.3em;
 }
