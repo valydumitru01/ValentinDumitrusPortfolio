@@ -58,5 +58,5 @@ canvas {
     font-family: 'Brittany Signature';
     font-style: normal;
     font-weight: 400;
-    src: local('Brittany Signature'), url('/fonts/BrittanySignature-LjyZ.woff') format('woff');
+    src: local('Brittany Signature'), url('../fonts/BrittanySignature-LjyZ.woff') format('woff');
 }
