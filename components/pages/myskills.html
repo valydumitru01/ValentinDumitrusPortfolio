@@ -1,5 +1,7 @@
+<div style="display: flex; justify-content: center;">
 <div id="skill-graph">
 
+</div>
 </div>
 <script>
 
@@ -11,17 +13,30 @@
     const N_LANGUAGES = 10;
     const IMG_NAMES = ['javascript', 'java', 'c++', 'csharp', "php", "sql", "c", "python", "typescript", "css"]
     const PATH = "media/brands/";
-    const IMG_TYPE=".png";
-    var values=[         100,    100,    50,   35,    30,    60,  20,       80,           40,    85]
-    var labels=['javascript', 'java', 'c++', 'c#', "php", "SQL", "c", "python", "typescript", "css"]
-    var colors=[]
+    const IMG_TYPE = ".png";
+
+    var imgSize = window.innerWidth / 7000
+    if (window.innerWidth < 700) {
+      imgSize = window.innerWidth / 3000
+    } else if (window.innerWidth < 1000) {
+      imgSize = window.innerWidth / 5000
+    }
+
+    var graph_width=window.innerWidth*0.8;
+    if(window.innerWidth<600){
+      graph_width=window.innerWidth;
+    }
+    console.log(graph_width)
+    var values = [100, 100, 50, 35, 30, 60, 20, 80, 40, 85]
+    var labels = ['javascript', 'java', 'c++', 'c#', "php", "SQL", "c", "python", "typescript", "css"]
+    var colors = []
     for (let i = 0; i < N_LANGUAGES; i++) {
       //The intention is that the max value results in 33,37,41 which is black
-      var r=(33*(100/values[i]))
-      var g=(37*(100/values[i]))
-      var b=(41*(100/values[i]))
-      colors.push("rgb("+r+","+g+","+b+")")
-      
+      var r = (33 * (100 / values[i]))
+      var g = (37 * (100 / values[i]))
+      var b = (41 * (100 / values[i]))
+      colors.push("rgb(" + r + "," + g + "," + b + ")")
+
     }
     console.log(colors)
     var data = [
@@ -29,26 +44,28 @@
         x: labels,
         y: values,
         type: 'bar',
-        marker:{
+        marker: {
           color: colors
         },
       }
     ];
-    var images_layout=[]
+    var images_layout = []
     for (let i = 0; i < N_LANGUAGES; i++) {
       images_layout.push({
-          x:i/N_LANGUAGES +0.05,
-          y: values[i]/100,
-          sizex: window.innerWidth / 7000,
-          sizey: window.innerWidth / 7000,
-          source: PATH + IMG_NAMES[i] + IMG_TYPE,
-          xanchor: "center",
-          xref: "paper",
-          yanchor: "bottom",
-          yref: "paper"
+        x: i / N_LANGUAGES + 0.05,
+        y: values[i] / 100,
+        sizex: imgSize,
+        sizey: imgSize,
+        source: PATH + IMG_NAMES[i] + IMG_TYPE,
+        xanchor: "center",
+        xref: "paper",
+        yanchor: "bottom",
+        yref: "paper"
       })
     }
     const layout = {
+      autosize: false,
+      width:graph_width,
       title: 'How confident I am (in %)',
       showlegend: false,
       yaxis: { fixedrange: true },
