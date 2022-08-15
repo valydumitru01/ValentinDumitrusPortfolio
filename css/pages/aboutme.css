@@ -53,6 +53,10 @@
 
 .tile {
     padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    
 }
 
 #yin-yang {
@@ -307,7 +311,7 @@
 }
 @media only screen and (max-width: 500px) {
     .frame{
-        height: 30vh;
+        height: 35vh;
         width: 60vw;
     }
     #signature{
