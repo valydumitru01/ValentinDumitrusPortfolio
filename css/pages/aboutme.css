@@ -3,20 +3,6 @@
 }
 
 
-@media only screen and (max-width: 1500px) {
-    .portrait {
-        width: 30vw;
-    }
-
-}
-
-@media only screen and (max-width: 1000px) {
-    .portrait {
-        width: 50vw;
-    }
-
-}
-
 
 /**----------------- Strengths and weaknesses table -------------------**/
 
@@ -164,19 +150,13 @@
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
     box-sizing: border-box;
     display: inline-block;
-    margin: 10vh 10vw;
-    height: 60vh;
+    height: 65vh;
     width: 30vw;
-    padding: 8vmin;
+    padding: 5vmin;
     position: relative;
     text-align: center;
 }
-@media only screen and (max-width: 1500px) {
-    .frame {
-        width: 40vh;
-    }
-    
-}
+
 
 @media only screen and (max-width: 1000px) {
 }
@@ -270,4 +250,71 @@
     right: 5%;
     color: black;
     font-size: 1.3em;
+}
+
+@media only screen and (max-width: 1800px) {
+    .frame{
+        height: 60vh;
+        width: 35vw;
+    }
+    #signature{
+        top: -15%;
+        right: 5%;
+        font-size: 1em;
+    }
+    
+}
+@media only screen and (max-width: 1500px) {
+    .frame{
+        height: 60vh;
+        width: 40vw;
+    }
+    
+}
+@media only screen and (max-width: 1300px) {
+    .frame{
+        height: 75vh;
+        width: 60vw;
+    }
+    
+}
+@media only screen and (max-width: 1000px) {
+    .frame{
+        height: 60vh;
+        width: 60vw;
+    }
+    #signature{
+        top: -15%;
+        right: 5%;
+        font-size: 1em;
+    }
+    
+}
+@media only screen and (max-width: 800px) {
+    .frame{
+        height: 50vh;
+        width: 60vw;
+    }
+
+    
+}
+@media only screen and (max-width: 700px) {
+    .frame{
+        height: 40vh;
+        width: 60vw;
+    }
+
+}
+@media only screen and (max-width: 500px) {
+    .frame{
+        height: 30vh;
+        width: 60vw;
+    }
+    #signature{
+        top: -15%;
+        right: 5%;
+        font-size: 0.7em;
+    }
+
+    
 }
