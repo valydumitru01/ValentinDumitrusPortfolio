@@ -59,7 +59,7 @@
 
     function goTo(where) {
         window.history.replaceState(where, "", url);
-
+        $("#navbarNavDropdown").collapse('hide')
         loadPage()
     }
 
@@ -76,11 +76,6 @@
         console.log(pageTitles[history.state])
         console.log(history.state)
     }
-    $('.container a').click(function(){ 
-    var $target = $($(this).data('target')); 
-    if(!$target.hasClass('in'))
-        $('.container .in').removeClass('in').height(0);
-    }); 
 </script>
 
 </html>

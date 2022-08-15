@@ -40,18 +40,8 @@ h4,
 h5 {
     color: #000000;
     font-weight: lighter;
-    text-decoration: underline;
     line-height: 2em;
     margin: 0 0 1em;
-}
-
-canvas {
-    display: block;
-    position: fixed;
-    top: 0;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
 }
 
 @font-face {
@@ -59,4 +49,8 @@ canvas {
     font-style: normal;
     font-weight: 400;
     src: local('Brittany Signature'), url('../fonts/BrittanySignature-LjyZ.woff') format('woff');
+}
+.text-note{
+    font-style: italic;
+    text-align: right;
 }
