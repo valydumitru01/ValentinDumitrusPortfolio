@@ -76,12 +76,11 @@
         console.log(pageTitles[history.state])
         console.log(history.state)
     }
-    const navLinks = document.querySelectorAll('.nav-item')
-    const menuToggle = document.getElementById('navbarSupportedContent')
-    const bsCollapse = new bootstrap.Collapse(menuToggle)
-    navLinks.forEach((l) => {
-        l.addEventListener('click', () => { bsCollapse.toggle() })
-    })
+    $('.container a').click(function(){ 
+    var $target = $($(this).data('target')); 
+    if(!$target.hasClass('in'))
+        $('.container .in').removeClass('in').height(0);
+    }); 
 </script>
 
 </html>
