@@ -197,30 +197,20 @@
 }
 
 .falling-animation {
-    animation: drop 5s ease forwards, 1s pulse 5s ease forwards;
+    animation: drop 3s ease forwards, 1s pulse 5s ease forwards;
     animation-iteration-count: initial;
 }
 
 @keyframes drop {
     0% {
         opacity: 0;
-        transform: translateY(-50%) translateX(10%) rotate(0.1rad);
+        transform: translateY(-50%) rotate(0.1rad) rotate3d(1,0,0,90deg);;
         transform-origin: top center;
     }
 
-    20% {
-        opacity: 100%;
-        transform: translateY(2%) rotate(0.1rad);
-        transform-origin: top center;
-    }
 
-    25% {
-        transform: translateY(0%) rotate(0.1rad);
-        transform-origin: top center;
-    }
-
-    50% {
-        transform: rotate(0.1rad);
+    40% {
+        transform:  translateY(2%) rotate(0.1rad);
         transform-origin: top center;
     }
 

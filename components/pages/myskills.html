@@ -1,145 +1,26 @@
+<h2 style="text-align: center;">
+  Programming Languages
+</h2>
+<p style="margin-left: 10%;">
+  This is (more or less) the graphs explaining my ability of a specific programming language.
+</p>
 <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+
   <div id="skill-graph">
 
   </div>
-  <p class="text-note" style="width: 80%;"> Note: I define confidence as how much I practiced them and how easy is to
-    work with them. Obviously python is higher than c. </p>
+  <div id="preference-graph">
+
+  </div>
 </div>
 
-<script>
-
-  const IMG_NAMES = { javascript: 'javascript', java: 'java', css: "css", python: "python", sql: "sql", cpp: 'c++', csharp: 'csharp', php: "php", c: "c", typescript: "typescript" }
-  var data_list = [
-    {
-      img: IMG_NAMES.javascript,
-      label: 'Javascript',
-      value: 100
-    },
-    {
-      img: IMG_NAMES.java,
-      label: 'Java',
-      value: 100
-    },
-    {
-      img: IMG_NAMES.css,
-      label: 'CSS',
-      value: 100
-    },
-    {
-      img: IMG_NAMES.python,
-      label: 'Python',
-      value: 100
-    },
-    {
-      img: IMG_NAMES.sql,
-      label: 'SQL',
-      value: 100
-    },
-    {
-      img: IMG_NAMES.cpp,
-      label: 'C++',
-      value: 100
-    },
-    {
-      img: IMG_NAMES.csharp,
-      label: 'C#',
-      value: 100
-    },
-    {
-      img: IMG_NAMES.php,
-      label: 'PHP',
-      value: 100
-    },
-    {
-      img: IMG_NAMES.c,
-      label: 'C',
-      value: 100
-    },
-    {
-      img: IMG_NAMES.typescript,
-      label: 'Typescript',
-      value: 100
-    },
-
-  ]
-  
-  data_list.sort(function (a, b) {
-    return a.value.localeCompare(b.value);
-  });
-  
-  function drawGraph(data_list) {
-    const N_LANGUAGES = 10;
-
-    const PATH = "media/brands/";
-    const IMG_TYPE = ".png";
-
-    var imgSize = window.innerWidth / 7000
-    if (window.innerWidth < 700) {
-      imgSize = window.innerWidth / 3000
-    } else if (window.innerWidth < 1000) {
-      imgSize = window.innerWidth / 5000
-    }
-
-    var graph_width = window.innerWidth * 0.8;
-    if (window.innerWidth < 800) {
-      graph_width = window.innerWidth;
-    }
-    console.log(graph_width)
-    var values = [100, 100, 85, 80, 60, 50, 35, 30, 20, 40]
-    var labels = ['javascript', 'java', "css", "python", "SQL", 'c++', 'c#', "php", "c", "typescript"]
-    var colors = []
-    for (let i = 0; i < N_LANGUAGES; i++) {
-      //The intention is that the max value results in 33,37,41 which is black
-      var r = (33 * (100 / values[i]))
-      var g = (37 * (100 / values[i]))
-      var b = (41 * (100 / values[i]))
-      colors.push("rgb(" + r + "," + g + "," + b + ")")
-
-    }
-    console.log(colors)
-    var data = [
-      {
-        x: labels,
-        y: values,
-        type: 'bar',
-        marker: {
-          color: colors
-        },
-      }
-    ];
-    var images_layout = []
-    for (let i = 0; i < N_LANGUAGES; i++) {
-      images_layout.push({
-        x: i / N_LANGUAGES + 0.05,
-        y: values[i] / 100,
-        sizex: imgSize,
-        sizey: imgSize,
-        source: PATH + IMG_NAMES[i] + IMG_TYPE,
-        xanchor: "center",
-        xref: "paper",
-        yanchor: "bottom",
-        yref: "paper"
-      })
-    }
-    const layout = {
-      autosize: false,
-      width: graph_width,
-      margin: {
-        l: 35,
-        r: 20
-      },
-      title: 'How confident I am (in %)',
-      showlegend: false,
-      yaxis: { fixedrange: true },
-      xaxis: { fixedrange: true },
-      images: images_layout
-    };
-    const config = {
-      displayModeBar: false, // this is the line that hides the bar.
-    };
-
-    Plotly.newPlot('skill-graph', data, layout, config);
+<script >
+  var resize=()=>{
+    var graph_factory=new GraphFactory();
+  graph_factory.drawEverything();
   }
-  drawGraph()
-  window.onresize = drawGraph
+  var graph_factory=new GraphFactory();
+  graph_factory.drawEverything();
+
+  window.onresize=resize
 </script>
