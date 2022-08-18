@@ -54,3 +54,13 @@ h5 {
     font-style: italic;
     text-align: right;
 }
+a{
+    
+    color: rgb(147, 148, 152);
+    text-shadow: 1px 1px 0 black
+}
+a:hover{
+    
+    color: black;
+    text-shadow: 1px 1px 0 rgb(147, 148, 152);
+}

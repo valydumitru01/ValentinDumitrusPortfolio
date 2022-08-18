@@ -26,13 +26,36 @@
   left: 50%;
   transform: translateX(-50%);
 }
+.main-timeline .timeline{
 
-.main-timeline .timeline {
   width: 50%;
   float: left;
   position: relative;
 }
-
+.main-timeline .timeline:nth-child(2n-1) {
+  animation: move_right_to_left_timeline 1s ease forwards;
+}
+.main-timeline .timeline:nth-child(2n) {
+  animation: move_left_to_right_timeline 1s ease forwards;
+}
+@keyframes move_right_to_left_timeline {
+  0%{
+    opacity: 0%;
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+@keyframes move_left_to_right_timeline {
+  0%{
+    opacity: 0%;
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
 .main-timeline .timeline:before,
 .main-timeline .timeline:after {
   content: "";
@@ -205,6 +228,8 @@
   font-size: 14px;
   color: white;
   margin: 0;
+  min-height: 6em;
+  text-align: justify;
 }
 
 .main-timeline .timeline:nth-child(2n):before,
@@ -285,7 +310,7 @@
 }
 
 .main-timeline .timeline:nth-child(4n-1) .content-inner:before {
-  border-right-color: rgb(205, 208, 211)
+  border-left-color:  rgb(205, 208, 211);
 }
 
 .main-timeline .timeline:nth-child(4n-1) .year,
@@ -308,7 +333,7 @@
 }
 
 .main-timeline .timeline:nth-child(4n) .content-inner:before {
-  border-left-color: white;
+  border-right-color:  white;
 }
 
 .main-timeline .timeline:nth-child(4n) .year,
@@ -343,7 +368,11 @@
     line-height: 90px;
     font-size: 50px;
   }
-  .main-timeline .year span:not(.dashed-line) {
+  .main-timeline .year .end {
+
+    left: 7%;
+  }
+  .main-timeline .year .start {
 
     left: 7%;
   }
@@ -365,7 +394,10 @@
   }
 
   .main-timeline .year .end {
-    top: 90%;
+    top: 85%;
+  }
+  .main-timeline .year .start {
+    top: 5%;
   }
 
 
@@ -461,12 +493,6 @@
     position: relative;
   }
 
-  .main-timeline .year .start {
-    position: relative;
-    top: 0.85em;
-    right: auto;
-    left: 0;
-  }
 
   .main-timeline .year .dashed-line {
     position: absolute;
@@ -478,19 +504,36 @@
     border: white dashed 2px;
 
   }
+  .main-timeline .year .dashed-line:after {
+    top: -7px;
+    left: -10%;
+  }
+  .main-timeline .year .dashed-line:before {
+    top: -7px;
+    left: 100%;
+  }
+  .main-timeline .year .start {
+    position: relative;
+    top: 0.85em;
+    right: auto;
+    left: -35%;
+  }
 
   .main-timeline .year .end {
     position: relative;
     right: 0;
     top: -0.6em;
-    left: 30%;
+    left: 35%;
   }
 
   .main-timeline .year span {
     transform: rotate(0);
     position: relative;
   }
-
+  .main-timeline .description {
+    min-height: 0;
+  }
+  
   .main-timeline .description {
     padding: 0 10px;
   }
