@@ -6,10 +6,12 @@
 @import url("pages/myprojects.css");
 @import url("imageviewer.css");
 @import url("pages/myexperience.css");
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Titillium Web';
     font-size: 1.3em;
-
 }
 
 @keyframes rotation {

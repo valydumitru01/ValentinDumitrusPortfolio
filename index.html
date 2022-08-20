@@ -64,8 +64,13 @@
 
     function goTo(where) {
         window.history.replaceState(where, "", url);
+        
         $("#navbarNavDropdown").collapse('hide')
+        window.scroll({
+            top: 180
+        });
         loadPage()
+        
     }
 
     function loadPage() {
@@ -81,6 +86,7 @@
         console.log(pageTitles[history.state])
         console.log(history.state)
     }
+
 </script>
 
 </html>
