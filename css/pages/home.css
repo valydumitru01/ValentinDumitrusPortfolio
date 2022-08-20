@@ -1,3 +1,4 @@
+/* ------ Contact me Button -------*/
 .contact-me-button {
     display: inline-block;
     background: black;
@@ -18,51 +19,259 @@
 }
 
 
-.home-text {
-    text-align: justify;
-    text-justify: inter-word;
+
+
+.fade-in-text {
+    color: black;
+    font-family: "Shell Roundhand";
+    font-size: 5vw;
+    transform: translate(10%, 35%);
+    animation: fade-in 1s both;
+    animation-delay: 1s;
 }
 
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
 
+    100% {
+        opacity: 100%;
+    }
 
-
-/* --------- Typing effect ---------*/
-
-.typing-effect {
-    color: #70869d;
-    letter-spacing: .15em;
-    text-shadow:
-        -1px -1px 1px #efede3,
-        0px 1px 0 #2e2e2e,
-        0px 2px 0 #2c2c2c,
-        0px 3px 0 #2a2a2a,
-        0px 4px 0 #282828,
-        0px 5px 0 #262626,
-        0px 6px 0 #242424,
-        0px 7px 0 #222,
-        0px 8px 0 #202020,
-        0px 9px 0 #1e1e1e,
-        0px 10px 0 #1c1c1c,
-        0px 11px 0 #1a1a1a,
-        0px 12px 0 #181818,
-        0px 13px 0 #161616,
-        0px 14px 0 #141414,
-        0px 15px 0 #121212,
-        2px 20px 5px rgba(0, 0, 0, 0.9),
-        5px 23px 5px rgba(0, 0, 0, 0.3),
-        8px 27px 8px rgba(0, 0, 0, 0.5),
-        8px 28px 35px rgba(0, 0, 0, 0.9);
 }
 
-.typing-effect {
+/* --------- Deconstructed text effect ---------*/
+.deconstructed {
+    position: relative;
+    margin: 0;
+    height: 1em;
+    color: transparent;
+    font-size: 10vw;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.03em;
+}
+
+.deconstructed>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #000000;
+    pointer-events: none;
+}
+
+.deconstructed>div:nth-child(1) {
+    -webkit-mask-image: linear-gradient(black 25%, transparent 25%);
+    mask-image: linear-gradient(black 25%, transparent 25%);
+    animation: deconstructed1 5s linear;
+}
+
+.deconstructed>div:nth-child(2) {
+    -webkit-mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+    mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+    animation: deconstructed2 5s linear;
+}
+
+.deconstructed>div:nth-child(3) {
+    -webkit-mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+    mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+    animation: deconstructed3 5s linear;
+}
+
+.deconstructed>div:nth-child(4) {
+    -webkit-mask-image: linear-gradient(transparent 75%, black 75%);
+    mask-image: linear-gradient(transparent 75%, black 75%);
+    animation: deconstructed4 5s linear;
+}
+
+@keyframes deconstructed1 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    26% {
+        transform: translateX(0%);
+    }
+
+    83% {
+        transform: translateX(-0.1%);
+    }
+
+}
+
+@keyframes deconstructed2 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    24% {
+        transform: translateX(0.5%);
+    }
+
+    82% {
+        transform: translateX(-0.2%);
+    }
+
+}
+
+@keyframes deconstructed3 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    22% {
+        transform: translateX(0%);
+    }
+
+    81% {
+        transform: translateX(0%);
+    }
+
+}
+
+@keyframes deconstructed4 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    20% {
+        transform: translateX(0%);
+    }
+
+    80% {
+        transform: translateX(0%);
+    }
+
+}
+
+/* --------- Stripped Text Effect ------------*/
+
+.stripped-effect-text {
+    position: relative;
+    display: flex;
     width: 100%;
-    margin: 0 auto 0 auto;
-    font-weight: bold;
-    line-height: 180px;
-    font-size: 5.5rem;
-    padding: 0 0;
-    text-align: center;
-    text-transform: uppercase;
-    text-rendering: optimizeLegibility;
+    flex-wrap: wrap;
+    transform: translate(20%);
 }
 
+
+.stripped-effect-text::before {
+    content: "PORTFOLIO";
+    position: absolute;
+    color: transparent;
+    background-image: repeating-linear-gradient(45deg,
+            transparent 0,
+            transparent 2px,
+            rgb(62, 69, 77) 2px,
+            rgb(62, 69, 77) 4px);
+    -webkit-background-clip: text;
+    top: 0px;
+    left: 0;
+    z-index: -1;
+    transition: 1s;
+    font-weight: 900;
+    font-size: 10vw;
+    letter-spacing: 0;
+
+    letter-spacing: +0.003em;
+}
+
+.stripped-effect-text::after {
+    content: "PORTFOLIO";
+    position: absolute;
+    color: transparent;
+    background-image: repeating-linear-gradient(135deg,
+            transparent 0,
+            transparent 2px,
+            rgb(62, 69, 77) 2px,
+            rgb(62, 69, 77) 4px);
+    -webkit-background-clip: text;
+    top: 0px;
+    left: 0px;
+    transition: 1s;
+    font-weight: 900;
+    font-size: 10vw;
+    letter-spacing: +0.003em;
+}
+
+.stripped-effect-text:hover:before {
+    top: 1%;
+    left: 1%;
+}
+
+.stripped-effect-text:hover:after {
+    top: -1%;
+    left: -1%;
+}
+
+/* ---------- Falling text effect ----------*/
+@keyframes drop {
+    0% {
+        transform: translateY(-200px) scaleY(0.9);
+    }
+
+    5% {}
+
+    50% {
+        transform: translateY(0px) scaleY(1);
+    }
+
+    65% {
+        transform: translateY(-17px) scaleY(.9);
+    }
+
+    75% {
+        transform: translateY(-22px) scaleY(.9);
+    }
+
+    100% {
+        transform: translateY(0px) scaleY(1);
+    }
+}
+
+.text-drop {
+    position: relative;
+    display: flex;
+    font-size: 10vw;
+    font-weight: 900;
+    transition: 0.3s;
+}
+
+#P {
+    animation: drop .4s linear forwards;
+}
+
+#O {
+    animation: drop .4s linear forwards .2s;
+}
+
+#R {
+    animation: drop .4s linear forwards .4s;
+}
+
+#T {
+    animation: drop .4s linear forwards .6s;
+}
+
+#F {
+    animation: drop .4s linear forwards 1s;
+}
+
+#O1 {
+    animation: drop .4s linear forwards 1.2s;
+}
+
+#L {
+    animation: drop .4s linear forwards 1.4s;
+}
+
+#I {
+    animation: drop .4s linear forwards 1.6s;
+}
+
+#O2 {
+    animation: drop .4s linear forwards 1.8s;
+}
