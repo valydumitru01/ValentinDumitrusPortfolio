@@ -1,12 +1,45 @@
+#home-content{
+    overflow: hidden;
+}
+#home-page{
+    overflow: hidden;
+}
 /* ------ Contact me Button -------*/
+#google-icon-contact-me{
+    opacity: 0.3;
+    display: none;
+    position: absolute;
+    font-size: 9vh;
+    
+    top: 5%;
+    left: 5%;
+}
+.contact-me-button:hover .alt-text-contact-me{
+    display: inherit;
+    font-size: 3vw;
+    margin-left: 2.5em;
 
+}
+.contact-me-button:hover #google-icon-contact-me{
+    display: inherit;
+}
+.contact-me-button:hover .text-contact-me{
+    display: none;
+    width: 100%;
+}
+.contact-me-button{
+    animation: 1s fade-in forwards;
+}
 .contact-me-button,
-button::after {
+.contact-me-button::after {
+    overflow: hidden;
     width: 30vw;
     height: 10vh;
     font-size: 4vw;
     font-family: 'Bebas Neue', cursive;
-    
+    padding-bottom: 0.5vh;
+
+    padding-top: 0.5vh;
     background: linear-gradient(45deg, transparent 5%, rgb(33, 37, 41) 5%);
     border: 0;
     color: #fff;
@@ -14,12 +47,19 @@ button::after {
     line-height: 88px;
     box-shadow: 6px 0px 0px #3e6063;
     outline: transparent;
-    position: absolute;
-    top: 26%;
-    left: 60%;
+    position: relative;
+    left: 70%;
+    
+    
+    animation: 1s glitch  linear;
+    animation-timing-function: steps(2, end);
     
 }
-
+.contact-me-button:hover,
+.contact-me-button:hover::after{
+    animation: 1s glitch infinite;
+    animation-timing-function: steps(2, end);
+}
 .contact-me-button::after {
     --slice-0: inset(50% 50% 50% 50%);
     --slice-1: inset(80% -6px 0 0);
@@ -41,10 +81,7 @@ button::after {
     clip-path: var(--slice-0);
 }
 
-.contact-me-button:hover::after {
-    animation: 1s glitch;
-    animation-timing-function: steps(2, end);
-}
+
 
 @keyframes glitch {
     0% {
@@ -118,6 +155,8 @@ button::after {
     font-family: "Shell Roundhand";
     font-size: 3vw;
     transform: translate(60%, -240%) rotate(-12deg);
+    position: relative;
+    
 }
 
 .fade-in-text {

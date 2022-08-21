@@ -13,4 +13,10 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
+    .footer-img{
+        width: 7vw;
+    }
+}
+.footer-img{
+    width: 10vw;
 }
