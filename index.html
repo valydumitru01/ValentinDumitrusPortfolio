@@ -24,6 +24,8 @@
     <script src="javascript/graph_factory.js"></script>
     <script src="javascript/typing_effect.js"></script>
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
     <!-- CSS  -->
     <link rel="stylesheet" href="css/main.css">
@@ -64,23 +66,25 @@
 
     function goTo(where) {
         window.history.replaceState(where, "", url);
-        
+
         $("#navbarNavDropdown").collapse('hide')
         window.scroll({
             top: 180
         });
         loadPage()
-        
+
     }
 
     function loadPage() {
         if (history.state === null || history.state === undefined) {
+
             window.history.pushState("home", "", url)
             $("#body").empty()
-            $("#body").load("components/pages/home.html", () => { $(".page-title").html(pageTitles[history.state]) })
+            $("#body").load("components/pages/home.html", () => { $(".page-title").html("") })
         } else {
             $("#body").empty()
-            $("#body").load("components/pages/" + history.state + ".html", () => { $(".page-title").html(pageTitles[history.state]) })
+            $(".page-title").html("") 
+            $("#body").load("components/pages/" + history.state + ".html", () => { if (history.state !== "home") $(".page-title").html(pageTitles[history.state]) })
         }
 
         console.log(pageTitles[history.state])

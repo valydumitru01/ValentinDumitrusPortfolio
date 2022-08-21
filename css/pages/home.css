@@ -1,31 +1,126 @@
 /* ------ Contact me Button -------*/
-.contact-me-button {
-    display: inline-block;
-    background: black;
+
+.contact-me-button,
+button::after {
+    width: 30vw;
+    height: 10vh;
+    font-size: 4vw;
+    font-family: 'Bebas Neue', cursive;
+    
+    background: linear-gradient(45deg, transparent 5%, rgb(33, 37, 41) 5%);
+    border: 0;
     color: #fff;
-    text-transform: uppercase;
-    padding: 20px 30px;
-    border-radius: 5px;
-    box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
-    cursor: pointer;
-    -webkit-transition: all ease-in-out 300ms;
-    transition: all ease-in-out 300ms;
+    letter-spacing: 3px;
+    line-height: 88px;
+    box-shadow: 6px 0px 0px #3e6063;
+    outline: transparent;
+    position: absolute;
+    top: 26%;
+    left: 60%;
+    
 }
 
-.contact-me-button:hover {
-    box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
-    -webkit-transform: translate(0px, -10px) scale(1.2);
-    transform: translate(0px, -10px) scale(1.2);
+.contact-me-button::after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+
+    content: 'CONTACT ME!';
+    font-size: 4vw;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, rgb(33, 37, 41) 5%);
+    text-shadow: -3px -3px 0px blue, 3px 3px 0px #00E6F6;
+    clip-path: var(--slice-0);
 }
 
+.contact-me-button:hover::after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+}
 
+@keyframes glitch {
+    0% {
+        clip-path: var(--slice-1);
+        transform: translate(-20px, -10px);
+    }
 
+    10% {
+        clip-path: var(--slice-3);
+        transform: translate(10px, 10px);
+    }
 
-.fade-in-text {
+    20% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 10px);
+    }
+
+    30% {
+        clip-path: var(--slice-3);
+        transform: translate(0px, 5px);
+    }
+
+    40% {
+        clip-path: var(--slice-2);
+        transform: translate(-5px, 0px);
+    }
+
+    50% {
+        clip-path: var(--slice-3);
+        transform: translate(5px, 0px);
+    }
+
+    60% {
+        clip-path: var(--slice-4);
+        transform: translate(5px, 10px);
+    }
+
+    70% {
+        clip-path: var(--slice-2);
+        transform: translate(-10px, 10px);
+    }
+
+    80% {
+        clip-path: var(--slice-5);
+        transform: translate(20px, -10px);
+    }
+
+    90% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 0px);
+    }
+
+    100% {
+        clip-path: var(--slice-1);
+        transform: translate(0);
+    }
+}
+
+/*--------- Fade Text ---------*/
+
+#to-my {
     color: black;
     font-family: "Shell Roundhand";
     font-size: 5vw;
     transform: translate(10%, 35%);
+
+}
+
+#by-valentin {
+    color: black;
+    font-family: "Shell Roundhand";
+    font-size: 3vw;
+    transform: translate(60%, -240%) rotate(-12deg);
+}
+
+.fade-in-text {
     animation: fade-in 1s both;
     animation-delay: 1s;
 }
@@ -36,7 +131,7 @@
     }
 
     100% {
-        opacity: 100%;
+        opacity: 1;
     }
 
 }
@@ -72,7 +167,7 @@
 .deconstructed>div:nth-child(2) {
     -webkit-mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
     mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
-    animation: deconstructed2 5s linear;
+    animation: deconstructed2 5s linear, deconstructed-moving 5s infinite 5s;
 }
 
 .deconstructed>div:nth-child(3) {
@@ -85,6 +180,18 @@
     -webkit-mask-image: linear-gradient(transparent 75%, black 75%);
     mask-image: linear-gradient(transparent 75%, black 75%);
     animation: deconstructed4 5s linear;
+}
+
+@keyframes deconstructed-moving {
+
+
+    24% {
+        transform: translateX(0.2%);
+    }
+
+    82% {
+        transform: translateX(-0.2%);
+    }
 }
 
 @keyframes deconstructed1 {
@@ -155,6 +262,7 @@
     width: 100%;
     flex-wrap: wrap;
     transform: translate(20%);
+    color: black;
 }
 
 
@@ -162,11 +270,12 @@
     content: "PORTFOLIO";
     position: absolute;
     color: transparent;
+
     background-image: repeating-linear-gradient(45deg,
             transparent 0,
             transparent 2px,
-            rgb(62, 69, 77) 2px,
-            rgb(62, 69, 77) 4px);
+            black 2px,
+            black 4px);
     -webkit-background-clip: text;
     top: 0px;
     left: 0;
@@ -175,8 +284,8 @@
     font-weight: 900;
     font-size: 10vw;
     letter-spacing: 0;
-
     letter-spacing: +0.003em;
+    animation: 2s wait linear;
 }
 
 .stripped-effect-text::after {
@@ -186,8 +295,8 @@
     background-image: repeating-linear-gradient(135deg,
             transparent 0,
             transparent 2px,
-            rgb(62, 69, 77) 2px,
-            rgb(62, 69, 77) 4px);
+            black 2px,
+            black 4px);
     -webkit-background-clip: text;
     top: 0px;
     left: 0px;
@@ -195,15 +304,31 @@
     font-weight: 900;
     font-size: 10vw;
     letter-spacing: +0.003em;
+    animation: 2s wait linear;
+}
+
+@keyframes wait {
+    0% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
 }
 
 .stripped-effect-text:hover:before {
-    top: 1%;
+    top: 3%;
     left: 1%;
+
 }
 
 .stripped-effect-text:hover:after {
-    top: -1%;
+    top: -3%;
     left: -1%;
 }
 
@@ -241,37 +366,56 @@
 }
 
 #P {
-    animation: drop .4s linear forwards;
+    opacity: 0;
+    animation: drop .4s linear forwards, fade-in 0.5 linear forwards;
 }
 
 #O {
-    animation: drop .4s linear forwards .2s;
+    opacity: 0;
+    animation: drop .4s linear forwards, fade-in 0.5 linear forwards;
+    animation-delay: .2s;
 }
 
 #R {
-    animation: drop .4s linear forwards .4s;
+    opacity: 0;
+    animation: drop .4s linear forwards, fade-in 0.5 linear forwards;
+    animation-delay: .4s;
 }
 
 #T {
-    animation: drop .4s linear forwards .6s;
+    opacity: 0;
+    animation: drop .4s linear forwards, fade-in 0.5 linear forwards;
+    animation-delay: .6s;
 }
 
 #F {
-    animation: drop .4s linear forwards 1s;
+    opacity: 0;
+    animation: drop .4s linear forwards, fade-in 0.5 linear forwards;
+    animation-delay: .8s;
 }
 
 #O1 {
-    animation: drop .4s linear forwards 1.2s;
+    opacity: 0;
+    animation: drop .4s linear forwards, fade-in 0.5 linear forwards;
+    animation-delay: 1s;
 }
 
 #L {
-    animation: drop .4s linear forwards 1.4s;
+    opacity: 0;
+    animation: drop .4s linear forwards, fade-in 0.5 linear forwards;
+    animation-delay: 1.2s;
 }
 
 #I {
-    animation: drop .4s linear forwards 1.6s;
+    opacity: 0;
+    animation: drop .4s linear forwards, fade-in 0.5 linear forwards;
+    ;
+    animation-delay: 1.4s;
 }
 
 #O2 {
-    animation: drop .4s linear forwards 1.8s;
+    opacity: 0;
+    animation: drop .4s linear forwards, fade-in 0.5 linear forwards;
+    ;
+    animation-delay: 1.6s;
 }
