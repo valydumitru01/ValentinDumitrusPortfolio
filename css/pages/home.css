@@ -27,8 +27,6 @@
     width: 100%;
 }
 .contact-me-button{
-    display: flex;
-    flex-wrap: wrap;
     padding-left: 1em;
     align-items: center;
     animation: 1s fade-in forwards;
@@ -36,7 +34,8 @@
 .contact-me-button,
 .contact-me-button::after {
     overflow: hidden;
-    width: 30vw;
+    width: max-content;
+    min-width: 40vw;
     height: 10vh;
     font-size: 4vw;
     font-family: 'Bebas Neue', cursive;
@@ -51,7 +50,7 @@
     box-shadow: 6px 0px 0px #3e6063;
     outline: transparent;
     position: relative;
-    left: 70%;
+    left: 60%;
     
     
     animation: 1s glitch  linear;
