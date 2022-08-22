@@ -506,7 +506,7 @@
 @media only screen and (max-width: 1000px) {
     .deconstructed {
 
-        font-size: 20vw;
+        font-size: 17vw;
     }
 
     #to-my {
@@ -518,12 +518,13 @@
     .text-drop,
     .stripped-effect-text::before,
     .stripped-effect-text::after{
-        font-size: 13vw;
+        font-size: 11vw;
     }
     #by-valentin{
-        font-size:5vw;
-        top: 2em;
-        left: -1.5em;
+        font-size:4vw;
+        top: -0.4em;
+        left: 1em;
+        transform: rotate(0.1rad);
     }
     .contact-me-button{
         left: 50%;
