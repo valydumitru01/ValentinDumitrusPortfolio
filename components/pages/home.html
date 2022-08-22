@@ -24,9 +24,20 @@
         <div class="fade-in-text" id="by-valentin">
             By Valentin Dumitru
         </div>
-
-
     </section>
     <button class="contact-me-button"><span class="text-contact-me">CONTACT ME!<br class="text-contact-me"></span><span
-            class="alt-text-contact-me"><div onclick="window.open('mailto:valentindmtr115@gmail.com');">valentindmtr115</div><i class="fa-brands fa-google" id="google-icon-contact-me" ></i></span></button>
+            class="alt-text-contact-me">
+            <div action="'mailto:valentindmtr115@gmail.com';">valentindmtr115</div><i class="fa-brands fa-google"
+                id="google-icon-contact-me"></i>
+        </span></button>
+
+    <form action="mailto:valentindmtr115@gmail.com" method="POST" enctype="multipart/form-data" name="EmailForm">
+        Name:<br>
+        <input type="text" size="19" name="Contact-Name"><br><br>
+        Email:<br>
+        <input type="email" name="Contact-Email"><br><br>
+        Message:<br>
+        <textarea name="Contact-Message" rows="6" cols="20"></textarea>
+        <button type="submit" value="Submit">Send</button>
+    </form>
 </article>

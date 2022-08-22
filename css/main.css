@@ -58,6 +58,12 @@ h5 {
     font-weight: 400;
     src: local('Shell Roundhand'), url('../fonts/Snell\ Roundhand\ LT\ W01\ Script.woff') format('woff');
 }
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Titillium Web'), url('../fonts/titillium-web-v15-latin-regular.woff') format('woff');
+}
 .text-note{
     font-style: italic;
     text-align: right;
