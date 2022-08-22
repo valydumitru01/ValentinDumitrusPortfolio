@@ -1,36 +1,43 @@
-#home-content{
+#home-content {
     overflow: hidden;
 }
-#home-page{
+
+#home-page {
     overflow: hidden;
 }
+
 /* ------ Contact me Button -------*/
-#google-icon-contact-me{
+#google-icon-contact-me {
     opacity: 0.3;
     display: none;
     position: absolute;
     font-size: 9vh;
-    
+
     top: 5%;
     left: 5%;
 }
-.contact-me-button:hover .alt-text-contact-me{
+
+.contact-me-button:hover .alt-text-contact-me {
     display: inherit;
     font-size: 3vw;
 
 }
-.contact-me-button:hover #google-icon-contact-me{
+
+.contact-me-button:hover #google-icon-contact-me {
     display: inherit;
 }
-.contact-me-button:hover .text-contact-me{
+
+.contact-me-button:hover .text-contact-me {
     display: none;
     width: 100%;
 }
-.contact-me-button{
+
+.contact-me-button {
     padding-left: 1em;
     align-items: center;
     animation: 1s fade-in forwards;
 }
+
 .contact-me-button,
 .contact-me-button::after {
     overflow: hidden;
@@ -51,17 +58,19 @@
     outline: transparent;
     position: relative;
     left: 60%;
-    
-    
-    animation: 1s glitch  linear;
+
+
+    animation: 1s glitch linear;
     animation-timing-function: steps(2, end);
-    
+
 }
+
 .contact-me-button:hover,
-.contact-me-button:hover::after{
+.contact-me-button:hover::after {
     animation: 1s glitch infinite;
     animation-timing-function: steps(2, end);
 }
+
 .contact-me-button::after {
     --slice-0: inset(50% 50% 50% 50%);
     --slice-1: inset(80% -6px 0 0);
@@ -158,7 +167,7 @@
     font-size: 3vw;
     transform: translate(60%, -240%) rotate(-12deg);
     position: relative;
-    
+
 }
 
 .fade-in-text {
@@ -459,4 +468,72 @@
     animation: drop .4s linear forwards, fade-in 0.5 linear forwards;
     ;
     animation-delay: 1.6s;
+}
+
+@media only screen and (max-width: 1500px) {
+    .deconstructed {
+
+        font-size: 15vw;
+    }
+
+    #to-my {
+        position: relative;
+        top: -0.2em;
+        font-size: 4vw;
+    }
+
+    .text-drop,
+    .stripped-effect-text::before,
+    .stripped-effect-text::after{
+        font-size: 10vw;
+    }
+    #by-valentin{
+        font-size: 4vw; bottom: -1em;
+    }
+    .contact-me-button{
+        left: 50%;
+        width: 50vw;
+        
+    }
+    .text-contact-me{
+        font-size: 6vw;
+    }
+    .contact-me-button:hover .alt-text-contact-me {
+        font-size: 6vw;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .deconstructed {
+
+        font-size: 20vw;
+    }
+
+    #to-my {
+        position: relative;
+        top: -0.2em;
+        font-size: 7vw;
+    }
+
+    .text-drop,
+    .stripped-effect-text::before,
+    .stripped-effect-text::after{
+        font-size: 13vw;
+    }
+    #by-valentin{
+        font-size:5vw;
+        top: 2em;
+        left: -1.5em;
+    }
+    .contact-me-button{
+        left: 50%;
+        width: 50vw;
+        
+    }
+    .text-contact-me{
+        font-size: 8vw;
+    }
+    .contact-me-button:hover .alt-text-contact-me {
+        font-size: 6vw;
+    }
 }
