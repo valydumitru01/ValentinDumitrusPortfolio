@@ -6,9 +6,11 @@
 @import url("pages/myprojects.css");
 @import url("imageviewer.css");
 @import url("pages/myexperience.css");
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: 'Titillium Web';
     font-size: 1.3em;
@@ -52,30 +54,36 @@ h5 {
     font-weight: 400;
     src: local('Brittany Signature'), url('../fonts/BrittanySignature-LjyZ.woff') format('woff');
 }
+
 @font-face {
     font-family: 'Shell Roundhand';
     font-style: normal;
     font-weight: 400;
     src: local('Shell Roundhand'), url('../fonts/Snell\ Roundhand\ LT\ W01\ Script.woff') format('woff');
 }
+
 @font-face {
     font-family: 'Titillium Web';
     font-style: normal;
     font-weight: 400;
     src: local('Titillium Web'), url('../fonts/titillium-web-v15-latin-regular.woff') format('woff');
 }
-.text-note{
+
+.text-note {
     font-style: italic;
     text-align: right;
 }
-a{
-    
-    color: rgb(147, 148, 152);
-    text-shadow: 1px 1px 0 black
-}
-a:hover{
-    
+
+a {
+
     color: black;
-    text-shadow: 1px 1px 0 rgb(147, 148, 152);
-    
+    text-shadow: 1px 1px 0 white,1px 1px 1px white
+}
+
+a:hover {
+
+    color: black;
+    text-shadow: 1px 1px 0 white, 
+        1px 1px 1px rgb(207, 233, 236),
+        1px 1px 1px black
 }
