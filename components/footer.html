@@ -2,11 +2,12 @@
     <div class="container p-4 pb-0">
         
         <section class="mb-4 contact-container">
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-                <i class="fab fa-facebook-f contact-logo"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" id="phone-button" href="tel:+34651953462" role="button">
+                <i class="fa fa-phone contact-logo"></i></a>
 
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-                <i class="fab fa-twitter contact-logo"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/valentindmtr115" role="button">
+                <i class="fab fa-twitter contact-logo"></i>
+            </a>
 
             <a class="btn btn-outline-light btn-floating m-1" href="mailto:valentindmtr115@email.com" data-rel="external" role="button">
                 <i class="fa fa-envelope contact-logo"></i></a>
@@ -29,3 +30,11 @@
     filter: drop-shadow(1px 1px 11px rgb(255, 255, 255));" src="media/brands/jquery.png" alt="javascript brand logo">
     </div>
 </div>
+<script>
+    $("#phone-button").mouseover(()=>{
+        $(".fa-phone").html("+34651953462")
+    })
+    $("#phone-button").mouseout(()=>{
+        $(".fa-phone").html("")
+    })
+</script>

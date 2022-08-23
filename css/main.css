@@ -77,13 +77,17 @@ h5 {
 a {
 
     color: black;
-    text-shadow: 1px 1px 0 white,1px 1px 1px white
+    text-shadow:    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
 }
 
 a:hover {
 
     color: black;
-    text-shadow: 1px 1px 0 white, 
-        1px 1px 1px rgb(207, 233, 236),
-        1px 1px 1px black
+    text-shadow:    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
 }
