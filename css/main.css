@@ -6,7 +6,7 @@
 @import url("pages/myprojects.css");
 @import url("imageviewer.css");
 @import url("pages/myexperience.css");
-
+@import url("pages/myskills.css");
 html {
     scroll-behavior: smooth;
 }
@@ -77,17 +77,17 @@ h5 {
 a {
 
     color: black;
-    text-shadow:    -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;
+    text-shadow: -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white
 }
 
 a:hover {
 
-    color: black;
-    text-shadow:    -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;
+    color: white;
+    text-shadow: -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
 }

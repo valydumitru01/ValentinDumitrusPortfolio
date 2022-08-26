@@ -6,21 +6,33 @@
 </p>
 <div style="display: flex; justify-content: center; flex-wrap: wrap;">
 
-  <div id="skill-graph">
+  <div class="programming-bar-graph" id="skill-graph">
 
   </div>
-  <div id="preference-graph">
+  <div class="programming-bar-graph" id="preference-graph">
 
   </div>
+
+  <div class="modal">
+
+  </div>
+
 </div>
 
-<script >
-  var resize=()=>{
-    var graph_factory=new GraphFactory();
-  graph_factory.drawEverything();
+<script>
+  var resize = () => {
+    var graph_factory = new GraphFactory();
+    graph_factory.drawEverything();
   }
-  var graph_factory=new GraphFactory();
+  var graph_factory = new GraphFactory();
   graph_factory.drawEverything();
 
-  window.onresize=resize
+  window.onresize = resize
+
+
+
+
+
+
+
 </script>
