@@ -7,6 +7,7 @@
 @import url("imageviewer.css");
 @import url("pages/myexperience.css");
 @import url("pages/myskills.css");
+
 html {
     scroll-behavior: smooth;
 }
@@ -74,20 +75,41 @@ h5 {
     text-align: right;
 }
 
-a {
-
+a,
+.black-white-text {
     color: black;
-    text-shadow: -1px -1px 0 white,
-        1px -1px 0 white,
-        -1px 1px 0 white,
-        1px 1px 0 white
+    text-shadow: -1px 0 0 white,
+        1px 0 0 white,
+        0 1px 0 white,
+        0 -1px 0 white
+}
+.black-white-text{
+    letter-spacing: 0.08em;
+}
+a:hover,.black-white-text-hover:hover{
+    color: white;
+    text-shadow: -1px 0 0 black,
+        1px 0 0 black,
+        0 1px 0 black,
+        0 -1px 0 black
 }
 
-a:hover {
 
-    color: white;
-    text-shadow: -1px -1px 0 black,
-        1px -1px 0 black,
-        -1px 1px 0 black,
-        1px 1px 0 black;
+::-webkit-scrollbar-track
+{
+	border: 0.2em solid black;
+	background-color: rgb(33, 37, 41);
+}
+
+::-webkit-scrollbar
+{
+	width: 0.6em;
+	background-color: rgb(33, 37, 41);
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: white;
+	border-radius: 5px;
+    border: 0.1em solid black
 }

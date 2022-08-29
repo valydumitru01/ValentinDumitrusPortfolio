@@ -1,23 +1,63 @@
-<h2 style="text-align: center;">
-  Programming Languages
-</h2>
-<p style="margin-left: 10%;">
-  This is (more or less) the graphs explaining my ability of a specific programming language.
-</p>
 <div style="display: flex; justify-content: center; flex-wrap: wrap;">
-
-  <div class="programming-bar-graph" id="skill-graph">
+  <div>
+    <h2 class="graph-title" style="text-align: center;">
+      Programming Languages
+    </h2>
+    <p style="text-align: center;">
+      Click on the bars to see what tools I uses within the languages
+    </p>
+  </div>
+  <div id="prog-lang-graph">
 
   </div>
-  <div class="programming-bar-graph" id="preference-graph">
+  <div>
+    <h2 class="graph-title" style="text-align: center;">
+      Integrated Development Environments (IDEs)
+    </h2>
+    <p style="text-align: center;">
+      Click on the bars to see what I used them for
+    </p>
+  </div>
+  <div id="ides-graph">
+
+  </div>
+  <h2 class="graph-title" style="text-align: center;">
+    Software Tools
+  </h2>
+  <div class="programming-bar-graph" id="tools-graph">
 
   </div>
 
+
+  <div class="graphs-together">
+    <div>
+
+      <h2 class="graph-title" style="text-align: center;">
+        Web Development
+      </h2>
+      <div id="frontend-backend-graph">
+
+      </div>
+    </div>
+    <div>
+      <h2 class="graph-title" style="text-align: center;">
+        Language Level
+      </h2>
+      <div id="language-graph">
+
+      </div>
+      <div id="language-legend" style="font-size: 0.7em;">
+
+      </div>
+    </div>
+  </div>
   <div class="modal">
 
   </div>
 
 </div>
+
+
 
 <script>
   var resize = () => {
@@ -28,11 +68,5 @@
   graph_factory.drawEverything();
 
   window.onresize = resize
-
-
-
-
-
-
 
 </script>

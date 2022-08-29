@@ -12,6 +12,9 @@
 .project-card .card-text{
     text-align: justify;
 }
+.card{
+    border-color: rgb(33, 37, 41);
+}
 @media only screen and (max-width: 1500px) {
     #projects-container {
         grid-template-columns: 1fr 1fr;
