@@ -54,7 +54,12 @@
     padding-bottom: 0.2em;
     
 }
-
+@media only screen and (max-width: 1000px) {
+    .tile {
+        padding-left: 0.4em;
+        padding-right: 0.4em;  
+    }
+}
 #yin-yang {
     height: 5em;
     position: relative;
@@ -172,8 +177,7 @@
 }
 
 
-@media only screen and (max-width: 1000px) {
-}
+
 .frame:before {
     border-radius: 2px;
     bottom: -2vmin;
