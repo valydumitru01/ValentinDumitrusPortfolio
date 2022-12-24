@@ -16,7 +16,7 @@
     top: 0;
     right: 0%;
     -webkit-filter: drop-shadow(10px 10px 10px #222);
-    filter: drop-shadow(10px 10px 10px #222);
+    filter: drop-shadow(10px 10px 10px rgb(34, 34, 34));
 
 }
 

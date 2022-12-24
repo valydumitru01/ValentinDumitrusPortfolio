@@ -1,5 +1,9 @@
 #home-content {
     overflow: hidden;
+    margin-left: 15vw;
+    margin-right: 20vw;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
 }
 
 #home-page {
@@ -7,7 +11,7 @@
 }
 
 /* ------ Contact me Button -------*/
-#google-icon-contact-me {
+#icon-contact-me {
     opacity: 0.3;
     display: none;
     position: absolute;
@@ -16,14 +20,17 @@
     top: 5%;
     left: 5%;
 }
-
+.text-contact-me{
+    position: relative;
+    bottom: 20%;
+}
 .contact-me-button:hover .alt-text-contact-me {
     display: inherit;
     font-size: 3vw;
 
 }
 
-.contact-me-button:hover #google-icon-contact-me {
+.contact-me-button:hover #icon-contact-me {
     display: inherit;
 }
 
@@ -36,15 +43,19 @@
     padding-left: 1em;
     align-items: center;
     animation: 1s fade-in forwards;
+    padding-top: 20%;
+    padding-bottom: 20%;
 }
-
+.alt-text-contact-me{
+    display: none;
+}
 .contact-me-button,
 .contact-me-button::after {
     overflow: hidden;
     width: max-content;
     min-width: 40vw;
-    height: 10vh;
-    font-size: 4vw;
+    height: min-content;
+    font-size: 5vw;
     padding-bottom: 0.5vh;
 
     padding-top: 0.5vh;
@@ -79,7 +90,7 @@
     --slice-5: inset(80% -6px 5% 0);
 
     content: 'CONTACT ME!';
-    font-size: 4vw;
+    font-size: 4em;
     display: block;
     position: absolute;
     top: 0;
@@ -381,7 +392,7 @@
     left: -1%;
 }
 
-/* ---------- Falling text effect ----------*/
+/* ---------------------- Falling text effect ------------------*/
 @keyframes drop {
     0% {
         transform: translateY(-200px) scaleY(0.9);
@@ -468,13 +479,19 @@
     ;
     animation-delay: 1.6s;
 }
-
+/* -----------------------------Adaptablity-------------------------------*/
 @media only screen and (max-width: 1500px) {
     .deconstructed {
-
         font-size: 15vw;
     }
-
+    #home-content {
+        overflow: hidden;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-bottom: 3vh;
+        margin-top: 3vh;
+    }
+    
     #to-my {
         position: relative;
         top: -0.2em;
@@ -483,20 +500,25 @@
 
     .text-drop,
     .stripped-effect-text::before,
-    .stripped-effect-text::after{
+    .stripped-effect-text::after {
         font-size: 10vw;
     }
-    #by-valentin{
-        font-size: 4vw; bottom: -1em;
+
+    #by-valentin {
+        font-size: 4vw;
+        bottom: -1em;
     }
-    .contact-me-button{
+
+    .contact-me-button {
         left: 50%;
         width: 50vw;
-        
+
     }
-    .text-contact-me{
-        font-size: 6vw;
+
+    .text-contact-me {
+        /*font-size: 4vw;*/
     }
+
     .contact-me-button:hover .alt-text-contact-me {
         font-size: 6vw;
     }
@@ -516,24 +538,30 @@
 
     .text-drop,
     .stripped-effect-text::before,
-    .stripped-effect-text::after{
+    .stripped-effect-text::after {
         font-size: 11vw;
     }
-    #by-valentin{
-        font-size:4vw;
+
+    #by-valentin {
+        font-size: 4vw;
         top: -0.4em;
         left: 1em;
         transform: rotate(0.1rad);
     }
-    .contact-me-button{
+
+    .contact-me-button {
         left: 50%;
         width: 50vw;
-        
+
     }
-    .text-contact-me{
-        font-size: 8vw;
+
+    .text-contact-me {
+        /*font-size: 6vw;*/
     }
+
     .contact-me-button:hover .alt-text-contact-me {
         font-size: 6vw;
     }
 }
+
+
