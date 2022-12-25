@@ -7,15 +7,25 @@
 @import url("pages/myexperience.css");
 @import url("pages/myskills.css");
 
+/* ------------- Scroll smoothing -------------- */
 html {
     scroll-behavior: smooth;
 }
 
+
+/* ------------- General font for text -------------- */
 body {
     font-family: 'Titillium Web';
     font-size: 1.3em;
 }
+/*  Body fill the screen, footer remains at the bottom  
+    in case of the screen is stretched out  */
+#body{
+    min-height: 66vh;
+}
 
+
+/*
 @keyframes rotation {
     from {
         transform: rotate(0deg);
@@ -29,6 +39,7 @@ body {
 .rotate {
     animation: rotation 8s infinite linear;
 }
+*/
 
 h1,
 h2 {
@@ -48,6 +59,41 @@ h5 {
     margin: 0 0 1em;
 }
 
+.text-note {
+    font-style: italic;
+    text-align: right;
+}
+
+
+
+
+/* ------------- Link style in general texts -------------- */
+
+
+a,
+.black-white-text {
+    color: black;
+    text-shadow: -1px 0 0 white,
+        1px 0 0 white,
+        0 1px 0 white,
+        0 -1px 0 white
+}
+.black-white-text{
+    letter-spacing: 0.08em;
+}
+a:hover,.black-white-text-hover:hover{
+    color: white;
+    text-shadow: -1px 0 0 black,
+        1px 0 0 black,
+        0 1px 0 black,
+        0 -1px 0 black
+}
+
+
+
+
+/* ------------- Font loading -------------- */
+ 
 @font-face {
     font-family: 'Brittany Signature';
     font-style: normal;
@@ -69,30 +115,8 @@ h5 {
     src: local('Titillium Web'), url('../fonts/titillium-web-v15-latin-regular.woff') format('woff');
 }
 
-.text-note {
-    font-style: italic;
-    text-align: right;
-}
 
-a,
-.black-white-text {
-    color: black;
-    text-shadow: -1px 0 0 white,
-        1px 0 0 white,
-        0 1px 0 white,
-        0 -1px 0 white
-}
-.black-white-text{
-    letter-spacing: 0.08em;
-}
-a:hover,.black-white-text-hover:hover{
-    color: white;
-    text-shadow: -1px 0 0 black,
-        1px 0 0 black,
-        0 1px 0 black,
-        0 -1px 0 black
-}
-
+/* ------------- Scrollbar  -------------- */
 
 ::-webkit-scrollbar-track
 {

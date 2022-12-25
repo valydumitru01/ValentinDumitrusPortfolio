@@ -1,46 +1,40 @@
-.custom-toggler.navbar-toggler {
+.custom-toggler .navbar-toggler {
     border-width: 0.1em;
-    border-color: rgb(126, 126, 126);
+    border-color: white;
 }
-
-
 
 #header {
     position: relative;
     margin: 0;
 }
-
-#cool-gear {
-    position: absolute;
-    overflow: visible;
-    top: 0;
-    right: 0%;
-    -webkit-filter: drop-shadow(10px 10px 10px #222);
-    filter: drop-shadow(10px 10px 10px rgb(34, 34, 34));
-
+#portfolio-title{
+    width:8em;
+    margin-right: 2em;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Shell Roundhand';
+    padding-top: 0.5em;
 }
 
-@media only screen and (max-width: 1500px) {
-    #cool-gear {
-        width: 30vw;
-    }
-
-}
-@media only screen and (max-width: 1500px) {
-    #cool-gear {
-        width: 30vw;
-    }
-
-}
-.nav-item:hover{
-    background-color: rgb(60, 68, 76);
+.nav-item:hover {
+    background-color: rgb(41, 50, 59);
     border-radius: 0.1em;
+    cursor: pointer;
 }
-.nav-item:active{
-    background-color: rgb(60, 68, 76);
+
+#portfolio-title:hover{
+    text-decoration: dotted;
+    font-weight: bold;
+    cursor: pointer;
 }
-.nav-item h2,nav a h2{
+
+.nav-item:active {
+    background-color: rgb(83, 92, 100);
+}
+
+.nav-item h2,
+nav a h2 {
     padding-left: 0.5em;
     padding-right: 0.5em;
-    margin:0 0 0 0;
+    margin: 0 0 0 0;
 }

@@ -18,5 +18,9 @@
     }
 }
 .footer-img{
-    width: 10vw;
+    width: 2em;
+}
+
+#footer{
+    height: 100%;
 }
