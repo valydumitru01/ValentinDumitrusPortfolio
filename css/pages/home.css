@@ -1,24 +1,24 @@
-#home-content {
-    overflow: hidden;
-    margin-left: 15vw;
-    margin-right: 20vw;
-    margin-bottom: 3vh;
-    margin-top: 3vh;
-}
 
 #home-page {
     overflow: hidden;
 }
 
 /* ------ Contact me Button -------*/
+.contact-me-button {
+    padding-left: 1em;
+    align-items: center;
+    animation: 1s fade-in forwards;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
 #icon-contact-me {
     opacity: 0.3;
     display: none;
     position: absolute;
-    font-size: 9vh;
+    font-size: 2.3em;
 
-    top: 5%;
-    left: 5%;
+    top: -5%;
+    left: 10%;
 }
 .text-contact-me{
     position: relative;
@@ -39,13 +39,7 @@
     width: 100%;
 }
 
-.contact-me-button {
-    padding-left: 1em;
-    align-items: center;
-    animation: 1s fade-in forwards;
-    padding-top: 20%;
-    padding-bottom: 20%;
-}
+
 .alt-text-contact-me{
     display: none;
 }
@@ -59,7 +53,7 @@
     padding-bottom: 0.5vh;
 
     padding-top: 0.5vh;
-    background: linear-gradient(45deg, transparent 5%, rgb(33, 37, 41) 5%);
+    background: linear-gradient(45deg, transparent 5%, black 5%);
     border: 0;
     color: #fff;
     letter-spacing: 3px;
@@ -161,6 +155,26 @@
     }
 }
 
+
+
+/*-------------------------------------------------------*/
+/*-------------------------------------------------------*/
+/*---------------------MAIN TEXT-------------------------*/
+/*-------------------------------------------------------*/
+/*-------------------------------------------------------*/
+#home-text {
+    overflow: hidden;
+    margin-left: 15vw;
+    margin-right: 20vw;
+    overflow: visible;
+}
+
+.centering-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 37em;
+}
 /*--------- Fade Text ---------*/
 
 #to-my {
@@ -177,6 +191,8 @@
     font-size: 3vw;
     transform: translate(60%, -240%) rotate(-12deg);
     position: relative;
+    bottom: -2em;
+    right: -10vw;
 
 }
 
@@ -481,17 +497,13 @@
 }
 /* -----------------------------Adaptablity-------------------------------*/
 @media only screen and (max-width: 1500px) {
+    #home-text {
+        overflow: visible;
+    }
+    
     .deconstructed {
         font-size: 15vw;
     }
-    #home-content {
-        overflow: hidden;
-        margin-left: 5vw;
-        margin-right: 5vw;
-        margin-bottom: 3vh;
-        margin-top: 3vh;
-    }
-    
     #to-my {
         position: relative;
         top: -0.2em;
@@ -506,7 +518,7 @@
 
     #by-valentin {
         font-size: 4vw;
-        bottom: -1em;
+        bottom: -2em;
     }
 
     .contact-me-button {
