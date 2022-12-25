@@ -1,42 +1,35 @@
-<nav style="font-size: 5vh;min-height: 7vh;  margin-right: 0; " class="navbar navbar-expand-lg  bg-dark">
-    <div class="container-fluid ">
-        <!-- Portfolio title -->
-        <p style="font-size: 0.5em" id="portfolio-title" class="text-white fw-bold" onclick="portfolio.goTo('home')">
-            Valentin Dumitru's Portfolio
-        </p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Portfolio title -->
+    <h2 class="text-white fw-bold" id="portfolio-title" onclick="portfolio.goTo('home')">Valentin Dumitru's Portfolio</h2>
 
-        <!-- Toggle button (only shows when window is narrow) -->
-        <button class="navbar-toggler custom-toggler" style="z-index: 1;" type="button" data-bs-toggle="collapse"
-            data-bs-target=".navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <!-- Nav options -->
-        <div class="collapse navbar-collapse navbarNavDropdown" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item ">
-                    <a class="nav-link text-white fw-bold" onclick="portfolio.goTo('aboutme')">
-                        <h2 class="text-white">About me</h2>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white fw-bold" onclick="portfolio.goTo('myexperience')">
-                        <h2 class="text-white">My Experience</h2>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white fw-bold" onclick="portfolio.goTo('myskills')">
-                        <h2 class="text-white">My Skills</h2>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white fw-bold" onclick="portfolio.goTo('myprojects')">
-                        <h2 class="text-white">My Projects</h2>
-                    </a>
-                </li>
-            </ul>
-        </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item ">
+                <a class="nav-link text-white fw-bold" onclick="portfolio.goTo('aboutme')">
+                    <h2 class="text-white">About me</h2>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white fw-bold" onclick="portfolio.goTo('myexperience')">
+                    <h2 class="text-white">My Experience</h2>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white fw-bold" onclick="portfolio.goTo('myskills')">
+                    <h2 class="text-white">My Skills</h2>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white fw-bold" onclick="portfolio.goTo('myprojects')">
+                    <h2 class="text-white">My Projects</h2>
+                </a>
+            </li>
+        </ul>
     </div>
 </nav>
 <!-- Page title (content changes dynamically) -->
