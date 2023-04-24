@@ -1,6 +1,6 @@
 .myexperiences {
-
   animation: fade_color 0.3s ease forwards;
+  min-height: 50em;
 }
 
 @keyframes fade_color {

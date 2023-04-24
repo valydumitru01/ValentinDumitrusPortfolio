@@ -14,13 +14,11 @@ html {
 
 
 /* ------------- General font for text -------------- */
-body {
-    font-family: 'Titillium Web';
-    font-size: 1.3em;
-}
 /*  Body fill the screen, footer remains at the bottom  
     in case of the screen is stretched out  */
 #body{
+    font-family: 'Titillium Web';
+    font-size: 1.3em;
     min-height: 66vh;
 }
 
@@ -72,17 +70,22 @@ h5 {
 
 a,
 .black-white-text {
-    color: black;
-    text-shadow: -1px 0 0 white,
-        1px 0 0 white,
-        0 1px 0 white,
-        0 -1px 0 white
+    color: black !important;
+    text-shadow:
+    -1px -1px 0 #ffffff,
+     0   -1px 0 #ffffff,
+     1px -1px 0 #ffffff,
+     1px  0   0 #ffffff,
+     1px  1px 0 #ffffff,
+     0    1px 0 #ffffff,
+    -1px  1px 0 #ffffff,
+    -1px  0   0 #ffffff;
 }
 .black-white-text{
     letter-spacing: 0.08em;
 }
 a:hover,.black-white-text-hover:hover{
-    color: white;
+    color: white !important;
     text-shadow: -1px 0 0 black,
         1px 0 0 black,
         0 1px 0 black,

@@ -1,100 +1,96 @@
+/*----------------- tabs -------------------*/
+input {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #bbb;
+    border: 1px solid transparent;
+}
+
+label:hover {
+    color: #888;
+    cursor: pointer;
+}
+
+input:checked+label {
+    color: rgb(37, 37, 37);
+    border: 1px solid #ddd;
+    border-top: 2px solid rgb(0, 0, 0);
+    border-bottom: 1px solid #fff;
+}
+
+#tab1:checked~#content1,
+#tab2:checked~#content2,
+#tab3:checked~#content3,
+#tab4:checked~#content4 {
+    display: block;
+}
+
+.tabbed-text {
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #ddd;
+}
 
 
-/**----------------- Strengths and weaknesses table -------------------**/
 
-
-
-#strength-and-weaknesses-table {
+/*----------------- Strengths and weaknesses table -------------------*/
+.content-table {
     width: 100%;
-    width: 100%;
-
-
+    border: none;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-#strength-and-weaknesses-table-img {
-    background-repeat: no-repeat;
+.content-table thead tr {
+    background-color: black;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
 }
 
-.strength-tile {
-    background-color: white;
-    border-bottom: 0.1em solid rgb(33, 37, 41);
+.content-table th,
+.content-table td {
+    padding: 0.5em 0.5em;
 }
 
-.weakness-tile {
-    background-color: rgb(33, 37, 41);
-    color: white;
-
-    border-bottom: 0.1em solid white;
+.content-table tbody tr {
+    border-bottom: 0.1em solid #dddddd;
 }
 
-#weakness-header-tile {
-    color: white;
-    background-color: rgb(33, 37, 41);
-    width: 50%;
-    border-bottom: 0.5em solid white;
-    border-top: 0.5em solid rgb(33, 37, 41);
+.content-table thead th:nth-of-type(even),
+.content-table tbody td:nth-of-type(even) {
+    text-align: right;
 }
 
-#strength-header-tile {
-    border-left: 0.5em solid rgb(33, 37, 41);
-    border-bottom: 0.5em solid rgb(33, 37, 41);
-    border-top: 0.5em solid rgb(33, 37, 41);
-    background-color: white;
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
 }
 
-#weakness-header-tile {
-    border-bottom: 0.5em solid white;
-    border-top: 0.5em solid rgb(33, 37, 41);
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid black;
 }
-
-.tile {
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    
-}
-@media only screen and (max-width: 1000px) {
-    .tile {
-        padding-left: 0.4em;
-        padding-right: 0.4em;  
-    }
-}
-#yin-yang {
-    height: 5em;
-    position: relative;
-    top: -5em;
-    -webkit-filter: drop-shadow(10px 10px 10px #222);
-    filter: drop-shadow(1px 1px 11px white);
-}
-
-#strengths-and-weaknesses-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: right;
-}
-
-.accordion-button:not(.collapsed) {
-    color: #0c63e4;
-    background-color: rgb(33, 37, 41);
-
-}
-
-.accordion-button:not(.collapsed) h2 {
-    color: white;
-}
-
-
-
 
 
 
 /**----------------- Portrait Frame -------------------**/
 
-#framed-picture{
+#framed-picture {
     padding-top: 4em;
     margin-top: 4em;
 }
+
 .paper {
     box-shadow: 0 0 0.5em 0 rgb(255, 255, 255);
     width: 100%;
@@ -143,16 +139,18 @@
     background: #fff;
     border-radius: 2px;
 }
-#ropes>*{
+
+#ropes>* {
     width: 13em;
     height: 0.6em;
     background-color: #222;
 }
 
-#rope_right{
+#rope_right {
     transform: translateX(30em) translateY(-1em) rotate(30deg)
 }
-#rope_left{
+
+#rope_left {
     transform: translateX(15em) translateY(-2em) rotate(-30deg)
 }
 
@@ -208,13 +206,14 @@
 @keyframes drop {
     0% {
         opacity: 0;
-        transform: translateY(-50%) rotate(0.1rad) rotate3d(1,0,0,90deg);;
+        transform: translateY(-50%) rotate(0.1rad) rotate3d(1, 0, 0, 90deg);
+        ;
         transform-origin: top center;
     }
 
 
     40% {
-        transform:  translateY(2%) rotate(0.1rad);
+        transform: translateY(2%) rotate(0.1rad);
         transform-origin: top center;
     }
 
@@ -257,80 +256,91 @@
         box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
     }
 }
-#signature{
+
+#signature {
     font-family: 'Brittany Signature';
     font-style: italic;
     position: relative;
-    top: -10%;
+    top: -15%;
     transform: rotate(-0.5rad);
-    right: 5%;
+    right: -20%;
     color: black;
     font-size: 1.3em;
 }
 
 @media only screen and (max-width: 1800px) {
-    .frame{
+    .frame {
         height: 60vh;
         width: 35vw;
     }
-    #signature{
+
+    #signature {
         top: -15%;
-        right: 5%;
         font-size: 1em;
     }
-    
+
 }
+
 @media only screen and (max-width: 1500px) {
-    .frame{
+    .frame {
         height: 60vh;
         width: 40vw;
     }
+
     
+
 }
+
 @media only screen and (max-width: 1300px) {
-    .frame{
+    .frame {
         height: 75vh;
         width: 60vw;
     }
     
 }
+
 @media only screen and (max-width: 1000px) {
-    .frame{
+    .frame {
         height: 60vh;
         width: 60vw;
     }
-    #signature{
+
+    #signature {
         top: -15%;
-        right: 5%;
         font-size: 1em;
     }
-    
+
 }
+
 @media only screen and (max-width: 800px) {
-    .frame{
+    .frame {
         height: 50vh;
         width: 60vw;
     }
 
-    
+
 }
+
 @media only screen and (max-width: 700px) {
-    .frame{
+    .frame {
         height: 40vh;
         width: 60vw;
     }
-
+    #signature {
+        font-size: 0.8em;
+    }
 }
+
 @media only screen and (max-width: 500px) {
-    .frame{
+    .frame {
         height: 35vh;
         width: 60vw;
     }
-    #signature{
+
+    #signature {
         top: -15%;
-        right: 5%;
         font-size: 0.7em;
     }
 
-    
+
 }
