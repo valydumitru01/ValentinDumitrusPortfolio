@@ -79,7 +79,7 @@ class GraphFactory {
                 ],
                 description: "",
                 preference_value: 100,
-                practice_value: 70,
+                practice_value: 100,
                 image_name: "c++"
             },
             {
