@@ -4,5 +4,7 @@
     c. Tools
 2. Add blender project
 2. Fix about me adaptability
-3. Change emoji funny background
-4. Make contact me links work
+5. Add more projects
+6. Fix "toScroll.js:476 [Intervention] Unable to preventDefault inside passive event listener due to target being
+treated as passive. See https://www.chromestatus.com/feature/6662647093133312" error in console when scrolling with
+middle mouse button

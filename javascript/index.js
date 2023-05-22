@@ -18,17 +18,25 @@ class Portfolio{
 
     loadPage(){
         if (history.state === null ) 
-        this.goTo('home')
-        console.log("HISTORY STATE: " + history.state)
-        
-        $("#body").empty()
-        $("#page-title").html("")
-        $("#body").load("components/pages/" + history.state + ".html", () => {
-            this.updateTitle()
-        })
+            this.goTo('home')
+
+        $("#body").load("components/pages/" + history.state + ".html",
+            () => {
+                this.updateTitle()
+            }
+        )
     }
     goTo(where) {
+        console.log("Going to " + where)
+        console.log("Old History state: " + history.state)
+        console.log(history)
+        if(where === "back"){
+            window.history.back()
+            this.loadPage()
+            return
+        }
         window.history.pushState(where, "", this.url);
+        console.log("New History state: " + history.state)
     
         $("#navbarNavDropdown").collapse('hide')
         //window.scroll({top: 180});
@@ -43,4 +51,4 @@ class Portfolio{
     }
 }
 
-var portfolio = new Portfolio()
+const portfolio = new Portfolio();
