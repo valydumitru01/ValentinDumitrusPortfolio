@@ -1,4 +1,5 @@
 /*----------------- tabs -------------------*/
+
 input {
     display: none;
 }
@@ -18,6 +19,7 @@ label:hover {
     color: #888;
     cursor: pointer;
 }
+
 @media screen and (max-width: 600px) {
     label {
         width: 100%;
@@ -25,11 +27,12 @@ label:hover {
         border-left: 1px solid #ddd;
         border-right: 1px solid #ddd;
     }
+
     label:hover {
         animation: rise-tab 0.3s ease-in-out forwards;
     }
 
-    input:checked+label {
+    input:checked + label {
         height: 4em;
     }
 
@@ -43,6 +46,7 @@ label:hover {
         height: 4em;
     }
 }
+
 @keyframes set-tab {
     0% {
         height: 4em;
@@ -51,7 +55,8 @@ label:hover {
         height: 3em;
     }
 }
-input:checked+label {
+
+input:checked + label {
     color: rgb(37, 37, 37);
     border-right: 1px solid #ddd;
     border-left: 1px solid #ddd;
@@ -59,10 +64,10 @@ input:checked+label {
     animation: widen 0.3s ease-in-out forwards;
 }
 
-#tab1:checked~#content1,
-#tab2:checked~#content2,
-#tab3:checked~#content3,
-#tab4:checked~#content4 {
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
     display: block;
 }
 
@@ -72,6 +77,7 @@ input:checked+label {
     border-top: 1px solid #ddd;
     animation: open-quality-text 0.3s ease-in-out forwards;
 }
+
 @keyframes open-quality-text {
     0% {
         font-size: 0;
@@ -128,8 +134,17 @@ input:checked+label {
 }
 
 
-
 /**----------------- Portrait Frame -------------------**/
+.frame-container {
+    text-align: center;
+    width: 99%;
+    margin: 1%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+}
 
 #framed-picture {
     padding-top: 4em;
@@ -185,7 +200,7 @@ input:checked+label {
     border-radius: 2px;
 }
 
-#ropes>* {
+#ropes > * {
     width: 13em;
     height: 0.6em;
     background-color: #222;
@@ -217,15 +232,10 @@ input:checked+label {
     position: relative;
     text-align: center;
 
-    width: 40vw;
-    min-width: 20em;
-    max-width: 30em;
+    width: 30em;
 
-    height: 75vh;
-    min-height: 30em;
-    max-height: 40em;
+    height: 37.5em;
 }
-
 
 
 .frame:before {
@@ -251,7 +261,7 @@ input:checked+label {
 }
 
 .falling-animation {
-    animation: drop 3s ease forwards, 1s ;
+    animation: drop 3s ease forwards, 1s;
     animation-iteration-count: initial;
 }
 
@@ -298,4 +308,16 @@ input:checked+label {
     right: -20%;
     color: black;
     font-size: 1.3em;
+}
+
+@media (max-width: 768px) {
+    .frame {
+        width: 20em;
+
+        height: 25em;
+    }
+
+    #signature {
+        font-size: 1em;
+    }
 }

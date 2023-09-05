@@ -4,16 +4,46 @@ class Portfolio{
     url = new URL(window.location)
     
     constructor() {
-        this.pageTitles['home'] = "Home"
-        this.pageTitles['aboutme'] = "About Me"
-        this.pageTitles['myexperience'] = "My Experience"
-        this.pageTitles['myprojects'] = "My Projects"
-        this.pageTitles['myskills'] = "My Skills"
+        this.pageTitles = {
+            'home': "Home",
+            'aboutme': "About Me",
+            'myexperience': "My Experience",
+            'myeducation': "My Education",
+            'myskills': "My Skills",
+            'myprojects': "My Projects",
+            'back': "Go Back",
+        }
 
-        $("#header").load("components/nav.html")
+        $("#header").load("components/nav.html", () => {
+            this.createNav();
+        })
         $("#footer").load("components/footer.html")
+        this.loadPage();
+    }
+    createNav() {
+        let navItems = Object.keys(this.pageTitles);
+        let navList = $(".navbar-nav");
 
-        this.loadPage()
+        navItems.forEach(item => {
+            // The back button is not a page
+            if (item === "back")
+                return
+            // Home can be accessed by clicking the logo
+            if(item === "home")
+                return
+
+
+            let listItem = $('<li>', { class: "nav-item" });
+            let link = $('<a>', {
+                class: "nav-link fw-bold",
+                onclick: `portfolio.goTo('${item}')`
+            });
+            let title = $('<h2>', { text: this.pageTitles[item] });
+
+            link.append(title);
+            listItem.append(link);
+            navList.append(listItem);
+        });
     }
 
     loadPage(){
@@ -25,29 +55,41 @@ class Portfolio{
                 this.updateTitle()
             }
         )
+        // Load dynamic css and js, the names of the files must be the same as the page
+        $("#dynamic-css").remove()
+        $("#dynamic-js").remove()
+
+        $('head')
+            // Load css
+            .append( $('<link rel="stylesheet" type="text/css" />')
+            .attr('href', "css/pages/" + history.state + ".css")
+            .attr('id', 'dynamic-css'))
+            // Load js
+            .append( $('<script type="text/javascript" />')
+            .attr('src', "javascript/pages/" + history.state + ".js")
+            .attr('id', 'dynamic-js')
+            .attr('async', true)
+        );
     }
     goTo(where) {
-        console.log("Going to " + where)
-        console.log("Old History state: " + history.state)
-        console.log(history)
         if(where === "back"){
             window.history.back()
             this.loadPage()
             return
         }
         window.history.pushState(where, "", this.url);
-        console.log("New History state: " + history.state)
-    
+
         $("#navbarNavDropdown").collapse('hide')
-        //window.scroll({top: 180});
         this.loadPage()
     
     }
     updateTitle(){
-        if (history.state !== "home")
-                $("#page-title").html(this.pageTitles[history.state])
-            else
-                $("#page-title").hide();
+        if (history.state !== "home"){
+            $("#title-container").show();
+            $("#main-title").text(this.pageTitles[history.state]);
+        }
+        else
+            $("#title-container").hide();
     }
 }
 

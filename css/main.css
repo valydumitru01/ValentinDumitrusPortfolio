@@ -1,11 +1,6 @@
 @import url("footer.css");
 @import url("nav.css");
-@import url("pages/home.css");
-@import url("pages/aboutme.css");
-@import url("pages/myprojects.css");
 @import url("imageviewer.css");
-@import url("pages/myexperience.css");
-@import url("pages/myskills.css");
 
 /* ------------- Scroll smoothing -------------- */
 html {
@@ -20,24 +15,17 @@ html {
     font-family: 'Titillium Web';
     font-size: 1.3em;
     min-height: 66vh;
+
+
+    padding-top: 2em;
+    margin: auto;
+    text-align: justify;
+
+    /* Center things, make the page stay in the middle */
+    width: 75%;
+    max-width: 50em;
 }
 
-
-/*
-@keyframes rotation {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(359deg);
-    }
-}
-
-.rotate {
-    animation: rotation 8s infinite linear;
-}
-*/
 
 h1,
 h2 {

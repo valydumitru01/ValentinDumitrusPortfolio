@@ -1,0 +1,76 @@
+{
+  "projects": [
+    {
+      "title": "TeraBox game",
+      "description": "Game made in the subject Software de Entretenimiento y Videojuegos (Software of Entertainment and Videogames)",
+      "img": "media/project_cards/terabox_title.png",
+      "link": null,
+      "downloadLink": "download/TeraBox.zip",
+      "moreDetailsLink": null
+    },
+    {
+      "title": "Rock Shop Web",
+      "description": "Website E-Commerce made with MERN stack. Developed with a team of 4 including me during the subject of Arquitectura de Software (Software Architecture)",
+      "img": "media/project_cards/rockshop_logo.png",
+      "link": "https://dede-es1a-webapp.herokuapp.com/home",
+      "downloadLink": null,
+      "moreDetailsLink": null
+    },
+    {
+      "title": "Labyrinth Game",
+      "description": "Mini game made on Canvas element with javascript. Developed during the subject of Software y Estándares para la Web (Web Software and Standards)",
+      "img": "media/project_cards/labyrinth_game.png",
+      "link": "https://valydumitru01.github.io/SEW/P-JS/Ej-14/Ejercicio14.html",
+      "downloadLink": null,
+      "moreDetailsLink": null
+    },
+    {
+      "title": "Weather Tool",
+      "description": "Weather tool which allows the user to click on a point in the map to see how is the exact weather in that position. Developed during the subject of Software y Estándares para la Web (Web Software and Standards)",
+      "img": "media/project_cards/weather_picker.png",
+      "link": "https://valydumitru01.github.io/SEW/P-JS/Ej-11/Tarea-6/Ejercicio11_Tarea6.html",
+      "downloadLink": null,
+      "moreDetailsLink": null
+    },
+    {
+      "title": "Maple Lenguage",
+      "description": "Lexical analysis, syntactic analysis, memory management and code generation of MAPL code. Project developed during the subject Diseño de Lenguajes de Programación (Programming Languages Design)",
+      "img": "media/project_cards/maple_lenguage.jpg",
+      "link": null,
+      "downloadLink": null,
+      "moreDetailsLink": null
+    },
+    {
+      "title": "My Portfolio",
+      "description": "Website made with HTML, Javascript, Bootstrap and JQuery. Developed by myself during a summer to show my work.",
+      "img": "media/project_cards/my_portfolio.png",
+      "link": null,
+      "downloadLink": null,
+      "moreDetailsLink": null
+    },
+    {
+      "title": "OpenGL Project",
+      "description": "C++ OpenGL project developed with the intend of creating a 2D Videogame Engine. It's heavily focused on documentation, investigation, good programming practices and future changes. Developed mostly by myself with the help of some friends during a summer. Work In Progress.",
+      "img": "media/project_cards/opengl_triangle.gif",
+      "link": null,
+      "downloadLink": null,
+      "moreDetailsLink": null
+    },
+    {
+      "title": "Blender Projects",
+      "description": "3D renders made with blender for artistic purposes. Developed during my free time, and it started before I began going to university.",
+      "img": "media/aboutme/blender/room.png",
+      "link": null,
+      "downloadLink": null,
+      "moreDetailsLink": null
+    },
+    {
+      "title": "And More...",
+      "description": "Many other small projects were done during my career. Some as hard as the other ones, but not as attractive and visual. Here I explain the most important not so important projects.",
+      "img": "media/project_cards/random_picture_for_more.jpg",
+      "link": null,
+      "downloadLink": null,
+      "moreDetailsLink": null
+    }
+  ]
+}

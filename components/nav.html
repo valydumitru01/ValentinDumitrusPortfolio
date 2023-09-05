@@ -4,40 +4,21 @@
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon" ></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-            <li class="nav-item ">
-                <a class="nav-link text-white fw-bold" onclick="portfolio.goTo('aboutme')">
-                    <h2 class="text-white">About me</h2>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white fw-bold" onclick="portfolio.goTo('myexperience')">
-                    <h2 class="text-white">My Experience</h2>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white fw-bold" onclick="portfolio.goTo('myskills')">
-                    <h2 class="text-white">My Skills</h2>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white fw-bold" onclick="portfolio.goTo('myprojects')">
-                    <h2 class="text-white">My Projects</h2>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white fw-bold" onclick="portfolio.goTo('back')">
-                    <h2 class="text-white">Go Back</h2>
-                </a>
-            </li>
+        <ul class="navbar-nav" >
+            <!-- Items are generated dynamically -->
         </ul>
     </div>
 </nav>
-<!-- Page title (content changes dynamically) -->
-<h1 style="font-size: 5vw;padding-bottom: 1em;padding-top: 1em;margin-bottom: 0;position: relative; padding-left: 1em;"
-    class="bg-dark text-white" id="main-title">
+
+<h1 class="bg-dark text-white" id="title-container">
+    <i class="fa fa-arrow-alt-circle-left" id="go-back-arrow" onclick="portfolio.goTo('home')" role="button">
+    </i>
+    <span id="go-back-text"></span>
+    <span id="main-title">
+        <!-- Title is generated dynamically -->
+    </span>
 </h1>
