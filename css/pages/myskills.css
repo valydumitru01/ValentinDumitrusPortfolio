@@ -1,8 +1,8 @@
-.graphs-together {
+.two-rows {
     width: 100%;
     display: flex;
 }
-.graphs-together div{
+.two-rows div{
     width: 50%;
 }
 #frontend-backend-graph{

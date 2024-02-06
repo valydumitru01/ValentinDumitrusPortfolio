@@ -1,13 +1,22 @@
 {
   "experiences": [
     {
-      "icon": "fa-school",
+      "icon": "fa-user-graduate",
       "period": {
-        "start": "2013",
-        "end": "2017"
+        "start": "20??",
+        "end": "20??"
       },
-      "title": "High School",
-      "description": "Done in Oviedo, Spain. Started in IES Río Nalón. Finished in IES Alfonso II."
+      "title": "INCOMING: Master's in Video game/Graphics Computer Science",
+      "description": "Incoming"
+    },
+    {
+      "icon": "fa-graduation-cap",
+      "period": {
+        "start": "2019",
+        "end": "2023"
+      },
+      "title": "Software Engineering Degree",
+      "description": "Degree coursed in Oviedo, Spain. Finished with average grade of 7.1 / 10. GPA score of 2.7. <a href='https://ingenieriainformatica.uniovi.es'>Uniovi software engineering official website.</a>"
     },
     {
       "icon": "fa-school-flag",
@@ -19,22 +28,15 @@
       "description": "Finished in Oviedo, Spain, in Alfonso II high school."
     },
     {
-      "icon": "fa-graduation-cap",
+      "icon": "fa-school",
       "period": {
-        "start": "2019",
-        "end": "2023"
+        "start": "2013",
+        "end": "2017"
       },
-      "title": "Software Engineering Degree",
-      "description": "Degree coursed in Oviedo, Spain. Finished with average grade of 7.1 / 10. GPA score of 2.7. No repeated year. <a href='https://ingenieriainformatica.uniovi.es'>Uniovi software engineering website.</a>"
-    },
-    {
-      "icon": "fa-user-graduate",
-      "period": {
-        "start": "20??",
-        "end": "20??"
-      },
-      "title": "INCOMING: Video game/Graphics Computer Science",
-      "description": "Hopefully"
+      "title": "High School",
+      "description": "Done in Oviedo, Spain. Started in IES Río Nalón. Finished in IES Alfonso II."
     }
+
+
   ]
 }

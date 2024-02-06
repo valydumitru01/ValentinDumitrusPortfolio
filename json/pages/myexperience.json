@@ -1,0 +1,40 @@
+{
+  "experiences": [
+    {
+      "icon": "fa-briefcase",
+      "period": {
+        "start": "Feb. 2023",
+        "end": "Apr. 2023"
+      },
+      "title": "Inetum Outsystems - Internship",
+      "description": "My main job here was full stack developer, working with Outsystems, a low-code platform for easy development and deployment. "
+    },
+    {
+      "icon": "fa-terminal",
+      "period": {
+        "start": "Jan. 2023",
+        "end": "Mar. 2023"
+      },
+      "title": "Linux Bash Tutor",
+      "description": "I helped a student of first year of system administration with basic/intermediate Linux Bash commands and scripts."
+    },
+    {
+      "icon": "fa-calculator",
+      "period": {
+        "start": "Jan. 2021",
+        "end": "Jan. 2022"
+      },
+      "title": "Math Tutor",
+      "description": "I helped a 4th year of high school student throughout his academic year."
+    },
+    {
+      "icon": "fa-desktop",
+      "period": {
+        "start": "2021",
+        "end": "2022"
+      },
+      "title": "Basic IT Tutor",
+      "description": "I did some basic IT classes for people who needed them. They were mostly oldish people who needed some actualization."
+    }
+  ]
+}

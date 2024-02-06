@@ -1,4 +1,3 @@
-
 function generateEducationHTML(educationJson) {
     let html = '';
 
@@ -23,6 +22,7 @@ function generateEducationHTML(educationJson) {
 
     return html;
 }
+
 function generateRandomPositionsForIcons() {
     let i = 0;
     let baseTop = 10;
@@ -30,16 +30,16 @@ function generateRandomPositionsForIcons() {
     let baseLeftForEven = 10;
     let baseLeftForOdd = 73;
 
-    $('.education-background-icon').each(function() {
+    $('.education-background-icon').each(function () {
         let randomAdjustment = Math.random() * 5;
         let randomRotation = Math.floor(Math.random() * 360) + 'deg';
         let randomFontSize = Math.floor(baseFontSize + Math.random() * 3) + 'vw';
 
-        let randomTop = Math.floor(baseTop + (1+i)*10 + randomAdjustment) + 'vh';
+        let randomTop = Math.floor(baseTop + (1 + i) * 10 + randomAdjustment) + 'vh';
         let randomLeft;
         let animation;
 
-        if(i % 2 === 0) {
+        if (i % 2 === 0) {
             randomLeft = Math.floor(Math.random() * baseLeftForEven) + 'vw';
             animation = 'move_right_to_left_icons 1s ease forwards';
         } else {
@@ -59,14 +59,12 @@ function generateRandomPositionsForIcons() {
     });
 }
 
-$.getJSON('/json/pages/myeducation.json', function(jsonData) {
+$.getJSON('/json/pages/myeducation.json', function (jsonData) {
     let html = generateEducationHTML(jsonData);
+    generateRandomPositionsForIcons();
     $('.main-timeline').html(html);
-}).fail(function(jqxhr, textStatus, error) {
+}).fail(function (jqxhr, textStatus, error) {
     let err = textStatus + ", " + error;
     console.log("Request Failed: " + err);
 });
 
-$(document).ready(function() {
-    generateRandomPositionsForIcons();
-});

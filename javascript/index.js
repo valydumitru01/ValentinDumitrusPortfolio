@@ -64,6 +64,7 @@ class Portfolio{
             .append( $('<link rel="stylesheet" type="text/css" />')
             .attr('href', "css/pages/" + history.state + ".css")
             .attr('id', 'dynamic-css'))
+
             // Load js
             .append( $('<script type="text/javascript" />')
             .attr('src', "javascript/pages/" + history.state + ".js")

@@ -6,15 +6,15 @@
       "img": "media/project_cards/terabox_title.png",
       "link": null,
       "downloadLink": "download/TeraBox.zip",
-      "moreDetailsLink": null
+      "moreDetailsInfo": null
     },
     {
       "title": "Rock Shop Web",
       "description": "Website E-Commerce made with MERN stack. Developed with a team of 4 including me during the subject of Arquitectura de Software (Software Architecture)",
       "img": "media/project_cards/rockshop_logo.png",
-      "link": "https://dede-es1a-webapp.herokuapp.com/home",
+      "link": null,
       "downloadLink": null,
-      "moreDetailsLink": null
+      "moreDetailsInfo": null
     },
     {
       "title": "Labyrinth Game",
@@ -22,7 +22,7 @@
       "img": "media/project_cards/labyrinth_game.png",
       "link": "https://valydumitru01.github.io/SEW/P-JS/Ej-14/Ejercicio14.html",
       "downloadLink": null,
-      "moreDetailsLink": null
+      "moreDetailsInfo": null
     },
     {
       "title": "Weather Tool",
@@ -30,7 +30,7 @@
       "img": "media/project_cards/weather_picker.png",
       "link": "https://valydumitru01.github.io/SEW/P-JS/Ej-11/Tarea-6/Ejercicio11_Tarea6.html",
       "downloadLink": null,
-      "moreDetailsLink": null
+      "moreDetailsInfo": null
     },
     {
       "title": "Maple Lenguage",
@@ -38,23 +38,24 @@
       "img": "media/project_cards/maple_lenguage.jpg",
       "link": null,
       "downloadLink": null,
-      "moreDetailsLink": null
+      "moreDetailsInfo": null
     },
     {
       "title": "My Portfolio",
       "description": "Website made with HTML, Javascript, Bootstrap and JQuery. Developed by myself during a summer to show my work.",
       "img": "media/project_cards/my_portfolio.png",
-      "link": null,
+      "link": "https://valydumitru01.github.io/ValentinDumitrusPortfolio/",
       "downloadLink": null,
-      "moreDetailsLink": null
+      "moreDetailsInfo": null
     },
     {
-      "title": "OpenGL Project",
-      "description": "C++ OpenGL project developed with the intend of creating a 2D Videogame Engine. It's heavily focused on documentation, investigation, good programming practices and future changes. Developed mostly by myself with the help of some friends during a summer. Work In Progress.",
+      "title": "Final Degree Project",
+      "description": "3D Game Engine with ECS Architecture: The project is a custom, simple, game engine written in C++ with SDL and OpenGL. It included a ECS architecture over some subsystems, mainly a graphic engine, a physics engine, an input engine and a custom console. One of the hardest tasks was fully developing and testing a custom header only math library for it. Another hard task was developing and testing an interface to decouple OpenGL from the graphic engine, to allow a possible API swap in the future.",
       "img": "media/project_cards/opengl_triangle.gif",
       "link": null,
+      "githubLink": null,
       "downloadLink": null,
-      "moreDetailsLink": null
+      "moreDetailsInfo": null
     },
     {
       "title": "Blender Projects",
@@ -62,7 +63,7 @@
       "img": "media/aboutme/blender/room.png",
       "link": null,
       "downloadLink": null,
-      "moreDetailsLink": null
+      "moreDetailsInfo": null
     },
     {
       "title": "And More...",
@@ -70,7 +71,7 @@
       "img": "media/project_cards/random_picture_for_more.jpg",
       "link": null,
       "downloadLink": null,
-      "moreDetailsLink": null
+      "moreDetailsInfo": null
     }
   ]
 }

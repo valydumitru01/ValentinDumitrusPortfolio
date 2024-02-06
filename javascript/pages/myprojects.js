@@ -1,4 +1,5 @@
-class ProjectCarouselItem {
+
+var ProjectCarouselItem = class ProjectCarouselItem {
     constructor(project, active = false) {
         this.project = project;
         this.active = active;
@@ -24,23 +25,35 @@ class ProjectCarouselItem {
         upperBand.append(title);
         return upperBand;
     }
+
+
     getLowerBand() {
         let lowerBand = $("<div class='carousel-lower-band align-items-center justify-content-between'></div>");
         let description = $("<p class='carousel-description text-white'>" + this.project.description + "</p>");
         lowerBand.append(description);
 
         let buttons = $("<div class='carousel-buttons'></div>");
-        let moreDetails = $("<a href='" + this.project.moreDetailsLink + "' class='btn btn-light'>" +
-            "More Details <i class=\"fas fa-info-circle\"></i>" +
-            "</a>");
-
-        buttons.append(moreDetails);
+        if (this.project.moreDetailsInfo){
+            let moreDetailsInfo = $("<button onclick='this.openMoreInfo(${this.project.moreDetailsInfo})' class='btn btn-light'>" +
+                "More Details <i class=\"fas fa-info-circle\"></i>" +
+                "</button>");
+            buttons.append(moreDetailsInfo);
+        }
         if (this.project.downloadLink) {
             let download = $("<a href='" + this.project.downloadLink + "' class='btn btn-light' download>" +
                 "Download Here! <i class='fas fa-download'></i>" +
                 "</a>");
             buttons.append(download);
         }
+
+        if (this.project.link){
+            let link = $("<a href='" + this.project.link + "' class='btn btn-light'>" +
+                "Visit Site <i class='fas fa-external-link-alt'></i>" +
+                "</a>");
+            buttons.append(link);
+        }
+
+
 
         lowerBand.append(buttons);
         return lowerBand;
@@ -51,7 +64,8 @@ class ProjectCarouselItem {
     }
 }
 
-class ProjectCarousel {
+
+var ProjectCarousel = class ProjectCarousel {
     constructor(projects) {
         this.projects = projects;
         this.carouselItems = [];
@@ -136,21 +150,20 @@ class ProjectCarousel {
             // Add active class to the new active thumbnail
             $(carouselThumbnailItem[this.activeIndex]).addClass('active');
             // Scroll thumbnail container to keep the active thumbnail centered
-            if(carouselThumbnailItemActive.length > 0) // If there is an active thumbnail
+            if (carouselThumbnailItemActive.length > 0) // If there is an active thumbnail
                 carouselContainer.animate({
                     scrollLeft: carouselThumbnailItemActive.offset().left - carouselContainer.offset().left + carouselContainer.scrollLeft() - carouselContainer.width() / 2 + carouselThumbnailItemActive.width() / 2
                 });
         });
 
 
-
     }
 }
 
-$(document).ready(function () {
+var createCarousel = function () {
     $.getJSON("json/pages/myprojects.json", function (data) {
-        let projects = data.projects;
-        let projectCarousel = new ProjectCarousel(projects);
+        var projects = data.projects;
+        var projectCarousel = new ProjectCarousel(projects);
 
         projectCarousel.appendToContainer("#projects-container");
         projectCarousel.handleEvents();
@@ -158,5 +171,8 @@ $(document).ready(function () {
     }).fail(function () {
         console.log("Error occurred while trying to fetch data");
     });
-});
+}
+
+$(document).ready(createCarousel);
+
 
