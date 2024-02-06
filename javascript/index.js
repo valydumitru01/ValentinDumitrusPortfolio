@@ -94,4 +94,12 @@ class Portfolio{
     }
 }
 
+let basePath;
+
+if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    basePath = '/'; // Your local base path, adjust if necessary
+} else {
+    basePath = '/ValentinDumitrusPortfolio/'; // Your GitHub Pages base path
+}
+
 const portfolio = new Portfolio();

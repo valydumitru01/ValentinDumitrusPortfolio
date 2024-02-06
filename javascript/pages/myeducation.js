@@ -59,7 +59,7 @@ function generateRandomPositionsForIcons() {
     });
 }
 
-$.getJSON('/json/pages/myeducation.json', function (jsonData) {
+$.getJSON(basePath + 'json/pages/myeducation.json', function (jsonData) {
     let html = generateEducationHTML(jsonData);
     generateRandomPositionsForIcons();
     $('.main-timeline').html(html);

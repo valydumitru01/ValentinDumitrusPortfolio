@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $.getJSON('/json/pages/myskills.json', function (data) {
+    $.getJSON(basePath+'json/pages/myskills.json', function (data) {
         $('#programming-languages').html(buildTable(data.programmingLanguages, 'Programming Languages'));
         $('#ides').html(buildTable(data.ides, 'Integrated Development Environments (IDEs)'));
         $('#software-tools').html(buildTools(data.softwareTools, 'Software Tools'));
@@ -32,7 +32,7 @@ function buildLanguagesTable(languages, title) {
     $.each(languages, function (index, language) {
         html += `<tr>
             <th class="bg-dark text-white">
-            <img src="/media/flags/${language.flag}.jpg" alt="${language.language}" 
+            <img src="${basePath}media/flags/${language.flag}.jpg" alt="${language.language}" 
                 class="flag" style="width:2em; margin-right: 1em; border: 1px solid white;
                 position: relative; bottom: 0.6em; right: 0.4em;">
             <p style="position: relative; bottom: 0.4em; text-align: center">
