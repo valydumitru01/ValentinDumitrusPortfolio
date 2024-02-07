@@ -11,6 +11,7 @@ class Portfolio{
             'myeducation': "My Education",
             'myskills': "My Skills",
             'myprojects': "My Projects",
+            'cv': "CV",
             'back': "Go Back",
         }
 
@@ -51,6 +52,9 @@ class Portfolio{
     loadPage(){
         if (history.state === null ) 
             this.goTo('home')
+
+        if(history.state === "cv")
+            return window.open(`${basePath}resources/cv.pdf`, "_blank")
 
         $("#body").load("components/pages/" + history.state + ".html",
             () => {
