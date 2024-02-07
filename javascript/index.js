@@ -34,11 +34,13 @@ class Portfolio{
 
 
             let listItem = $('<li>', { class: "nav-item" });
-            let link = $('<a>', {
+            let link = $('<div>', {
                 class: "nav-link fw-bold",
                 onclick: `portfolio.goTo('${item}')`
             });
-            let title = $('<h2>', { text: this.pageTitles[item] });
+            let title = $('<h2>', { text: this.pageTitles[item],
+                style: "color: white; cursor: pointer;"
+            });
 
             link.append(title);
             listItem.append(link);

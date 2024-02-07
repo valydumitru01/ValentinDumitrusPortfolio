@@ -41,7 +41,7 @@ function buildLanguagesTable(languages, title) {
 
         if (language.certificate !== "") {
             html += `<p><a style="btn btn-primary btn-sm width: 100%" 
-                        href="/resources/certificates/${language.certificate}.pdf" >Open Certificate
+                        href="/resources/certificates/${language.certificate}.pdf" >Click here to open Certificate
                     </a></p>`;
         }
         html += ` </td></tr>`;

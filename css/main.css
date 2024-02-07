@@ -59,6 +59,7 @@ h5 {
 a,
 .black-white-text {
     color: black !important;
+    text-decoration: underline;
     text-shadow:
     -1px -1px 0 #ffffff,
      0   -1px 0 #ffffff,
