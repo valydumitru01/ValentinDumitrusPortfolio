@@ -21,7 +21,7 @@ footer{
 }
 @keyframes move_right_to_left_icons {
     0%{
-        opacity: 0%;
+        opacity: 0;
         transform: translateX(-100%);
     }
     100%{

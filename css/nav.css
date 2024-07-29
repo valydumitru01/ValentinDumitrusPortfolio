@@ -32,6 +32,7 @@
 .navbar-nav {
     display: flex;
     gap: 0.4em;
+    z-index: 100;
 }
 
 
@@ -115,6 +116,7 @@
     cursor: pointer;
     border-radius: 0.4em;
     --active-color: rgb(53, 53, 53);
+    z-index: inherit;
 }
 
 .nav-item:hover {
