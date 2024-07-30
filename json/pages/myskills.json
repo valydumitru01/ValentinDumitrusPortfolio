@@ -7,15 +7,14 @@
     "Main": ["JetBrains (CLion, IntelliJ, WebStorm, PyCharm), Visual Studio Code"],
     "Other": ["Microsoft Visual Studio", "Eclipse"]
   },
-  "softwareTools": ["Git", "GitHub"],
+  "softwareTools": ["Git", "GitHub", "Doxygen"],
   "other": {
-    "Operating Systems (user level)": ["Linux(Ubuntu)", "Windows"],
+    "Operating Systems (user level)": ["Linux", "Windows"],
     "Modeling": ["Blender", "MagicaVoxel"],
     "Image Editing": ["GIMP", "Adobe Photoshop"],
     "Browsers": ["Vivaldi", "Edge", "Chrome"],
     "Text Editors": ["Notepad++"],
-    "Office Suite": ["Microsoft Office"],
-    "Music Player": ["Spotify"]
+    "Office Suite": ["Microsoft Office"]
   },
   "languages": [
     {
@@ -35,18 +34,6 @@
       "level": "Advanced (C1 certificate)",
       "flag": "uk",
       "certificate": "CambridgeC1Certificate"
-    },
-    {
-      "language": "German \uD83C\uDDE9\uD83C\uDDEA",
-      "level": "Basic words and phrases",
-      "flag": "germany",
-      "certificate": ""
-    },
-    {
-      "language": "French \uD83C\uDDEB\uD83C\uDDF7",
-      "level": "Basic words and phrases",
-      "flag": "france",
-      "certificate": ""
     }
   ]
 }

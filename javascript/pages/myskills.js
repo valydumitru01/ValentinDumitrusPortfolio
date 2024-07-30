@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $.getJSON(basePath+'json/pages/myskills.json', function (data) {
         $('#programming-languages').html(buildTable(data.programmingLanguages, 'Programming Languages'));
-        $('#ides').html(buildTable(data.ides, 'Integrated Development Environments (IDEs)'));
+        $('#ides').html(buildTable(data.ides, 'IDEs'));
         $('#software-tools').html(buildTools(data.softwareTools, 'Software Tools'));
         $('#other-skills').html(buildTable(data.other, 'Other'));
         $('#languages').html(buildLanguagesTable(data.languages, 'Languages'));

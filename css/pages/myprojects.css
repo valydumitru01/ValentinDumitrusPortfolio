@@ -111,11 +111,70 @@
 }
 
 
-.carousel-thumbnail-item {
+.carousel-thumbnail-item,.carousel-thumbnail-item-important  {
     cursor: pointer;
     padding: 0.5em;
-
     text-align: center;
+    transition: transform 0.3s ease-out;
+}
+.carousel-thumbnail-item-important {
+    /* Existing styles for the button */
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative; /* Needed for absolute positioning of ::after */
+    overflow: hidden; /* Ensures no overflow outside the button */
+
+    /* Shiny, moving gradient and other styles */
+    background: linear-gradient(
+            45deg,
+            #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00ab, #ff0000
+    );
+    background-size: 400% 400%;
+    animation: rainbow 8s linear infinite;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+}
+
+
+.carousel-thumbnail-item-important::after {
+    content: "Important!!";
+    position: absolute;
+    display: block;
+    width: 100%;
+    rotate: 10deg;
+    bottom: 4.5em;
+    font-weight: bold;
+    color: red;
+    font-size: 0.8em;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes rainbow {
+    0% { background-position: 100% 50%; }
+    50% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); /* Bounce to 120% of the size */
+    }
+}
+
+
+
+.carousel-thumbnail-item:hover,.carousel-thumbnail-item-important:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
 }
 
 .carousel-thumbnail {

@@ -1,15 +1,6 @@
 {
   "list": [
-    {
-      "icon": "fa-briefcase",
-      "period": {
-        "start": "Jul. 2022",
-        "end": "Jul. 2024",
-        "duration": "2 years"
-      },
-      "title": "Game engine development (Personal Project)",
-      "description": "I developed a game engine from scratch using C++ and OpenGL. It includes a graphic API abstraction, fully custom math library, a simple rendering, sound, input and physics system and some other features. GitHub repo <a href='https://github.com/valydumitru01/GLESC'> here</a>. More details <a href='https://valentin-dumitru.com/projects/game-engine'> here</a>."
-    },
+
     {
       "icon": "fa-briefcase",
       "period": {
@@ -20,6 +11,16 @@
       "title": "Inetum Outsystems - Internship",
       "subtitle": "Full Stack Developer",
       "description": "My main job here was full stack developer, working with Outsystems, a low-code platform for easy development and deployment. "
+    },
+    {
+      "icon": "fa-briefcase",
+      "period": {
+        "start": "Jul. 2022",
+        "end": "Jul. 2024",
+        "duration": "2 years"
+      },
+      "title": "Game engine development (Personal Project)",
+      "description": "I developed a game engine from scratch using C++ and OpenGL. It includes a graphic API abstraction, fully custom math library, a simple rendering, sound, input and physics system and some other features. GitHub repo <a href='https://github.com/valydumitru01/GLESC'> here</a>."
     },
     {
       "icon": "fa-terminal",

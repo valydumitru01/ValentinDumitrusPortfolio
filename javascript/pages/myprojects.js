@@ -1,4 +1,3 @@
-
 var ProjectCarouselItem = class ProjectCarouselItem {
     constructor(project, active = false) {
         this.project = project;
@@ -33,8 +32,9 @@ var ProjectCarouselItem = class ProjectCarouselItem {
         lowerBand.append(description);
 
         let buttons = $("<div class='carousel-buttons'></div>");
-        if (this.project.moreDetailsInfo){
-            let moreDetailsInfo = $("<button onclick='this.openMoreInfo(${this.project.moreDetailsInfo})' class='btn btn-light'>" +
+        if (this.project.moreDetailsLink) {
+            let moreDetailsInfo = $(
+                "<button onclick='this.openMoreInfo(${this.project.moreDetailsLink})' class='btn btn-light'>" +
                 "More Details <i class=\"fas fa-info-circle\"></i>" +
                 "</button>");
             buttons.append(moreDetailsInfo);
@@ -46,13 +46,19 @@ var ProjectCarouselItem = class ProjectCarouselItem {
             buttons.append(download);
         }
 
-        if (this.project.link){
-            let link = $("<a href='" + this.project.link + "' class='btn btn-light'>" +
+        if (this.project.siteLink) {
+            let link = $("<a href='" + this.project.siteLink + "' class='btn btn-light'>" +
                 "Visit Site <i class='fas fa-external-link-alt'></i>" +
                 "</a>");
             buttons.append(link);
         }
 
+        if (this.project.githubLink) {
+            let github = $("<a href='" + this.project.githubLink + "' class='btn btn-light'>" +
+                "Github <i class='fab fa-github'></i>" +
+                "</a>");
+            buttons.append(github);
+        }
 
 
         lowerBand.append(buttons);
@@ -69,6 +75,7 @@ var ProjectCarousel = class ProjectCarousel {
     constructor(projects) {
         this.projects = projects;
         this.carouselItems = [];
+
 
         this.init();
     }
@@ -124,7 +131,12 @@ var ProjectCarousel = class ProjectCarousel {
     getThumbnailContainer() {
         let thumbnailContainer = $("<div class='carousel-container d-flex justify-content-center flex-wrap mt-3'></div>");
         this.projects.forEach((project, i) => {
-            let thumbnailItem = $("<div class='carousel-thumbnail-item' data-target='#projectCarousel' data-slide-to='" + i + "'></div>");
+            let thumbnailItem = "";
+            if (project.isImportant) {
+                thumbnailItem =$("<div class='carousel-thumbnail-item-important' data-target='#projectCarousel' data-slide-to='" + i + "'></div>");
+            }else {
+                thumbnailItem = $("<div class='carousel-thumbnail-item' data-target='#projectCarousel' data-slide-to='" + i + "'></div>");
+            }
             let thumbnail = $("<img src='" + project.img + "' alt='" + project.title + "' class='carousel-thumbnail'>");
             let thumbnailTitle = $("<p class='thumbnail-title text-center'>" + project.title + "</p>");
 
