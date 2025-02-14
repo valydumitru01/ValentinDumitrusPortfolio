@@ -1,0 +1,46 @@
+@import "../../../global/css/timeline.css";
+
+
+main {
+    animation: fade-color 0.3s ease forwards;
+}
+
+@keyframes fade-color {
+    100% {
+        background-color: rgb(0, 0, 0);
+    }
+}
+
+@keyframes fade-color {
+    100% {
+        background-color: rgb(0, 0, 0);
+    }
+}
+
+.education-background-icon {
+    color: rgb(30, 30, 30);
+    position: absolute;
+    z-index: -2;
+    overflow-y: hidden;
+}
+
+@keyframes move_right_to_left_icons {
+    0% {
+        opacity: 0%;
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes move_left_to_right_icons {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+        rotate: inherit;
+    }
+}

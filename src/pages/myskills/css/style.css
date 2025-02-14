@@ -1,0 +1,48 @@
+/* Example styling for the tables, accordions, etc. */
+
+/* Make tables more modern and interactive */
+table.dataTable.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: #f9fafb !important;
+}
+table.dataTable.table-hover tbody tr:hover {
+    background-color: #f2f4f7 !important;
+}
+/* Header styling for DataTables */
+table.dataTable thead th {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+table.dataTable thead th:hover {
+    background-color: #e9ecef; /* Light gray on hover */
+}
+table.dataTable thead th:active {
+    background-color: #dee2e6; /* Slightly darker on click */
+}
+/* Round table corners slightly (optional) */
+.table.dataTable {
+    border-radius: 0.5rem;
+    overflow: hidden; /* clip corners */
+}
+/* Pagination buttons */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-radius: 0.25rem;
+    margin: 0 3px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #e9ecef !important;
+    color: #212529 !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    color: #fff !important;
+    background-color: #0d6efd !important;
+}
+
+/* Basic accordion styling overrides (optional) */
+.accordion-button {
+    font-weight: 600;
+}

@@ -1,0 +1,143 @@
+@import url("layout/footer/footer.css");
+@import url("layout/nav/nav.css");
+@import url("global/css/imageviewer.css");
+
+/* ------------- Variables -------------- */
+:root {
+    --main-font-family: 'Titillium Web';
+    --main-font-size: 1.1em;
+    --main-font-color: #000000;
+
+    --main-font-high-title-color: #1d2122;
+    --main-font-high-title-shadow: 0.08em 0.08em 0.08em #969696;
+    --main-font-low-title-color: #000000;
+    --main-font-header-line-height: 2em;
+    --main-font-header-margin-bottom: 1em;
+
+    --body-min-height: 66vh;
+    --body-top-padding: 2em;
+    --body-width: 50%;
+
+    --scrollbar-width: 0.6em;
+    --scrollbar-color: rgb(33, 37, 41);
+
+    --scrollbar-track-color: rgb(33, 37, 41);
+    --scrollbar-track-border: 0.2em solid black;
+
+    --scrollbar-thumb-color: white;
+    --scrollbar-thumb-border-radius: 0.5em;
+    --scrollbar-thumb-border: 0.1em solid black;
+}
+
+/* ------------- Scroll smoothing -------------- */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ------------- General font for text -------------- */
+/*  Body fill the screen, footer remains at the bottom
+    in case of the screen is stretched out  */
+main {
+    font-family: var(--main-font-family) 'sans-serif';
+    font-size: var(--main-font-size);
+    color: var(--main-font-color);
+    /* To avoid the footer to be in the middle of the screen */
+    min-height: var(--body-min-height);
+
+    /* To separate a bit the content from the nav bar */
+    padding-top: var(--body-top-padding);
+
+    /* Justify the text */
+    text-align: justify;
+
+    /* Center things, make the page stay in the middle */
+    margin: auto;
+    width: var(--body-width);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--main-font-high-title-color);
+    line-height: var(--main-font-header-line-height);
+    margin-bottom: var(--main-font-header-margin-bottom);
+}
+
+h1, h2 {
+    font-weight: bold;
+    text-shadow: var(--main-font-high-title-shadow);
+}
+
+h3, h4, h5 {
+    color: var(--main-font-low-title-color);
+    font-weight: lighter;
+}
+
+.text-note {
+    font-style: italic;
+    text-align: right;
+}
+
+
+/* ------------- Link style in general texts -------------- */
+
+
+a{
+    color: black;
+    text-decoration: underline;
+}
+
+.black-white-text {
+    letter-spacing: 0.08em;
+}
+
+a:hover, .black-white-text-hover:hover {
+    color: white !important;
+    text-shadow: -1px 0 0 black,
+    1px 0 0 black,
+    0 1px 0 black,
+    0 -1px 0 black
+}
+
+
+/* ------------- Font loading -------------- */
+
+@font-face {
+    font-family: 'Brittany Signature';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Brittany Signature'), url('global/res/fonts/BrittanySignature-LjyZ.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Shell Roundhand';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Shell Roundhand'), url('global/res/fonts/Snell Roundhand LT W01 Script.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Titillium Web'), url('global/res/fonts/titillium-web-v15-latin-regular.woff') format('woff');
+}
+
+
+/* ------------- Scrollbar  -------------- */
+
+
+::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+    background-color: var(--scrollbar-color);
+}
+::-webkit-scrollbar-track {
+    border: var(--scrollbar-track-border);
+    background-color: var(--scrollbar-track-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: var(--scrollbar-thumb-border-radius);
+    border: var(--scrollbar-thumb-border);
+}

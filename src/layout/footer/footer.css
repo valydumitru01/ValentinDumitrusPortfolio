@@ -1,0 +1,36 @@
+
+.contact-button-icon {
+    font-size: 2em;
+}
+
+.contact-button-content{
+    font-family: 'Font Awesome 6 Free',serif;
+    font-size: 1.5em;
+    margin : 0;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .contact-button-icon {
+        font-size: 1.5em;
+    }
+
+    .contact-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-img{
+        width: 7vw;
+    }
+}
+.footer-img{
+    width: 2em;
+}
+
+#footer{
+    height: 100%;
+}
+
+#copyright-footer-text{
+    color: grey;
+}
