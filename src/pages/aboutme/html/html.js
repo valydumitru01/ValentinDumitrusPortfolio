@@ -48,7 +48,7 @@ TEMPLATE_STRINGS = {
     `
 };
 
-function generate_page_aboutme(jquery_selector_where) {
+function generate_page_aboutme(selector) {
 	load_page_json('aboutme', (jsonData) => {
 		let html = TEMPLATE_STRINGS.base;
 		let signature = jsonData.signature;
@@ -68,7 +68,7 @@ function generate_page_aboutme(jquery_selector_where) {
 		html = renderTemplate(html, {
 			signature: signature, paragraphs: paragraphs, tableRows: tableRows
 		});
-		$(jquery_selector_where).html(html);
+		$(selector).html(html);
 	});
 
 

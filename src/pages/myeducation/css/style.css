@@ -1,6 +1,6 @@
 @import "../../../global/css/timeline.css";
 
-main{
+body{
     animation: fade-color 0.3s ease forwards;
     overflow-x: hidden;
 }

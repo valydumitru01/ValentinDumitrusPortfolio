@@ -4,10 +4,10 @@ TEMPLATE_STRINGS = {
       Here is a complete collection of all my projects since I started my software engineering career.
     </p>
     <article id="projects-container" style="margin-top: 5em;">
-		<div id="header-carousel" class="carousel slide mb-4 h-10" data-ride="carousel">
+		<div id="header-carousel" class="carousel slide mb-4 h-10" data-bs-ride="carousel">
 			<div class="carousel-lower-band"></div>
 			
-			<a class="carousel-control-prev" href="#header-carousel" role="button" data-slide="prev">
+			<a class="carousel-control-prev" href="#header-carousel" role="button" data-bs-slide="prev">
 			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			  <span class="sr-only">Previous</span>
 			</a>
@@ -18,7 +18,7 @@ TEMPLATE_STRINGS = {
 				{carouselItems}
 			</div>
 			
-			<a class="carousel-control-next" href="#header-carousel" role="button" data-slide="next">
+			<a class="carousel-control-next" href="#header-carousel" role="button" data-bs-slide="next">
 			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
 			  <span class="sr-only">Next</span>
 			</a>
@@ -36,14 +36,14 @@ TEMPLATE_STRINGS = {
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="projectModalLabel"><!-- title --></h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-carousel">
-          	 <div id="modal-header-carousel" class="carousel slide mb-4 h-10" data-ride="carousel">
+          	 <div id="modal-header-carousel" class="carousel slide mb-4 h-10" data-bs-ride="carousel">
 			
-			<a class="carousel-control-prev" href="#modal-header-carousel" role="button" data-slide="prev">
+			<a class="carousel-control-prev" href="#modal-header-carousel" role="button" data-bs-slide="prev">
 			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			  <span class="sr-only">Previous</span>
 			</a>
@@ -54,7 +54,7 @@ TEMPLATE_STRINGS = {
 				<!-- modalCarouselItems -->
 			</div>
 			
-			<a class="carousel-control-next" href="#modal-header-carousel" role="button" data-slide="next">
+			<a class="carousel-control-next" href="#modal-header-carousel" role="button" data-bs-slide="next">
 			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
 			  <span class="sr-only">Next</span>
 			</a>
@@ -69,7 +69,7 @@ TEMPLATE_STRINGS = {
     </article>
     `,
 	carouselItem     : `
-    <div class="carousel-item {activeClass}" style="cursor:pointer;"  data-index="{i}">
+    <div class="carousel-item {activeClass}" style="cursor:pointer;"  data-bs-index="{index}">
       <img class="carousel-img" src="{imgSrc}" alt="{title}">
       <div class="carousel-caption d-none d-md-block">
         <p class="carousel-title">{title}</p>
@@ -82,10 +82,10 @@ TEMPLATE_STRINGS = {
       <img class="carousel-img" src="{imgSrc}" alt="{title}">
     </div>
 	`,
-	carouselIndicator: `<li data-target="#header-carousel" data-slide-to="{index}" class="{activeClass}"></li>`,
+	carouselIndicator: `<li data-target="#header-carousel" data-bs-slide-to="{index}" class="{activeClass}"></li>`,
 	card             : `
     <div class="col-md-4 mb-4">
-      <div class="card text-white h-50" data-index="{index}" style="cursor:pointer;">
+      <div class="card text-white h-50" data-bs-index="{index}" style="cursor:pointer;">
         <img class="card-img img-fluid" src="{imgSrc}" alt="{title}">
         <div class="card-img-overlay">
           <h5 class="card-title">{title}</h5>
@@ -142,15 +142,13 @@ function generate_cards(projects) {
 }
 
 
-// Function that loads the JSON for "myprojects" and renders the HTML
-function generate_page_myprojects(jquery_selector_where) {
-	load_page_json('myprojects', (jsonData) => {
-		let html = renderTemplate(TEMPLATE_STRINGS.base, {
-			carouselItems     : generate_carousel_items(jsonData.projects),
-			carouselIndicators: generate_carousel_indicators(jsonData.projects),
-			cards             : generate_cards(jsonData.projects)
-		});
-		// Finally, set the HTML into the given container
-		$(jquery_selector_where).html(html);
+
+function generate_page_myprojects(selector) {
+	let html = renderTemplate(TEMPLATE_STRINGS.base, {
+		carouselItems     : generate_carousel_items(DATA),
+		carouselIndicators: generate_carousel_indicators(DATA),
+		cards             : generate_cards(DATA)
 	});
+	// Finally, set the HTML into the given container
+	$(selector).html(html);
 }

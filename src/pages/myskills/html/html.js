@@ -94,7 +94,7 @@ TEMPLATE_STRINGS = {
            aria-labelledby="softHead{catIndex}" data-bs-parent="#softwareAccordion">
         <div class="accordion-body">
           <div class="table-responsive">
-            <table id="softTable{catIndex}" class="table table-striped table-hover table-bordered align-middle">
+            <table id="softTable{catIndex}" class="softTable table table-striped table-hover table-bordered align-middle">
               <thead>
                 <tr>
                   <th>Name</th>
@@ -119,7 +119,7 @@ TEMPLATE_STRINGS = {
              style="width:30px;height:30px;object-fit:contain;margin-right:5px;">
         {title}
       </td>
-      <td>{levelLabel}</td>
+      <td data-order="{numericLevel}">{levelLabel}</td>
     </tr>
   `,
 	
@@ -201,9 +201,10 @@ function generate_software_categories(softwareArray) {
 		// generate row HTML for each item in that category
 		const rowsHtml = grouped[catName].map(item => {
 			return renderTemplate(TEMPLATE_STRINGS.softwareRow, {
-				file      : BRAND_IMAGES_PATH + item.file + BRAND_IMAGES_EXT,
-				title     : item.title,
-				levelLabel: numericLevelToText(item.level)
+				file        : BRAND_IMAGES_PATH + item.file + BRAND_IMAGES_EXT,
+				title       : item.title,
+				numericLevel: item.level,
+				levelLabel  : numericLevelToText(item.level)
 			});
 		}).join("");
 		
@@ -221,11 +222,18 @@ function generate_software_categories(softwareArray) {
 
 function convert_tables_to_data_tables() {
 	$(document).ready(function () {
-		$("table").each(function () {
+		$(".softTable").each(function () {
 			$(this).DataTable({
-								  paging   : true,
-								  searching: true,
-								  info     : true
+								  paging    : true,
+								  searching : true,
+								  info      : true,
+								  columnDefs: [
+									  {
+										  targets  : 1,
+										  type     : "num",
+										  orderData: 1
+									  }
+								  ]
 							  });
 		});
 	});
@@ -247,7 +255,7 @@ function generate_languages_rows(langsArray) {
 /********************************************
  * Main function: generate_page_myskills
  ********************************************/
-function generate_page_myskills(jquery_selector_where) {
+function generate_page_myskills(selector) {
 	// We assume there's a global DATA object with .engineering, .software, .languages
 	const engineeringItems = generate_engineering_items(DATA.engineering);
 	const softwareCats     = generate_software_categories(DATA.software);
@@ -260,6 +268,6 @@ function generate_page_myskills(jquery_selector_where) {
 		languagesRows     : languagesRows
 	});
 	
-	$(jquery_selector_where).html(finalHtml);
+	$(selector).html(finalHtml);
 	convert_tables_to_data_tables();
 }

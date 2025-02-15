@@ -6,40 +6,43 @@ function renderTemplate(template, data) {
 	return template.replace(/{(\w+)}/g, (match, key) => data[key] || '');
 }
 
+function loadScript(url, className) {
+	return new Promise((resolve, reject) => {
+		const script = document.createElement("script");
+		script.type = "text/javascript";
+		script.src = url;
+		if (className) {
+			script.classList.add(className);
+		}
+		script.onload = () => resolve(script);
+		script.onerror = () => reject(new Error("Failed to load script: " + url));
+		document.head.appendChild(script);
+	});
+}
+
 function generate_page(page) {
+	document.querySelectorAll(".dynamic-js").forEach(el => el.remove());
+	const oldCss = document.querySelector("#dynamic-css");
+	if (oldCss) oldCss.remove();
 	
-	$(".dynamic-js").remove()
+	const cssLink = document.createElement("link");
+	cssLink.rel = "stylesheet";
+	cssLink.id = "dynamic-css";
+	cssLink.href = basePath + "src/pages/" + history.state + "/css/style.css";
+	document.head.appendChild(cssLink);
 	
-	let head = "head";
-	// We need to load the templates before we can generate the page
-	$(head)
-		.append($('<script type="text/javascript">')
-					.attr('src', basePath + "src/pages/" + history.state + "/json/data.js")
-					.attr('class', 'dynamic-js'))
-		.append($('<script type="text/javascript">')
-					.attr('src', basePath + "src/pages/" + history.state + "/html/html.js")
-					.attr('class', 'dynamic-js'))
-	
-	
-	const generator = window["generate_page_" + page];
-	if (typeof generator === "function") {
-		generator("main");
-	} else {
-		console.log("No generator found for page: " + page);
-	}
-	
-	
-	// Load dynamic css and js, the names of the files must be the same as the page
-	$("#dynamic-css").remove()
-	
-	$(head)
-		// Load css
-		.append($('<link rel="stylesheet" type="text/css" />')
-					.attr('href', basePath + "src/pages/" + history.state + "/css/style.css")
-					.attr('id', 'dynamic-css'))
-		.append($('<script type="text/javascript">')
-					.attr('src', basePath + "src/pages/" + history.state + "/js/src.js")
-					.attr('class', 'dynamic-js'))
+	loadScript(basePath + "src/pages/" + history.state + "/json/data.js", "dynamic-js")
+		.then(() => loadScript(basePath + "src/pages/" + history.state + "/html/html.js", "dynamic-js"))
+		.then(() => {
+			const generator = window["generate_page_" + page];
+			if (typeof generator === "function") {
+				generator("main");
+			} else {
+				console.log("No generator found for page:", page);
+			}
+		})
+		.then(() => loadScript(basePath + "src/pages/" + history.state + "/js/src.js", "dynamic-js"))
+		.catch(err => console.error(err));
 }
 
 // Object that will store all the template strings

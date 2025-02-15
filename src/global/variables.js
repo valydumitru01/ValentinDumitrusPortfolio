@@ -22,12 +22,7 @@ const PAGE_TITLES = {
 	[PAGES.MY_PROJECTS]: 'My Projects'
 }
 
-let basePath;
-if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-	basePath = '/';
-} else {
-	basePath = '/ValentinDumitrusPortfolio/';
-}
+let basePath = '/ValentinDumitrusPortfolio/';
 
 
 const NAME = 'Valentin Dumitru';
@@ -116,7 +111,7 @@ const BRAND_IMAGES={
 	c:'c',
 	canvas:'canvas',
 	cpp:'c++',
-	csharp:'c#',
+	csharp:'csharp',
 	css:'css',
 	eclipse:'eclipse',
 	hsqldb:'hsqldb',
@@ -155,7 +150,7 @@ const BRAND_IMAGES={
 	springboot : 'springboot',
 	git : 'git',
 	docker : 'docker',
-	microsoftOffice : 'microsoftOffice',
+	microsoftOffice : 'microsoftoffice',
 	android : 'android',
 	msvs : 'msvs',
 	clion : 'clion',
@@ -164,7 +159,8 @@ const BRAND_IMAGES={
 	drawio : 'drawio',
 	cppdepend : 'cppdepend',
 	eslint : 'eslint',
-	nsight : 'nsight',
+	nsight : 'nsightgraphics',
 	gimp : 'gimp',
+	clangFormat : 'clangformat',
 	
 }

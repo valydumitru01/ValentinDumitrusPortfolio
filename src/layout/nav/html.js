@@ -4,12 +4,11 @@ TEMPLATE_STRINGS = {
         <!-- Portfolio title -->
         <h2 class="text-white fw-bold" id="portfolio-title">${NAME}'s Portfolio</h2>
     
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon" ></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggled-content" aria-controls="toggled-content" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
     
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="toggled-content">
             <ul class="navbar-nav" >
                 {navItems}
             </ul>

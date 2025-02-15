@@ -1,5 +1,5 @@
 // Define your numeric levels for easy sorting
-const LEVELS = {
+var LEVELS = {
 	basic       : 1,
 	intermediate: 2,
 	advanced    : 3,
@@ -8,7 +8,7 @@ const LEVELS = {
 
 
 // Define categories for grouping software
-const CATEGORIES = {
+var CATEGORIES = {
 	programming: "Programming Languages & Scripting",
 	frameworks : "Frameworks & Libraries",
 	tools      : "Tools & IDEs",
@@ -58,7 +58,8 @@ DATA = {
 	],
 	software   : [
 		// Programming Languages & Scripting
-		{title      : "C++",
+		{
+			title   : "C++",
 			level   : LEVELS.expert,
 			file    : BRAND_IMAGES.cpp,
 			category: CATEGORIES.programming
@@ -75,7 +76,7 @@ DATA = {
 		}, {
 			title   : "TypeScript",
 			level   : LEVELS.advanced,
-			file    : BRAND_IMAGES.javascript,
+			file    : BRAND_IMAGES.typescript,
 			category: CATEGORIES.programming
 		}, {
 			title   : "Python",
@@ -114,7 +115,7 @@ DATA = {
 			category: CATEGORIES.programming
 		}, {
 			title   : "Makefile",
-			level   : LEVELS.advanced,
+			level   : LEVELS.expert,
 			file    : BRAND_IMAGES.makefile,
 			category: CATEGORIES.programming
 		}, {
@@ -170,7 +171,8 @@ DATA = {
 		},
 		
 		// Frameworks & Libraries
-		{title      : "React",
+		{
+			title   : "React",
 			level   : LEVELS.intermediate,
 			file    : BRAND_IMAGES.react,
 			category: CATEGORIES.frameworks
@@ -202,7 +204,8 @@ DATA = {
 		},
 		
 		// Tools & IDEs
-		{title      : "Git",
+		{
+			title   : "Git",
 			level   : LEVELS.advanced,
 			file    : BRAND_IMAGES.git,
 			category: CATEGORIES.tools
@@ -243,7 +246,7 @@ DATA = {
 			category: CATEGORIES.tools
 		}, {
 			title   : "Eclipse",
-			level   : LEVELS.advanced,
+			level   : LEVELS.intermediate,
 			file    : BRAND_IMAGES.eclipse,
 			category: CATEGORIES.tools
 		}, {
@@ -296,10 +299,16 @@ DATA = {
 			level   : LEVELS.advanced,
 			file    : BRAND_IMAGES.cmake,
 			category: CATEGORIES.tools
+		}, {
+			title   : "Clang-Format",
+			level   : LEVELS.expert,
+			file    : BRAND_IMAGES.clangFormat,
+			category: CATEGORIES.tools
 		},
 		
 		// Game Dev & Graphics
-		{title      : "Unity",
+		{
+			title   : "Unity",
 			level   : LEVELS.advanced,
 			file    : BRAND_IMAGES.unity,
 			category: CATEGORIES.game
