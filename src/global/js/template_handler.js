@@ -23,22 +23,31 @@ function loadScript(url, className) {
 	});
 }
 
+function loadCss(url) {
+	return new Promise((resolve, reject) => {
+		const cssLink   = document.createElement("link");
+		cssLink.rel     = "stylesheet";
+		cssLink.href    = url;
+		cssLink.onload  = () => resolve(cssLink);
+		cssLink.onerror = () => reject(new Error("Failed to load css: " + url));
+		cssLink.id = "dynamic-css";
+		document.head.appendChild(cssLink);
+	});
+}
+
 function generate_page(page) {
 	document.querySelectorAll(".dynamic-js").forEach(el => el.remove());
+	const oldCss = document.querySelector("#dynamic-css");
 	
+	
+	loadCss(basePath + "src/pages/" + history.state + "/css/style.css")
+		.then(() => {
+			oldCss && oldCss.remove();
+		})
+		.catch(err => console.error(err));
 	
 	loadScript(basePath + "src/pages/" + history.state + "/json/data.js", "dynamic-js")
-		.then(() => {
-			loadScript(basePath + "src/pages/" + history.state + "/html/html.js", "dynamic-js")
-			const oldCss = document.querySelector("#dynamic-css");
-			if (oldCss) oldCss.remove();
-			
-			const cssLink = document.createElement("link");
-			cssLink.rel   = "stylesheet";
-			cssLink.id    = "dynamic-css";
-			cssLink.href  = basePath + "src/pages/" + history.state + "/css/style.css";
-			document.head.appendChild(cssLink);
-		})
+		.then(() => loadScript(basePath + "src/pages/" + history.state + "/html/html.js", "dynamic-js"))
 		.then(() => {
 			const generator = window["generate_page_" + page];
 			if (typeof generator === "function") {
