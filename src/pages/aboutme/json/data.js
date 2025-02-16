@@ -32,19 +32,25 @@ DATA = {
 			description: "I have been listening to music for many years now. I like rock, metal, rap/hip-hop, indie,"
 						 + " classical and some more.",
 			icon       : "music",
-			extra      : PASSIONS.SPOTIFY_PLAYLIST
+			extra      : "<iframe style='border-radius:12px' src='https://open.spotify.com/embed/playlist/2xgUlH8h9EoMd0o10jEldL?utm_source=generator&theme=0' width='100%' height='352' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe>"
 		}, {
 			title      : "Art",
 			description: "I used to draw and paint a lot when I was younger. I don't do it anymore, but I still"
 						 + " appreciate art a lot.",
 			icon       : "paint-brush",
-			extra      : PASSIONS.ART_COLLAGE
+			images      : [
+				"drawings/bird.jpg", "drawings/demon.jpg", "drawings/dragon_painting.jpg", "drawings/sword.jpg", "drawings/dragonforce.jpg", "drawings/embers.jpg", "drawings/eye.jpg", "drawings/tiger_painting.jpg",
+				"drawings/minimalist_painting.jpg", "drawings/mom.jpg", "drawings/oldman.jpg", "drawings/treant.jpg", "drawings/poppies_painting.jpg", "drawings/skull.jpg", "drawings/statue.jpg", "drawings/womanbrain.jpg"
+			]
 		}, {
 			title      : "3D Modeling",
 			description: "I did a lot of 3D modeling in the past. I thought it was my new found way of making art."
 						 + "I enjoyed it a lot, but I stopped doing it.",
 			icon       : "cube",
-			extra      : PASSIONS.MODELING_COLLAGE
+			images      : [
+				"blender/goblin.png", "blender/goblin2.png", "blender/knight_back.gif", "blender/knight_front.gif", "blender/mage.png", "blender/marble_table.png", "blender/marble_table_edited.png",
+				"blender/minecraft_cube.png", "blender/room.png", "blender/sun_axe.png"
+			]
 		}, {
 			title      : "Fitness",
 			description: "I have been working out, running, cycling and doing calisthenics for many years now."
@@ -56,6 +62,11 @@ DATA = {
 						 + " I get bored easily if the series is not good. My favorite genres are fantasy, medieval,"
 						 + "comedy, animation (including anime) and action. Even better if it is a mix of them.",
 			icon       : "tv"
+		},
+		{
+			title	  : "Philosophy",
+			description: "For me philosophy has been very important in my life. It has helped me understand the world and be a better person. I believe everyone is a philosopher, and the more you know about philosophy, the more yourself you become.",
+			icon	  : "book"
 		}
 	]
 }

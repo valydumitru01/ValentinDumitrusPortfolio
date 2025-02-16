@@ -1,7 +1,10 @@
-/***************************************
- * Template Rendering Helper
- ***************************************/
-function renderTemplate(template, data) {
+/**
+ * Fills the template with the data.
+ * @param {string} template Html template string, with placeholders {key}.
+ * @param {object} data Object with key-value pairs.
+ * @returns {string} Html string with placeholders replaced by values.
+ */
+function fillTemplate(template, data) {
 	// Replace placeholders {key} with corresponding values from data.
 	return template.replace(/{(\w+)}/g, (match, key) => data[key] || '');
 }

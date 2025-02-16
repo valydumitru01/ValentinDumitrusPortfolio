@@ -39,7 +39,7 @@ function buildCarousel(projects) {
 		const activeClass     = index === 0 ? CSS_CLASSES.CAROUSEL_ITEM_ACTIVE : '';
 		
 		// Render carousel item.
-		const carouselItemHtml = renderTemplate(TEMPLATE_STRINGS.carouselItem, {
+		const carouselItemHtml = fillTemplate(TEMPLATE_STRINGS.carouselItem, {
 			activeClass    : activeClass,
 			imgSrc         : imgSrc,
 			title          : title,
@@ -61,7 +61,7 @@ function buildCarousel(projects) {
 		$inner.append($item);
 		
 		// Render and append the carousel indicator.
-		const indicatorHtml = renderTemplate(TEMPLATE_STRINGS.carouselIndicator, {
+		const indicatorHtml = fillTemplate(TEMPLATE_STRINGS.carouselIndicator, {
 			index      : index,
 			activeClass: activeClass
 		});
@@ -89,7 +89,7 @@ function buildCards(projects) {
 		}
 		const title    = validateString(project.title, TEXTS.FALLBACK_TITLE);
 		const imgSrc   = getFirstImage(project.imgs);
-		const cardHtml = renderTemplate(TEMPLATE_STRINGS.card, {
+		const cardHtml = fillTemplate(TEMPLATE_STRINGS.card, {
 			imgSrc,
 			title
 		});
@@ -115,79 +115,3 @@ function buildCards(projects) {
 /***************************************
  * Modal Display Function
  ***************************************/
-function openModal(project) {
-	let $modal = $('#' + IDS.MODAL);
-	if ($modal.length === 0) {
-		// Create modal if it does not exist.
-		$modal = $(TEMPLATE_STRINGS.modal);
-		$('body').append($modal);
-	}
-	
-	const title = validateString(project.title, TEXTS.FALLBACK_TITLE);
-	$modal.find('.' + CSS_CLASSES.MODAL_TITLE).text(title);
-	const $modalBody = $modal.find('.' + CSS_CLASSES.MODAL_BODY).empty();
-	
-	// Append project image.
-	const imgSrc = getFirstImage(project.imgs);
-	const $img   = createImageTag(imgSrc, title).addClass(CSS_CLASSES.MB_3);
-	$modalBody.append($img);
-	
-	// Append project description if available.
-	if (project.description) {
-		$modalBody.append($('<p>').html(project.description));
-	} else {
-		console.warn(WARN_MESSAGES.NO_DESCRIPTION(title));
-	}
-	
-	// Build external resource links.
-	const $links = $(TEMPLATE_STRINGS.modalLinks);
-	if (project.video) {
-		$links.append($('<a>', {
-			href  : project.video,
-			target: '_blank',
-			class : `btn btn-primary ${CSS_CLASSES.MR_2} ${CSS_CLASSES.MB_2}`,
-			text  : TEXTS.BUTTON_WATCH_VIDEO
-		}));
-	}
-	if (project.download) {
-		$links.append($('<a>', {
-			href    : project.download,
-			target  : '_blank',
-			class   : `btn btn-success ${CSS_CLASSES.MR_2} ${CSS_CLASSES.MB_2}`,
-			text    : TEXTS.BUTTON_DOWNLOAD,
-			download: ''
-		}));
-	}
-	if (project.site) {
-		$links.append($('<a>', {
-			href  : project.site,
-			target: '_blank',
-			class : `btn btn-info ${CSS_CLASSES.MR_2} ${CSS_CLASSES.MB_2}`,
-			text  : TEXTS.BUTTON_VISIT_SITE
-		}));
-	}
-	if (project.github) {
-		$links.append($('<a>', {
-			href  : project.github,
-			target: '_blank',
-			class : `btn btn-dark ${CSS_CLASSES.MR_2} ${CSS_CLASSES.MB_2}`,
-			text  : TEXTS.BUTTON_GITHUB
-		}));
-	}
-	if ($links.children().length === 0) {
-		console.warn(WARN_MESSAGES.NO_EXTERNAL_LINKS(title));
-	}
-	$modalBody.append($links);
-	$modal.modal('show');
-}
-
-$(document).ready(function () {
-	$('.project-card').on('click', function () {
-		const index   = $(this).data('index');
-		const project = projects[index];
-		$('#projectModalLabel').text(project.title);
-		// Populate modal carousel images, descriptions, etc.
-		// ...
-		$('#projectModal').modal('show');
-	});
-});

@@ -1,6 +1,6 @@
 TEMPLATE_STRINGS_FOOTER = {
 	base         : `
-	<div class="bg-dark text-center text-white" id="footer">
+	<div class="bg-primary text-center text-white" id="footer">
 		<div class="container p-4 pb-0">
 			<section class="mb-4 contact-container">
 				{contactAnchors}
@@ -33,13 +33,13 @@ TEMPLATE_STRINGS_FOOTER = {
 function generateFooter() {
 	let contactAnchors = "";
 	for (let contact of Object.values(CONTACT)) {
-		contactAnchors += renderTemplate(TEMPLATE_STRINGS_FOOTER.contactAnchor, {
+		contactAnchors += fillTemplate(TEMPLATE_STRINGS_FOOTER.contactAnchor, {
 			href   : contact.link,
 			icon   : contact.icon,
 			content: contact.username,
 		});
 	}
-	let html = renderTemplate(TEMPLATE_STRINGS_FOOTER.base, {contactAnchors: contactAnchors});
+	let html = fillTemplate(TEMPLATE_STRINGS_FOOTER.base, {contactAnchors: contactAnchors});
 	$("footer").html(html);
 }
 

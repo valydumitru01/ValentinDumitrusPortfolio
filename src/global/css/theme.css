@@ -1,0 +1,14 @@
+/*------------------------------------
+- COLOR primary
+------------------------------------*/
+
+
+:root,
+[data-bs-theme=light]  {
+    --bs-primary: #000000;
+    --bs-primary-rgb: 0, 0, 0;
+    --bs-primary-contrast: #ffffff;
+    --bs-primary-contrast-rgb: 255, 255, 255;
+    --bs-primary-shade: #000000;
+    --bs-primary-tint: #1a1a1a;
+}

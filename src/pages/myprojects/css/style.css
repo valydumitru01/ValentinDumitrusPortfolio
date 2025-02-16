@@ -155,3 +155,17 @@ main {
     height: 25vh;
     object-fit: cover;
 }
+
+.modal img{
+    object-fit: contain;
+}
+
+.project-card {
+    transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,42 @@
+
+/*----------------- Strengths and weaknesses table -------------------*/
+.content-table {
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+    background-color: black;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 0.5em 0.5em;
+}
+
+.content-table tbody tr {
+    border-bottom: 0.1em solid #dddddd;
+}
+
+.content-table thead th:nth-of-type(even),
+.content-table tbody td:nth-of-type(even) {
+    text-align: right;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid black;
+}
+

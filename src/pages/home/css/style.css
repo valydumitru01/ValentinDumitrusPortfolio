@@ -5,66 +5,9 @@ main{
 
 #home-page {
     overflow: hidden;
+    padding-bottom: 5em;
 }
 
-
-
-@keyframes glitch {
-    0% {
-        clip-path: var(--slice-1);
-        transform: translate(-20px, -10px);
-    }
-
-    10% {
-        clip-path: var(--slice-3);
-        transform: translate(10px, 10px);
-    }
-
-    20% {
-        clip-path: var(--slice-1);
-        transform: translate(-10px, 10px);
-    }
-
-    30% {
-        clip-path: var(--slice-3);
-        transform: translate(0px, 5px);
-    }
-
-    40% {
-        clip-path: var(--slice-2);
-        transform: translate(-5px, 0px);
-    }
-
-    50% {
-        clip-path: var(--slice-3);
-        transform: translate(5px, 0px);
-    }
-
-    60% {
-        clip-path: var(--slice-4);
-        transform: translate(5px, 10px);
-    }
-
-    70% {
-        clip-path: var(--slice-2);
-        transform: translate(-10px, 10px);
-    }
-
-    80% {
-        clip-path: var(--slice-5);
-        transform: translate(20px, -10px);
-    }
-
-    90% {
-        clip-path: var(--slice-1);
-        transform: translate(-10px, 0px);
-    }
-
-    100% {
-        clip-path: var(--slice-1);
-        transform: translate(0);
-    }
-}
 
 
 
@@ -74,7 +17,6 @@ main{
 /*-------------------------------------------------------*/
 /*-------------------------------------------------------*/
 #home-text {
-    overflow: hidden;
     margin-left: 15vw;
     margin-right: 20vw;
     margin-bottom: 20vh;
@@ -92,7 +34,7 @@ main{
 
 #to-my {
     color: black;
-    font-family: "Shell Roundhand";
+    font-family: "Shell Roundhand", serif;
     font-size: 5vw;
     transform: translate(10%, 35%);
 
@@ -100,7 +42,7 @@ main{
 
 #by-valentin {
     color: black;
-    font-family: "Shell Roundhand";
+    font-family: "Shell Roundhand", serif;
     font-size: 3vw;
     transform: translate(60%, -240%) rotate(-12deg);
     position: relative;
@@ -266,13 +208,12 @@ main{
             black 2px,
             black 4px);
     -webkit-background-clip: text;
-    top: 0px;
+    top: 0;
     left: 0;
     z-index: -1;
     transition: 1s;
     font-weight: 900;
     font-size: 10vw;
-    letter-spacing: 0;
     letter-spacing: +0.003em;
     animation: 2s wait linear;
 }
@@ -287,8 +228,8 @@ main{
             black 2px,
             black 4px);
     -webkit-background-clip: text;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     transition: 1s;
     font-weight: 900;
     font-size: 10vw;
@@ -409,34 +350,7 @@ main{
     animation-delay: 1.6s;
 }
 /* -----------------------------Adaptablity-------------------------------*/
-@media only screen and (max-width: 1500px) {
-    #home-text {
-        overflow: visible;
-        margin-bottom: 0;
-    }
-    
-    .deconstructed {
-        font-size: 15vw;
-    }
-    #to-my {
-        position: relative;
-        top: -0.2em;
-        font-size: 4vw;
-    }
 
-    .text-drop,
-    .stripped-effect-text::before,
-    .stripped-effect-text::after {
-        font-size: 10vw;
-    }
-
-    #by-valentin {
-        font-size: 4vw;
-        bottom: -2em;
-    }
-
-
-}
 
 @media only screen and (max-width: 1000px) {
     .deconstructed {

@@ -1,6 +1,6 @@
 TEMPLATE_STRINGS = {
     base: `
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <!-- Portfolio title -->
         <h2 class="text-white fw-bold" id="portfolio-title">${NAME}'s Portfolio</h2>
     
@@ -15,7 +15,7 @@ TEMPLATE_STRINGS = {
         </div>
     </nav>
     
-    <h1 class="bg-dark text-white" id="title-container">
+    <h1 class="bg-primary text-white" id="title-container">
         <i class="fa fa-arrow-alt-circle-left" id="go-back-arrow"  role="button"></i>
         <span id="go-back-text"></span>
         <span id="main-title">
@@ -36,9 +36,9 @@ function generateNav(){
     let html = TEMPLATE_STRINGS.base;
     let navItems = "";
     for (var page of Object.values(PAGES)) {
-        navItems += renderTemplate(TEMPLATE_STRINGS.navItem, { item: page, title: PAGE_TITLES[page] });
+        navItems += fillTemplate(TEMPLATE_STRINGS.navItem, { item: page, title: PAGE_TITLES[page] });
     }
-    html = renderTemplate(html, { navItems: navItems });
+    html = fillTemplate(html, { navItems: navItems });
     $("header").html(html);
 }
 

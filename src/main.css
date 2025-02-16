@@ -16,7 +16,9 @@
 
     --body-min-height: 66vh;
     --body-top-padding: 2em;
+    --body-bottom-padding: 2em;
     --body-width: 50%;
+    --body-width-mobile: 80%;
 
     --scrollbar-width: 0.6em;
     --scrollbar-color: rgb(33, 37, 41);
@@ -47,6 +49,7 @@ main {
 
     /* To separate a bit the content from the nav bar */
     padding-top: var(--body-top-padding);
+    padding-bottom: var(--body-bottom-padding);
 
     /* Justify the text */
     text-align: justify;
@@ -54,6 +57,13 @@ main {
     /* Center things, make the page stay in the middle */
     margin: auto;
     width: var(--body-width);
+}
+
+/* Making the body width adaptable to different screen sizes */
+@media screen and (max-width: 800px) {
+    main {
+        width: var(--body-width-mobile);
+    }
 }
 
 
