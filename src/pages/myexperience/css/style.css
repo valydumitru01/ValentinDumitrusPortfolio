@@ -1,3 +1,6 @@
+@import "../../../global/css/timeline.css";
+
+
 body {
     animation: fade-color 0.3s ease forwards;
 }
