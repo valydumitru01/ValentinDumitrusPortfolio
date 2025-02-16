@@ -8,7 +8,7 @@ TEMPLATE_STRINGS = {
         <section class="frame-container">
             <figure class="frame falling-animation">
                 <div class="paper">
-                    <img class="portrait" src="/src/pages/aboutme/res/imgs/me_transparent.png" alt="Photo of myself"/>
+                    <img class="portrait" src="src/pages/aboutme/res/imgs/me_transparent.png" alt="Photo of myself"/>
                     <p class="text-end" id="signature">{signature}</p>
                 </div>
             </figure>
