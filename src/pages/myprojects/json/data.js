@@ -10,8 +10,8 @@ DATA = [
 		github     : "https://github.com/valydumitru01/TeraBox",
 		video      : "https://www.youtube.com/watch?v=xJrLYVcxPwo",
 		tools      : [
-			BRAND_IMAGES.cpp, BRAND_IMAGES.sdl, BRAND_IMAGES.opengl, BRAND_IMAGES.github, BRAND_IMAGES.clion,
-			BRAND_IMAGES.cmake, BRAND_IMAGES.markdown
+			BRAND_IMAGES.cpp, BRAND_IMAGES.sdl, BRAND_IMAGES.github, BRAND_IMAGES.clion,
+			BRAND_IMAGES.makefile
 		]
 	}, {
 		title      : "Labyrinth Game",
@@ -175,11 +175,11 @@ DATA = [
 		]
 	}, {
 		title      : "RPN Calculator",
-		description: "A RPN calculator made in with php but it does not work without the server.",
+		description: "A RPN calculator made in javascript, I also have one with a backend in php but it does not work without the server.",
 		imgs       : [
 			"src/pages/myprojects/res/imgs/rpm_calculator.png"
 		],
-		site       : "https://valydumitru01.github.io/SEW/P-PHP/Ejercicio-3/CalculadoraRPN.html",
+		site       : "https://valydumitru01.github.io/SEW/P-JS/Ej-5/CalculadoraRPN.html",
 		download   : null,
 		github     : null,
 		tools      : [
