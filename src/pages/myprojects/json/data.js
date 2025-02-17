@@ -64,7 +64,7 @@ DATA = [
 		]
 	}, {
 		title      : "GLESC Engine",
-		description: "The project is a custom, simple, game engine written in C++ with SDL and OpenGL. It included a ECS architecture over some subsystems, mainly a graphic engine, a physics engine, an input engine and a debugging system. It includes fully implemented custom math library and an abstraction for the graphic API. The project took approximately 3500 hours of work. You can download the game examples in the link on the right. You can also see the Doxygen documentation in the \"Visit Site\" button. Also, you can see the presentation video <a href='https://www.youtube.com/watch?v=BUtPk38Kh0Y&ab_channel=ValentinDumitru'>here</a>.",
+		description: "The project is a custom, simple, game engine written in C++ with SDL and OpenGL. It included a ECS architecture over some subsystems, mainly a graphic engine, a physics engine, an input engine and a debugging system. It includes fully implemented custom math library and an abstraction for the graphic API. The project took approximately 3500 hours of work. You can download the game examples in the link on the right. You can also see the Doxygen documentation in the \"Visit Site\" button.",
 		imgs       : [
 			"src/pages/myprojects/res/imgs/glesc.gif"
 		],
@@ -72,6 +72,7 @@ DATA = [
 		github     : "https://github.com/valydumitru01/GLESC",
 		download   : "https://github.com/valydumitru01/GLESC/releases/download/GLESC_game_examples/GLESC_games.zip",
 		"header"   : true,
+		video: "https://www.youtube.com/watch?v=BUtPk38Kh0Y",
 		tools      : [
 			BRAND_IMAGES.sdl, BRAND_IMAGES.opengl, BRAND_IMAGES.cpp, BRAND_IMAGES.doxygen, BRAND_IMAGES.github,
 			BRAND_IMAGES.clion, BRAND_IMAGES.cmake, BRAND_IMAGES.clangFormat, BRAND_IMAGES.git, BRAND_IMAGES.nsight,
