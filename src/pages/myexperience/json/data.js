@@ -2,14 +2,12 @@ DATA = [
 	{
 		icon       : "fa-briefcase",
 		period     : {
-			start   : "Feb. 2023",
-			end     : "Apr. 2023",
-			duration: "3 months"
+			start: "Dec. 2024",
+			end  : "Present",
+			duration: "Present"
 		},
-		title      : "Inetum Outsystems - Internship",
-		subtitle   : "Full Stack Developer",
-		description: "My main job here was full stack developer, working with Outsystems, a low-code platform for easy development and deployment. "
-		
+		title      : "C++ Software Engineer",
+		description: "I am currently working as a C++ developer and engineer in a critical mission telecommunications company. Responsibilities include documenting, architecting, and developing a full-stack website using Angular and C++ and the software of critical mission soft switches developed in C++. I overhauled one of their systems, drastically improving performance, maintainability, and efficiency."
 	}, {
 		icon       : "fa-briefcase",
 		period     : {
@@ -19,6 +17,17 @@ DATA = [
 		},
 		title      : "Game engine development (Personal Project)",
 		description: "I developed a game engine from scratch using C++ and OpenGL. It includes a graphic API abstraction, fully custom math library, a simple rendering, sound, input and physics system and some other features. GitHub repo <a href='https://github.com/valydumitru01/GLESC'> here</a>."
+		
+	}, {
+		icon       : "fa-briefcase",
+		period     : {
+			start   : "Feb. 2023",
+			end     : "Apr. 2023",
+			duration: "3 months"
+		},
+		title      : "Inetum Outsystems - Internship",
+		subtitle   : "Full Stack Developer",
+		description: "My main job here was full stack developer, working with Outsystems, a low-code platform for easy development and deployment. "
 		
 	}, {
 		icon       : "fa-terminal",

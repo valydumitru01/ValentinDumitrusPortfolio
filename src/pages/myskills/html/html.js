@@ -20,7 +20,7 @@ TEMPLATE_STRINGS = {
 	// for the engineering accordion, software accordion,
 	// and languages table.
 	base: `
-    <div class="container py-5">
+    <div class="py-5">
       <h1 class="text-center mb-5">My Skills</h1>
 
       <!-- Engineering Section -->
@@ -226,7 +226,14 @@ function convert_tables_to_data_tables() {
 			$(this).DataTable({
 								  paging    : true,
 								  searching : true,
-								  info      : true,
+								  autoWidth : true,
+								  lengthMenu: [5, 7, 10],
+								  pageLength: 5,
+								  dom: '<"row"<"col-6"l><"col-6"f>>' + // 1 row, half-width for "Show X entries" + half-width for search
+									   '<"row"<"col-12"i>>' +          // 1 full-width row for the info
+									   'rt' +                          // table itself
+									   '<"row"<"col-12"p>>' +          // 1 full-width row for pagination
+									   '<"clear">',
 								  columnDefs: [
 									  {
 										  targets  : 1,
@@ -236,6 +243,12 @@ function convert_tables_to_data_tables() {
 								  ]
 							  });
 		});
+		// Changing the paging so instead of having the showing X text and the page buttons next to each other, they
+		// are on top of each other
+		$(".dataTables_length").addClass("d-flex flex-column");
+		$(".dataTables_length label").addClass("mb-2");
+		$(".dataTables_paginate").addClass("d-flex flex-column");
+		$(".dataTables_paginate .pagination").addClass("justify-content-center");
 	});
 }
 

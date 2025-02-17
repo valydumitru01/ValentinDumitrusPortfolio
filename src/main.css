@@ -19,6 +19,7 @@
     --body-bottom-padding: 2em;
     --body-width: 50%;
     --body-width-mobile: 80%;
+    --mobile-screen-px: 800px;
 
     --scrollbar-width: 0.6em;
     --scrollbar-color: rgb(33, 37, 41);
@@ -81,6 +82,16 @@ h1, h2 {
 h3, h4, h5 {
     color: var(--main-font-low-title-color);
     font-weight: lighter;
+}
+
+.hr-white {
+    border: 0.1em solid white;
+    margin: 1em 0;
+}
+
+.hr-black {
+    border: 0.1em solid black;
+    margin: 1em 0;
 }
 
 .text-note {

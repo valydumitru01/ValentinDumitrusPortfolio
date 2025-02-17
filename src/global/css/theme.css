@@ -4,11 +4,23 @@
 
 
 :root,
-[data-bs-theme=light]  {
+[data-bs-theme=light] {
     --bs-primary: #000000;
     --bs-primary-rgb: 0, 0, 0;
     --bs-primary-contrast: #ffffff;
     --bs-primary-contrast-rgb: 255, 255, 255;
     --bs-primary-shade: #000000;
     --bs-primary-tint: #1a1a1a;
+    --bs-border-color: #aaaaaa;
+    --bs-secondary: #888888;
+
+    /* Accordion */
+    --bs-primary-text-emphasis: #ffffff;
+    --bs-primary-bg-subtle: #222222;
+    --bs-link-color-rgb: 0, 0, 0;
+
+}
+.accordion{
+    --bs-accordion-btn-focus-border-color: #222222;
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.7);
 }

@@ -77,11 +77,11 @@ class Navigator {
 }
 
 
+let navigator                 = new Navigator();
 $(document).ready(function () {
-	let navigator                 = new Navigator();
-	$("#portfolio-title").onclick = function () {
-		navigator.goTo("home");
-	}
+	$("#portfolio-title").on('click', (ev)=> {
+		navigator.goTo(PAGES.HOME);
+	});
 	
 	for (key in PAGES) {
 		page = PAGES[key]

@@ -28,7 +28,7 @@ DATA = [
 		download   : null,
 		github     : null
 	}, {
-		title      : "Maple Language",
+		title      : "MAPL Language",
 		description: "Lexical analysis, syntactic analysis, memory management and code generation of MAPL code.",
 		imgs       : [
 			"src/pages/myprojects/res/imgs/mapl.jpg"

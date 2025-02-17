@@ -2,7 +2,7 @@ TEMPLATE_STRINGS = {
     base: `
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <!-- Portfolio title -->
-        <h2 class="text-white fw-bold" id="portfolio-title">${NAME}'s Portfolio</h2>
+        <h2 class="text-white fw-bold" id="portfolio-title" style="color: white; cursor: pointer;">${NAME}'s Portfolio</h2>
     
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggled-content" aria-controls="toggled-content" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -26,7 +26,9 @@ TEMPLATE_STRINGS = {
     navItem: `
     <li class="nav-item">
         <a class="nav-link fw-bold" id="nav-item-{item}">
-            <h2 style="color: white; cursor: pointer;"> {title} </h2>
+            <div class=" h-100 d-flex align-items-center">
+                <h2 style="color: white; cursor: pointer;"> {title} </h2>
+            </div>
         </a>
     </li>
 `

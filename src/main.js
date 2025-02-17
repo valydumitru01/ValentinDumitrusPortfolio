@@ -1,5 +1,3 @@
-
-
 generateNav("header")
 generateFooter("footer")
 
@@ -9,3 +7,6 @@ $("img").on("error", function () {
 	$(this).attr("src", "src/global/res/imgs/placeholder.png")
 })
 
+$(document).ready(function () {
+	navigator.goTo(PAGES.HOME)
+})

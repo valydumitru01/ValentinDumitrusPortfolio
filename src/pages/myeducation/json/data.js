@@ -8,7 +8,7 @@ DATA = {
 				duration: "5 years"
 			},
 			title      : "Software Engineering Degree",
-			description: "Degree coursed in Oviedo, Spain. Finished with average grade of 7.4 / 10. GPA score of 2.7. <a href='https://ingenieriainformatica.uniovi.es'>Uniovi software engineering official website.</a>"
+			description: "Degree coursed in Oviedo, Spain. Finished with average grade of 7.4 / 10. <a href='https://ingenieriainformatica.uniovi.es'>Uniovi software engineering official website.</a>"
 		}, {
 			icon       : "fa-school-flag",
 			period     : {
@@ -16,7 +16,7 @@ DATA = {
 				end     : "2019",
 				duration: "2 years"
 			},
-			title      : "College / Bachelor's",
+			title      : "High School / College",
 			description: "Finished in Oviedo, Spain, in Alfonso II high school."
 		}, {
 			icon       : "fa-school",
@@ -25,19 +25,22 @@ DATA = {
 				end     : "2017",
 				duration: "4 years"
 			},
-			title      : "High School",
+			title      : "Middle School / Secondary School",
 			description: "Done in Oviedo, Spain. Started in IES Río Nalón. Finished in IES Alfonso II."
 		}
 	],
 	books  : [
 		{
 			title : "Learn OpenGL",
+			author: "Joey de Vries",
 			status: 30
 		}, {
 			title : "Game Engine Architecture",
+			author: "Jason Gregory",
 			status: 10
 		}, {
 			title : "Game Programming Patterns",
+			author: "Robert Nystrom",
 			status: 100
 		}, {
 			title : "Fundamentals of Computer Graphics 5th Edition",
@@ -63,6 +66,12 @@ DATA = {
 			link       : "https://www.youtube.com/watch?v=W3gAzLwfIP0&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2",
 			description: "This is a youtube course that I followed to learn OpenGL. The Cherno explains it wonderfully "
 						 + "and you learn a lot about OpenGL, shaders and graphics programming in general."
+		},
+		{
+			title: "How To Make A Game In C++ & SDL2 From Scratch!",
+			status: 50,
+			link: "https://www.youtube.com/watch?v=jq3Bg7XXjWw&list=PLhfAbcv9cehhkG7ZQK0nfIGJC_C-wSLrx&index=10",
+			description: "This is a youtube course that I followed to learn how to make games in C++ and SDL2. It is also a good introduction to ECS pattern."
 		}
 	],
 	blogs  : [

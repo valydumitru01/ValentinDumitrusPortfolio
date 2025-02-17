@@ -17,7 +17,17 @@ TEMPLATE_STRINGS = {
             <h1>Introduction</h1>
             {paragraphs}
         </section>
-        <section id="strengths-and-weaknesses">
+        
+        <section>
+            <h2>Passions <i class='fas fa-heart'></i></h2>
+            <div class="accordion" id="passions-accordion">
+                {passions}
+            </div>
+        </section>
+    </article>
+    `,
+	strengthsAndWeaknesses: `
+	<section id="strengths-and-weaknesses">
             <h2>
                 Strengths and Weaknesses <i class='fas fa-thumbs-up'></i><i class='fas fa-thumbs-down'></i>
             </h2>
@@ -35,14 +45,7 @@ TEMPLATE_STRINGS = {
                 </table>
             </div>
         </section>
-        <section>
-            <h2>Passions <i class='fas fa-heart'></i></h2>
-            <div class="accordion" id="passions-accordion">
-                {passions}
-            </div>
-        </section>
-    </article>
-    `,
+        `,
 	tableRow: `
         <tr>
             <td class="tile">{strength}</td>
@@ -113,7 +116,7 @@ function generate_page_aboutme(selector) {
 	html = fillTemplate(html, {
 		signature : signature,
 		paragraphs: paragraphs,
-		tableRows : tableRows,
+		// tableRows : tableRows,
 		passions  : generate_passions(DATA.passions)
 	});
 	

@@ -79,7 +79,7 @@
 }
 
 .frame {
-    background-image: url("src/pages/aboutme/res/imgs/portrait_background.png");
+    background-image: url("../res/imgs/portrait_background.png");
     background-color: rgb(33, 37, 41);
 
     /* Border Settings */
