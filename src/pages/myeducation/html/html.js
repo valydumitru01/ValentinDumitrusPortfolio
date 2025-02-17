@@ -112,6 +112,7 @@ function generate_page_myeducation(selector) {
 		$slider.slick({
 						  centerMode   : true,
 						  autoplay     : true,
+						  dots: true,
 						  infinite     : true,
 						  centerPadding: '10vw',
 						  cssEase: 'linear',

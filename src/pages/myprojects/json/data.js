@@ -8,7 +8,11 @@ DATA = [
 		site       : null,
 		download   : "https://github.com/valydumitru01/TeraBox/releases/download/Release/TeraBox1.0.rar",
 		github     : "https://github.com/valydumitru01/TeraBox",
-		video      : "https://www.youtube.com/watch?v=3Q6J9Q6Z9ZI&ab_channel=ValentinDumitru"
+		video      : "https://www.youtube.com/watch?v=3Q6J9Q6Z9ZI&ab_channel=ValentinDumitru",
+		tools      : [
+			BRAND_IMAGES.cpp, BRAND_IMAGES.sdl, BRAND_IMAGES.opengl, BRAND_IMAGES.github, BRAND_IMAGES.clion,
+			BRAND_IMAGES.cmake, BRAND_IMAGES.markdown
+		]
 	}, {
 		title      : "Labyrinth Game",
 		description: "Mini game made on Canvas element with javascript.",
@@ -17,7 +21,11 @@ DATA = [
 		],
 		site       : "https://valydumitru01.github.io/SEW/P-JS/Ej-14/Ejercicio14.html",
 		download   : null,
-		github     : null
+		github     : null,
+		tools      : [
+			BRAND_IMAGES.javascript, BRAND_IMAGES.canvas, BRAND_IMAGES.html, BRAND_IMAGES.css, BRAND_IMAGES.bootstrap,
+			BRAND_IMAGES.vscode, BRAND_IMAGES.git
+		]
 	}, {
 		title      : "Weather Tool",
 		description: "Weather tool which allows the user to click on a point in the map to see how is the exact weather in that position.",
@@ -25,8 +33,10 @@ DATA = [
 			"src/pages/myprojects/res/imgs/weather_picker.png"
 		],
 		site       : "https://valydumitru01.github.io/SEW/P-JS/Ej-11/Tarea-6/Ejercicio11_Tarea6.html",
-		download   : null,
-		github     : null
+		tools      : [
+			BRAND_IMAGES.javascript, BRAND_IMAGES.html, BRAND_IMAGES.css, BRAND_IMAGES.bootstrap, BRAND_IMAGES.jquery,
+			BRAND_IMAGES.nodejs, BRAND_IMAGES.vscode
+		]
 	}, {
 		title      : "MAPL Language",
 		description: "Lexical analysis, syntactic analysis, memory management and code generation of MAPL code.",
@@ -35,7 +45,10 @@ DATA = [
 		],
 		site       : null,
 		download   : null,
-		github     : "https://github.com/valydumitru01/MAPL"
+		github     : "https://github.com/valydumitru01/MAPL",
+		tools      : [
+			BRAND_IMAGES.antlr, BRAND_IMAGES.java, BRAND_IMAGES.eclipse, BRAND_IMAGES.git, BRAND_IMAGES.markdown
+		]
 	}, {
 		title      : "My Portfolio",
 		description: "Website made with HTML, Javascript, Bootstrap and JQuery.",
@@ -44,7 +57,11 @@ DATA = [
 		],
 		site       : "https://valydumitru01.github.io/ValentinDumitrusPortfolio/",
 		download   : null,
-		github     : "https://github.com/valydumitru01/ValentinDumitrusPortfolio"
+		github     : "https://github.com/valydumitru01/ValentinDumitrusPortfolio",
+		tools      : [
+			BRAND_IMAGES.html, BRAND_IMAGES.css, BRAND_IMAGES.bootstrap, BRAND_IMAGES.javascript, BRAND_IMAGES.jquery,
+			BRAND_IMAGES.vscode, BRAND_IMAGES.git
+		]
 	}, {
 		title      : "GLESC Engine",
 		description: "The project is a custom, simple, game engine written in C++ with SDL and OpenGL. It included a ECS architecture over some subsystems, mainly a graphic engine, a physics engine, an input engine and a debugging system. It includes fully implemented custom math library and an abstraction for the graphic API. The project took approximately 3500 hours of work. You can download the game examples in the link on the right. You can also see the Doxygen documentation in the \"Visit Site\" button. Also, you can see the presentation video <a href='https://www.youtube.com/watch?v=BUtPk38Kh0Y&ab_channel=ValentinDumitru'>here</a>.",
@@ -54,7 +71,12 @@ DATA = [
 		site       : "https://valydumitru01.github.io/GLESC/doc/doxy/generated-doxy/html/index.html",
 		github     : "https://github.com/valydumitru01/GLESC",
 		download   : "https://github.com/valydumitru01/GLESC/releases/download/GLESC_game_examples/GLESC_games.zip",
-		"header"     : true
+		"header"   : true,
+		tools      : [
+			BRAND_IMAGES.sdl, BRAND_IMAGES.opengl, BRAND_IMAGES.cpp, BRAND_IMAGES.doxygen, BRAND_IMAGES.github,
+			BRAND_IMAGES.clion, BRAND_IMAGES.cmake, BRAND_IMAGES.clangFormat, BRAND_IMAGES.git, BRAND_IMAGES.nsight,
+			BRAND_IMAGES.drawio, BRAND_IMAGES.cppdepend, BRAND_IMAGES.markdown
+		]
 	}, {
 		title      : "Blender Projects",
 		description: "A bunch of 3D renders made in Blender.",
@@ -68,7 +90,8 @@ DATA = [
 		site       : null,
 		download   : null,
 		github     : null,
-		video      : null
+		video      : null,
+		tools      : [BRAND_IMAGES.blender]
 	}, {
 		title      : "Risk Of Dying",
 		description: "Simple Unreal Engine game. Consists of a rogue-like type game inspired a little by Risk of Rain. In this game you kill enemies that gives you coins. The coins allow you to open chests that drop upgrades. The more time it passes, the more enemies you encounter.",
@@ -84,7 +107,10 @@ DATA = [
 		download   : null,
 		github     : "https://github.com/valydumitru01/RiskOfDying",
 		video      : "https://www.youtube.com/watch?v=GFXCLXv05RU",
-		"header"     : true
+		"header"   : true,
+		tools      : [
+			BRAND_IMAGES.unrealEngine, BRAND_IMAGES.cpp, BRAND_IMAGES.github, BRAND_IMAGES.vscode, BRAND_IMAGES.git
+		]
 	}, {
 		title      : "3D&D",
 		description: "VR Card Game made in Unity. It includes online connection and allows two players to combat each other using cards that summon different creatures. You start with 100 mana, each time you cast a card, a bit of mana is consumed. You can skip turn whenever you want with the sand clock. Each new turn you gain a bit of mana. If you run out of mana, you skip turn.",
@@ -96,7 +122,8 @@ DATA = [
 		download   : "https://github.com/valydumitru01/3DnD/releases/download/Releases/3dnd.apk",
 		github     : "https://github.com/valydumitru01/3DnD",
 		video      : "https://www.youtube.com/watch?v=gWdh3RslvRQ",
-		"header"     : true
+		"header"   : true,
+		tools      : [BRAND_IMAGES.unity, BRAND_IMAGES.csharp, BRAND_IMAGES.android, BRAND_IMAGES.git]
 	}, {
 		title      : "Photogrammetry",
 		description: "A nice photogrammetry project where I created a 3D model out of 2 decorative figures.",
@@ -117,7 +144,8 @@ DATA = [
 		],
 		site       : null,
 		download   : null,
-		github     : "https://github.com/valydumitru01/bingo"
+		github     : "https://github.com/valydumitru01/bingo",
+		tools      : [BRAND_IMAGES.java, BRAND_IMAGES.eclipse, BRAND_IMAGES.github]
 	}, {
 		title      : "Basic Calculator",
 		description: "A basic calculator made in javascript, I also have one with a backend in php but it does not work without the server.",
@@ -126,7 +154,11 @@ DATA = [
 		],
 		site       : "https://valydumitru01.github.io/SEW/P-PHP/Ejercicio-1/CalculadoraBasica.html",
 		download   : null,
-		github     : null
+		github     : null,
+		tools      : [
+			BRAND_IMAGES.javascript, BRAND_IMAGES.php, BRAND_IMAGES.html, BRAND_IMAGES.css, BRAND_IMAGES.bootstrap,
+			BRAND_IMAGES.vscode
+		]
 	}, {
 		title      : "Scientific Calculator",
 		description: "A scientific calculator made in javascript, I also have one with a backend in php but it does not work without the server.",
@@ -135,7 +167,11 @@ DATA = [
 		],
 		site       : "https://valydumitru01.github.io/SEW/P-JS/Ej-10/Ejercicio10.html",
 		download   : null,
-		github     : null
+		github     : null,
+		tools      : [
+			BRAND_IMAGES.javascript, BRAND_IMAGES.php, BRAND_IMAGES.html, BRAND_IMAGES.css, BRAND_IMAGES.bootstrap,
+			BRAND_IMAGES.vscode
+		]
 	}, {
 		title      : "RPN Calculator",
 		description: "A RPN calculator made in with php but it does not work without the server.",
@@ -144,7 +180,10 @@ DATA = [
 		],
 		site       : "https://valydumitru01.github.io/SEW/P-PHP/Ejercicio-3/CalculadoraRPN.html",
 		download   : null,
-		github     : null
+		github     : null,
+		tools      : [
+			BRAND_IMAGES.php, BRAND_IMAGES.html, BRAND_IMAGES.css, BRAND_IMAGES.bootstrap, BRAND_IMAGES.vscode
+		]
 	}, {
 		title      : "SoFit",
 		description: "A gym android app made in Android Studio. It includes API usage for the exercises, a database for the user data and a graph to display user progress.",
@@ -156,7 +195,8 @@ DATA = [
 		],
 		site       : null,
 		download   : null,
-		github     : "https://github.com/valydumitru01/SoFit"
+		github     : "https://github.com/valydumitru01/SoFit",
+		tools      : [BRAND_IMAGES.android, BRAND_IMAGES.java, BRAND_IMAGES.git]
 	}, {
 		title      : "Rock Shop (DeDe Shop)",
 		description: "And E-Commerce website made in React. It includes a login system, a cart system, a product list and a product detail page. It was deployed in Heroku (but it is not available anymore). It was done in a team of 4 persons.",
@@ -165,6 +205,10 @@ DATA = [
 		],
 		site       : "https://arquisoft.github.io/dede_es1a/",
 		download   : "https://github.com/Arquisoft/dede_es1a/archive/refs/tags/v1.1.3.zip",
-		github     : "https://github.com/Arquisoft/dede_es1a"
+		github     : "https://github.com/Arquisoft/dede_es1a",
+		tools      : [
+			BRAND_IMAGES.react, BRAND_IMAGES.typescript, BRAND_IMAGES.nodejs, BRAND_IMAGES.mongodb, BRAND_IMAGES.git,
+			BRAND_IMAGES.docker, BRAND_IMAGES.springboot
+		]
 	}
 ]

@@ -1,5 +1,5 @@
 TEMPLATE_STRINGS = {
-	base: `
+	base               : `
     <p>
       Here is a complete collection of all my projects since I started my software engineering career.
     </p>
@@ -25,7 +25,7 @@ TEMPLATE_STRINGS = {
 			<div class="carousel-upper-band"></div>
 		</div>
 		<p> Click on a project for more information! </p>
-        <div class="card-group">
+        <div class="card-deck d-flex flex-wrap justify-content-center">
         	{cards}
 		</div>
 		
@@ -66,7 +66,7 @@ TEMPLATE_STRINGS = {
 		</div>
     </article>
     `,
-	carouselItem: `
+	carouselItem       : `
     <div class="carousel-item {activeClass}" style="cursor:pointer;" data-bs-index="{index}">
       <img class="carousel-img" src="{imgSrc}" alt="{title}">
       <div class="carousel-caption d-none d-md-block">
@@ -75,42 +75,47 @@ TEMPLATE_STRINGS = {
       </div>
     </div>
     `,
-	modalCarouselItem: `
+	modalCarouselItem  : `
 	<div class="carousel-item {activeClass}">
       <img class="carousel-img" src="{imgSrc}" alt="{title}">
     </div>
 	`,
-	carouselIndicator: `<li data-target="#header-carousel" data-bs-slide-to="{index}" class="{activeClass}"></li>`,
-	card: `
-    <div class="col-md-4 mb-4">
-      <div class="card text-white h-50 project-card" data-bs-index="{index}" style="cursor:pointer;">
-        <img class="card-img img-fluid" src="{imgSrc}" alt="{title}">
-        <div class="card-img-overlay">
-          <h5 class="card-title">{title}</h5>
-        </div>
-      </div>
-    </div>
+	carouselIndicator  : `<li data-target="#header-carousel" data-bs-slide-to="{index}" class="{activeClass}"></li>`,
+	card               : `
+      <div class="card text-white project-card " data-bs-index="{index}" style="cursor:pointer;">
+      	<div class="card-header bg-white">
+      	  <div class="card-title text-black">
+          {title}
+          </div>
+      	</div>
+        <img class="card-img-top" src="{imgSrc}" alt="{title}">
+        
+      	<div class="card-footer bg-white">
+      	  {tools}
+      	</div>
+	  </div>
     `,
 	modalLinksContainer: `
 		<div class="modal-links mt-3">
 			{buttons}
 		</div>
 	`,
-	modalLink: `<a href="{url}" target="_blank" class="btn {btnClass} me-2">{text}</a>`
+	modalLink          : `<a href="{url}" target="_blank" class="btn {btnClass} me-2">{text}</a>`,
+	toolImg			: `<img src="{imgSrc}" alt="{tool}" class="tool-img">`
 };
 
 function generate_carousel_items(projects) {
 	let carouselItems = "";
-	let index = 0;
+	let index         = 0;
 	projects.forEach((project, i) => {
 		if (project.header !== true) return;
 		const activeClass = index === 0 ? "active" : "";
 		carouselItems += fillTemplate(TEMPLATE_STRINGS.carouselItem, {
-			activeClass: activeClass,
-			imgSrc: project.imgs[0],
-			title: project.title,
+			activeClass    : activeClass,
+			imgSrc         : project.imgs[0],
+			title          : project.title,
 			descriptionHtml: project.description,
-			index: i
+			index          : i
 		});
 		index++;
 	});
@@ -119,13 +124,13 @@ function generate_carousel_items(projects) {
 
 function generate_carousel_indicators(projects) {
 	let carouselIndicators = "";
-	let index = 0;
+	let index              = 0;
 	projects.forEach((project) => {
 		if (project.header !== true) return;
 		const activeClass = index === 0 ? "active" : "";
 		carouselIndicators += fillTemplate(TEMPLATE_STRINGS.carouselIndicator, {
 			activeClass: activeClass,
-			index: index
+			index      : index
 		});
 		index++;
 	});
@@ -135,10 +140,13 @@ function generate_carousel_indicators(projects) {
 function generate_cards(projects) {
 	let cardsHtml = "";
 	projects.forEach((project, index) => {
+		let projectsToolHtml = "";
+		projectsToolHtml=project.tools ? project.tools.map(tool => fillTemplate(TEMPLATE_STRINGS.toolImg, {imgSrc: BRAND_IMAGES_PATH+tool+BRAND_IMAGES_EXT, tool: tool})).join("") : "";
 		cardsHtml += fillTemplate(TEMPLATE_STRINGS.card, {
 			imgSrc: project.imgs[0],
-			title: project.title,
-			index: index
+			title : project.title,
+			tools : projectsToolHtml,
+			index : index
 		});
 	});
 	return cardsHtml;
@@ -146,9 +154,9 @@ function generate_cards(projects) {
 
 function generate_page_myprojects(selector) {
 	let html = fillTemplate(TEMPLATE_STRINGS.base, {
-		carouselItems: generate_carousel_items(DATA),
+		carouselItems     : generate_carousel_items(DATA),
 		carouselIndicators: generate_carousel_indicators(DATA),
-		cards: generate_cards(DATA)
+		cards             : generate_cards(DATA)
 	});
 	$(selector).html(html);
 }
@@ -158,20 +166,20 @@ function openModal(project) {
 	$('#projectModalLabel').text(project.title);
 	
 	// Populate the modal carousel with project images
-	var $modalCarousel = $('#modal-header-carousel');
+	var $modalCarousel   = $('#modal-header-carousel');
 	var $modalIndicators = $modalCarousel.find('.carousel-indicators');
-	var $modalInner = $modalCarousel.find('.carousel-inner');
+	var $modalInner      = $modalCarousel.find('.carousel-inner');
 	
 	$modalIndicators.empty();
 	$modalInner.empty();
 	
 	if (project.imgs && project.imgs.length > 0) {
-		project.imgs.forEach(function(imgSrc, index) {
+		project.imgs.forEach(function (imgSrc, index) {
 			var activeClass = index === 0 ? "active" : "";
-			var modalItem = fillTemplate(TEMPLATE_STRINGS.modalCarouselItem, {
+			var modalItem   = fillTemplate(TEMPLATE_STRINGS.modalCarouselItem, {
 				activeClass: activeClass,
-				imgSrc: imgSrc,
-				title: project.title
+				imgSrc     : imgSrc,
+				title      : project.title
 			});
 			$modalInner.append(modalItem);
 			var indicator = `<li data-bs-target="#modal-header-carousel" data-bs-slide-to="${index}" class="${activeClass}"></li>`;
@@ -191,35 +199,35 @@ function openModal(project) {
 	var buttonsHtml = "";
 	if (project.site) {
 		buttonsHtml += fillTemplate(TEMPLATE_STRINGS.modalLink, {
-			url: project.site,
+			url     : project.site,
 			btnClass: "btn-info",
-			text: "Visit Site"
+			text    : "Visit Site"
 		});
 	}
 	if (project.download) {
 		buttonsHtml += fillTemplate(TEMPLATE_STRINGS.modalLink, {
-			url: project.download,
+			url     : project.download,
 			btnClass: "btn-success",
-			text: "Download"
+			text    : "Download"
 		});
 	}
 	if (project.github) {
 		buttonsHtml += fillTemplate(TEMPLATE_STRINGS.modalLink, {
-			url: project.github,
+			url     : project.github,
 			btnClass: "btn-dark",
-			text: "GitHub"
+			text    : "GitHub"
 		});
 	}
 	if (project.video) {
 		buttonsHtml += fillTemplate(TEMPLATE_STRINGS.modalLink, {
-			url: project.video,
+			url     : project.video,
 			btnClass: "btn-primary",
-			text: "Watch Video"
+			text    : "Watch Video"
 		});
 	}
 	
 	if (buttonsHtml !== "") {
-		var modalLinks = fillTemplate(TEMPLATE_STRINGS.modalLinksContainer, { buttons: buttonsHtml });
+		var modalLinks = fillTemplate(TEMPLATE_STRINGS.modalLinksContainer, {buttons: buttonsHtml});
 		$modalBody.append(modalLinks);
 	}
 	
