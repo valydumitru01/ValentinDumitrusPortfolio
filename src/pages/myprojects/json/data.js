@@ -153,7 +153,7 @@ DATA = [
 		imgs       : [
 			"src/pages/myprojects/res/imgs/basic_calculator.png"
 		],
-		site       : "https://valydumitru01.github.io/SEW/P-PHP/Ejercicio-1/CalculadoraBasica.html",
+		site       : "https://valydumitru01.github.io/SEW/P-JS/Ejercicio-1/CalculadoraBasica.html",
 		download   : null,
 		github     : null,
 		tools      : [
@@ -166,7 +166,7 @@ DATA = [
 		imgs       : [
 			"src/pages/myprojects/res/imgs/scientific_calculator.png"
 		],
-		site       : "https://valydumitru01.github.io/SEW/P-JS/Ej-10/Ejercicio10.html",
+		site       : "https://valydumitru01.github.io/SEW/P-JS/Ej-4/CalculadoraCientifica.html",
 		download   : null,
 		github     : null,
 		tools      : [
