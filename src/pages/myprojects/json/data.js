@@ -8,7 +8,7 @@ DATA = [
 		site       : null,
 		download   : "https://github.com/valydumitru01/TeraBox/releases/download/Release/TeraBox1.0.rar",
 		github     : "https://github.com/valydumitru01/TeraBox",
-		video      : "https://www.youtube.com/watch?v=3Q6J9Q6Z9ZI&ab_channel=ValentinDumitru",
+		video      : "https://www.youtube.com/watch?v=xJrLYVcxPwo",
 		tools      : [
 			BRAND_IMAGES.cpp, BRAND_IMAGES.sdl, BRAND_IMAGES.opengl, BRAND_IMAGES.github, BRAND_IMAGES.clion,
 			BRAND_IMAGES.cmake, BRAND_IMAGES.markdown
