@@ -93,8 +93,8 @@ $(document).ready(function () {
 		navigator.goTo(PAGES.HOME);
 	});
 	
-	for (key in PAGES) {
-		page = PAGES[key]
+	for (let key in PAGES) {  // Use `let` to keep `key` local to the loop
+		let page = PAGES[key]; // Use `let` to ensure proper scoping inside the loop
 		$("#nav-item-" + page).on('click', (ev) => {
 			let page = ev.currentTarget.id.replace("nav-item-", "");
 			navigator.goTo(page);
