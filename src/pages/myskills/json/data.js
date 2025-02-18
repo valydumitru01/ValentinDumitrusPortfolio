@@ -256,7 +256,7 @@ DATA = {
 			category: CATEGORIES.tools
 		}, {
 			title   : "Doxygen",
-			level   : LEVELS.advanced,
+			level   : LEVELS.expert,
 			file    : BRAND_IMAGES.doxygen,
 			category: CATEGORIES.tools
 		}, {

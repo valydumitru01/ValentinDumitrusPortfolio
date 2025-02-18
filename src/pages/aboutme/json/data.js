@@ -54,7 +54,7 @@ DATA = {
 		}, {
 			title      : "Fitness",
 			description: "I have been working out, running, cycling and doing calisthenics for many years now."
-						 + "I don't plan stopping anytime soon. It is a big part of my life and have changed me a lot.",
+						 + " I don't plan stopping anytime soon. It is a big part of my life and have changed me a lot.",
 			icon       : "dumbbell"
 		}, {
 			title      : "Series",

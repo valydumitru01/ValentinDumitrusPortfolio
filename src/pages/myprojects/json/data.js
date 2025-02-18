@@ -10,7 +10,7 @@ DATA = [
 		github     : "https://github.com/valydumitru01/TeraBox",
 		video      : "https://www.youtube.com/watch?v=xJrLYVcxPwo",
 		tools      : [
-			BRAND_IMAGES.cpp, BRAND_IMAGES.sdl, BRAND_IMAGES.github, BRAND_IMAGES.clion,
+			BRAND_IMAGES.cpp, BRAND_IMAGES.sdl, BRAND_IMAGES.git, BRAND_IMAGES.clion,
 			BRAND_IMAGES.makefile
 		]
 	}, {
@@ -74,7 +74,7 @@ DATA = [
 		"header"   : true,
 		video: "https://www.youtube.com/watch?v=BUtPk38Kh0Y",
 		tools      : [
-			BRAND_IMAGES.sdl, BRAND_IMAGES.opengl, BRAND_IMAGES.cpp, BRAND_IMAGES.doxygen, BRAND_IMAGES.github,
+			BRAND_IMAGES.sdl, BRAND_IMAGES.opengl, BRAND_IMAGES.cpp, BRAND_IMAGES.doxygen,
 			BRAND_IMAGES.clion, BRAND_IMAGES.cmake, BRAND_IMAGES.clangFormat, BRAND_IMAGES.git, BRAND_IMAGES.nsight,
 			BRAND_IMAGES.drawio, BRAND_IMAGES.cppdepend, BRAND_IMAGES.markdown
 		]
@@ -110,7 +110,7 @@ DATA = [
 		video      : "https://www.youtube.com/watch?v=GFXCLXv05RU",
 		"header"   : true,
 		tools      : [
-			BRAND_IMAGES.unrealEngine, BRAND_IMAGES.cpp, BRAND_IMAGES.github, BRAND_IMAGES.vscode, BRAND_IMAGES.git
+			BRAND_IMAGES.unrealEngine, BRAND_IMAGES.cpp,  BRAND_IMAGES.vscode, BRAND_IMAGES.git
 		]
 	}, {
 		title      : "3D&D",
@@ -146,7 +146,7 @@ DATA = [
 		site       : null,
 		download   : null,
 		github     : "https://github.com/valydumitru01/bingo",
-		tools      : [BRAND_IMAGES.java, BRAND_IMAGES.eclipse, BRAND_IMAGES.github]
+		tools      : [BRAND_IMAGES.java, BRAND_IMAGES.eclipse ]
 	}, {
 		title      : "Basic Calculator",
 		description: "A basic calculator made in javascript, I also have one with a backend in php but it does not work without the server.",

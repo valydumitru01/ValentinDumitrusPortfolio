@@ -5,17 +5,16 @@ body {
     animation: fade-color 0.3s ease forwards;
 }
 
+
 @keyframes fade-color {
+    0% {
+        background-color: initial;
+    }
     100% {
         background-color: rgb(0, 0, 0);
     }
 }
 
-@keyframes fade-color {
-    100% {
-        background-color: rgb(0, 0, 0);
-    }
-}
 
 .education-background-icon {
     color: rgb(30, 30, 30);

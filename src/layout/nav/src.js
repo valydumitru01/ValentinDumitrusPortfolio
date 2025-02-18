@@ -1,3 +1,6 @@
+
+let currentPageLoadId = 0; // Track load ID
+
 class Navigator {
 	/**
 	 * A map of callbacks with the key being the page name and the value being a list
@@ -5,6 +8,7 @@ class Navigator {
 	 * @type {Object.<string, Array.<Function>>}
 	 */
 	callbacks = {}
+	
 	
 	constructor() {
 		// Listen for history changes and reload the page when they happen
@@ -14,29 +18,35 @@ class Navigator {
 		});
 	}
 	
+	
 	goTo(page) {
-		let error = ""
+		let error = "";
 		if (typeof page !== "string") error = "Page is not a string, it is a " + typeof page;
 		if (page === "") error = "Page string is empty";
-		if (!isPage(page)) error = "Page \"" + page + "\" is not a valid page";
+		if (!isPage(page)) error = `Page "${page}" is not a valid page`;
 		if (error !== "") {
 			console.error("We cannot go to the parameter page: " + error);
 			return;
 		}
 		
 		if (page === "back") {
-			window.history.back()
-			return
+			window.history.back();
+			return;
 		}
+		
 		window.history.pushState(page, "", this.url);
 		console.log("Navigating to page: " + history.state);
-		generate_page(history.state);
-		$("#navbarNavDropdown").collapse('hide')
-		for (let callback in this.callbacks[page]) {
+		
+		// Track loading state
+		const loadId = ++currentPageLoadId; // Unique ID for this load
+		generate_page(history.state, loadId); // Pass the load ID
+		
+		$("#navbarNavDropdown").collapse('hide');
+		
+		for (let callback of this.callbacks[page] || []) {
 			callback();
 		}
 		this.updateTitle();
-		
 	}
 	
 	goBack() {

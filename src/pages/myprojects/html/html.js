@@ -2,7 +2,8 @@ TEMPLATE_STRINGS = {
 	base               : `
     <p>
       Here is a complete collection of all my projects since I started my software engineering career.
-    </p>
+    
+	
     <article id="projects-container" style="margin-top: 5em;">
 		<div id="header-carousel" class="carousel slide mb-4 h-10" data-bs-ride="carousel">
 			<div class="carousel-lower-band"></div>
@@ -25,7 +26,11 @@ TEMPLATE_STRINGS = {
 			<div class="carousel-upper-band"></div>
 		</div>
 		<p> Click on a project for more information! </p>
-        <div class="card-deck d-flex flex-wrap justify-content-center">
+		<div class="filter-container">
+		  <label for="tool-filter">Filter by Tools:</label>
+		  <select id="tool-filter" multiple class="tool-select form-control"></select>
+		</div>
+        <div class="card-deck d-flex flex-wrap justify-content-center" id="filtered-projects">
         	{cards}
 		</div>
 		
@@ -34,8 +39,9 @@ TEMPLATE_STRINGS = {
 			<div class="modal-content">
 			  <div class="modal-header">
 				<h5 class="modal-title" id="projectModalLabel"><!-- title --></h5>
-				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-				  <span aria-hidden="true">&times;</span>
+				<button type="button" class="close text-white bg-dark border-0 rounded " style="width: 2em; height: 2em;"
+				data-bs-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true"><i class="fas fa-times"></i></span>
 				</button>
 			  </div>
 			  <div class="modal-carousel">
@@ -91,7 +97,9 @@ TEMPLATE_STRINGS = {
         <img class="card-img-top" src="{imgSrc}" alt="{title}">
         
       	<div class="card-footer bg-white">
+      	  <div class="tools-slider slider">
       	  {tools}
+      	  </div>
       	</div>
 	  </div>
     `,
@@ -234,10 +242,92 @@ function openModal(project) {
 	// Show the modal
 	$('#projectModal').modal('show');
 }
+function createSlidersForTools() {
+	$('.slider').each(function () {
+		$(this).slick({
+			infinite  : true,
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			autoplay  : true,
+			autoplaySpeed: 300,
+			autoplayStopTime: 0,
+			cssEase   : 'linear',
+			variableWidth: true,
+			arrows    : false,
+			dots      : false,
+			responsive: [
+				{
+					breakpoint: 992,
+					settings  : {
+						slidesToShow: 2
+					}
+				},
+				{
+					breakpoint: 768,
+					settings  : {
+						slidesToShow: 1
+					}
+				}
+			]
+		});
+	});
+}
 
+function formatToolOption(tool) {
+	if (!tool.id) { return tool.text; }
+	return $(`<span><img src="${BRAND_IMAGES_PATH}${tool.text}${BRAND_IMAGES_EXT}" style="height: 2em; margin-right: 1em; margin-top: 0.5em; margin-bottom: 0.5em" alt="${tool.text}" class="tool-img">`+ tool.text + "</span>");
+}
+
+function formatToolResult(tool) {
+	if (!tool.id) { return tool.text; }
+	return $(`<span ><img src="${BRAND_IMAGES_PATH}${tool.text}${BRAND_IMAGES_EXT}" style="height: 2em; margin-right: 1em;" alt="${tool.text}" class="tool-img">`+ tool.text + "</span>");
+}
+
+function populateToolFilter() {
+	let toolSet = new Set();
+	
+	// Extract all unique tools
+	Object.keys(BRAND_IMAGES).forEach(brand =>  toolSet.add(BRAND_IMAGES[brand]));
+	
+	const toolFilter = $("#tool-filter");
+	toolFilter.empty(); // Clear previous options
+	
+	// Populate the dropdown with tools
+	toolSet.forEach(tool => {
+		toolFilter.append(new Option(tool, tool));
+	});
+	
+	// Initialize Select2 for search functionality
+	toolFilter.select2({
+						   placeholder: "Select tools...",
+						   allowClear: true,
+		templateResult: formatToolResult,
+		templateSelection: formatToolOption
+					   });
+}
+
+function setupToolFilter() {
+	$("#tool-filter").on("change", function () {
+		const selectedTools = $(this).val() || []; // Get selected tools (array)
+		
+		if (selectedTools.length === 0) {
+			$("#filtered-projects").html(generate_cards(DATA)); // Show all projects
+		} else {
+			// Filter projects that contain all selected tools
+			const filteredProjects = DATA.filter(project =>
+													 project.tools && selectedTools.every(tool => project.tools.includes(tool))
+			);
+			
+			$("#filtered-projects").html(generate_cards(filteredProjects));
+		}
+	});
+}
 $(document).ready(function () {
 	$('.project-card').on('click', function () {
 		const index = $(this).data('bs-index');
 		openModal(DATA[index === "" ? 0 : index]);
 	});
+	createSlidersForTools();
+	populateToolFilter(); // Populate the tool filter dropdown
+	setupToolFilter();     // Setup event listener for filtering
 });

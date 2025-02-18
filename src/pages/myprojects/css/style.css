@@ -154,7 +154,9 @@ main {
 }
 .project-card {
     transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
-    width: 22em;
+    width: 20vw;
+    max-width: 20em;
+    min-width: 15em;
     margin: 1em;
 }
 
@@ -162,4 +164,11 @@ main {
     transform: scale(1.03);
     border: 1px solid rgba(0, 0, 0, 0.125);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.select2-selection__choice{
+    background-color: black !important;
+    color: white;
+    font-weight: bold;
+    border-color: #333333 !important;
 }
