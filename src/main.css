@@ -99,6 +99,10 @@ h3, h4, h5 {
     text-align: right;
 }
 
+p{
+    max-width: 75ch;
+}
+
 
 /* ------------- Link style in general texts -------------- */
 
