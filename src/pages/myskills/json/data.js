@@ -10,7 +10,7 @@ var LEVELS = {
 // Define categories for grouping software
 var CATEGORIES = {
 	programming: "Programming Languages & Scripting",
-	frameworks : "Frameworks & Libraries",
+	libraries  : "Frameworks & Libraries",
 	tools      : "Tools & IDEs",
 	game       : "Game Dev & Graphics"
 };
@@ -169,38 +169,64 @@ DATA = {
 			file    : BRAND_IMAGES.c,
 			category: CATEGORIES.programming
 		},
+		{
+			title   : "Rust",
+			level   : LEVELS.advanced,
+			file    : BRAND_IMAGES.rust,
+			category: CATEGORIES.programming
+		},
 		
 		// Frameworks & Libraries
 		{
 			title   : "React",
 			level   : LEVELS.intermediate,
 			file    : BRAND_IMAGES.react,
-			category: CATEGORIES.frameworks
+			category: CATEGORIES.libraries
 		}, {
 			title   : "Angular",
 			level   : LEVELS.advanced,
 			file    : BRAND_IMAGES.angular,
-			category: CATEGORIES.frameworks
+			category: CATEGORIES.libraries
 		}, {
 			title   : "Bootstrap",
 			level   : LEVELS.advanced,
 			file    : BRAND_IMAGES.bootstrap,
-			category: CATEGORIES.frameworks
+			category: CATEGORIES.libraries
 		}, {
 			title   : "SpringBoot",
 			level   : LEVELS.intermediate,
 			file    : BRAND_IMAGES.springboot,
-			category: CATEGORIES.frameworks
+			category: CATEGORIES.libraries
 		}, {
 			title   : "Node.js",
 			level   : LEVELS.intermediate,
 			file    : BRAND_IMAGES.nodejs,
-			category: CATEGORIES.frameworks
+			category: CATEGORIES.libraries
 		}, {
 			title   : "MongoDB",
 			level   : LEVELS.intermediate,
 			file    : BRAND_IMAGES.mongodb,
-			category: CATEGORIES.frameworks
+			category: CATEGORIES.libraries
+		}, {
+			title   : "SDL",
+			level   : LEVELS.expert,
+			file    : BRAND_IMAGES.sdl,
+			category: CATEGORIES.libraries
+		}, {
+			title   : "OpenGL",
+			level   : LEVELS.expert,
+			file    : BRAND_IMAGES.opengl,
+			category: CATEGORIES.libraries
+		}, {
+			title : "Vulkan",
+			level : LEVELS.intermediate,
+			file : BRAND_IMAGES.vulkan,
+			category : CATEGORIES.libraries
+		}, {
+			title   : "Android",
+			level   : LEVELS.intermediate,
+			file    : BRAND_IMAGES.android,
+			category: CATEGORIES.libraries
 		},
 		
 		// Tools & IDEs
@@ -224,12 +250,7 @@ DATA = {
 			level   : LEVELS.advanced,
 			file    : BRAND_IMAGES.linux,
 			category: CATEGORIES.tools
-		}, {
-			title   : "Android",
-			level   : LEVELS.intermediate,
-			file    : BRAND_IMAGES.android,
-			category: CATEGORIES.tools
-		}, {
+		},{
 			title   : "Visual Studio Code",
 			level   : LEVELS.advanced,
 			file    : BRAND_IMAGES.vscode,
@@ -332,17 +353,7 @@ DATA = {
 			level   : LEVELS.intermediate,
 			file    : BRAND_IMAGES.photoshop,
 			category: CATEGORIES.game
-		}, {
-			title   : "SDL",
-			level   : LEVELS.expert,
-			file    : BRAND_IMAGES.sdl,
-			category: CATEGORIES.game
-		}, {
-			title   : "OpenGL",
-			level   : LEVELS.expert,
-			file    : BRAND_IMAGES.opengl,
-			category: CATEGORIES.game
-		}
+		},
 	],
 	languages  : [
 		{

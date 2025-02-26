@@ -211,5 +211,12 @@ DATA = [
 			BRAND_IMAGES.react, BRAND_IMAGES.typescript, BRAND_IMAGES.nodejs, BRAND_IMAGES.mongodb, BRAND_IMAGES.git,
 			BRAND_IMAGES.docker, BRAND_IMAGES.springboot
 		]
+	},{
+		title : "Voxel Terrain Generator: Blast",
+		description : "Voxel terrain generator made in Rust with Vulkan. Status: Unfinished",
+		tools : [BRAND_IMAGES.vulkan, BRAND_IMAGES.git, BRAND_IMAGES.rustrover, BRAND_IMAGES.rust],
+		imgs : [
+			"src/pages/myprojects/res/imgs/blast/blast.gif",
+		],
 	}
 ]

@@ -162,5 +162,7 @@ const BRAND_IMAGES={
 	nsight : 'nsightgraphics',
 	gimp : 'gimp',
 	clangFormat : 'clangformat',
-	
+	rustrover: 'rustrover',
+	rust : 'rust',
+	vulkan : 'vulkan',
 }

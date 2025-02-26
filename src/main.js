@@ -1,12 +1,16 @@
 generateNav("header")
 generateFooter("footer")
 
-// To all images that are not found, replace with a placeholder image and log an error
-$("img").on("error", function () {
-	console.error("Image not found: " + $(this).attr("src"))
-	$(this).attr("src", "src/global/res/imgs/placeholder.png")
-})
 
 $(document).ready(function () {
 	navigator.goTo(PAGES.HOME)
 })
+
+
+
+document.body.addEventListener("error", function (event) {
+	if (event.target.tagName === "IMG") {
+		event.target.onerror = null;
+		event.target.src = "src/global/res/imgs/placeholder.png";
+	}
+}, true);

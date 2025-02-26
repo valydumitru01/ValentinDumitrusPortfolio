@@ -1,5 +1,5 @@
-TEMPLATE_STRINGS = {
-	base: `
+function baseTemplate() {
+	return `
 	<article id="home-page">
 	<div class="centering-container">
 		<section id="home-text">
@@ -31,8 +31,8 @@ TEMPLATE_STRINGS = {
 	</div>
 	</article>
 	`
-};
+}
 
 function generate_page_home(selector) {
-	$(selector).html(TEMPLATE_STRINGS.base);
+	$(selector).html(baseTemplate());
 }

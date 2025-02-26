@@ -1,5 +1,5 @@
-TEMPLATE_STRINGS = {
-	base: `
+function getBaseTemplate() {
+	return `
 	<p> This is my most updated CV. If you have received my CV a long time ago, most probably this one is a different and improved version. It might be worth checking out.
 	</p>
 	<object type="application/pdf" id="cv-pdf"
@@ -10,5 +10,5 @@ TEMPLATE_STRINGS = {
 }
 
 function generate_page_cv(selector) {
-	$(selector).html(TEMPLATE_STRINGS.base);
+	$(selector).html(getBaseTemplate());
 }
