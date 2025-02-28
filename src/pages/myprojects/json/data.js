@@ -10,8 +10,7 @@ DATA = [
 		github     : "https://github.com/valydumitru01/TeraBox",
 		video      : "https://www.youtube.com/watch?v=xJrLYVcxPwo",
 		tools      : [
-			BRAND_IMAGES.cpp, BRAND_IMAGES.sdl, BRAND_IMAGES.git, BRAND_IMAGES.clion,
-			BRAND_IMAGES.makefile
+			BRAND_IMAGES.cpp, BRAND_IMAGES.sdl, BRAND_IMAGES.git, BRAND_IMAGES.clion, BRAND_IMAGES.makefile
 		]
 	}, {
 		title      : "Labyrinth Game",
@@ -72,11 +71,11 @@ DATA = [
 		github     : "https://github.com/valydumitru01/GLESC",
 		download   : "https://github.com/valydumitru01/GLESC/releases/download/GLESC_game_examples/GLESC_games.zip",
 		"header"   : true,
-		video: "https://www.youtube.com/watch?v=BUtPk38Kh0Y",
+		video      : "https://www.youtube.com/watch?v=BUtPk38Kh0Y",
 		tools      : [
-			BRAND_IMAGES.sdl, BRAND_IMAGES.opengl, BRAND_IMAGES.cpp, BRAND_IMAGES.doxygen,
-			BRAND_IMAGES.clion, BRAND_IMAGES.cmake, BRAND_IMAGES.clangFormat, BRAND_IMAGES.git, BRAND_IMAGES.nsight,
-			BRAND_IMAGES.drawio, BRAND_IMAGES.cppdepend, BRAND_IMAGES.markdown
+			BRAND_IMAGES.sdl, BRAND_IMAGES.opengl, BRAND_IMAGES.cpp, BRAND_IMAGES.doxygen, BRAND_IMAGES.clion,
+			BRAND_IMAGES.cmake, BRAND_IMAGES.clangFormat, BRAND_IMAGES.git, BRAND_IMAGES.nsight, BRAND_IMAGES.drawio,
+			BRAND_IMAGES.cppdepend, BRAND_IMAGES.markdown
 		]
 	}, {
 		title      : "Blender Projects",
@@ -110,7 +109,7 @@ DATA = [
 		video      : "https://www.youtube.com/watch?v=GFXCLXv05RU",
 		"header"   : true,
 		tools      : [
-			BRAND_IMAGES.unrealEngine, BRAND_IMAGES.cpp,  BRAND_IMAGES.vscode, BRAND_IMAGES.git
+			BRAND_IMAGES.unrealEngine, BRAND_IMAGES.cpp, BRAND_IMAGES.vscode, BRAND_IMAGES.git
 		]
 	}, {
 		title      : "3D&D",
@@ -146,7 +145,7 @@ DATA = [
 		site       : null,
 		download   : null,
 		github     : "https://github.com/valydumitru01/bingo",
-		tools      : [BRAND_IMAGES.java, BRAND_IMAGES.eclipse ]
+		tools      : [BRAND_IMAGES.java, BRAND_IMAGES.eclipse]
 	}, {
 		title      : "Basic Calculator",
 		description: "A basic calculator made in javascript, I also have one with a backend in php but it does not work without the server.",
@@ -211,19 +210,21 @@ DATA = [
 			BRAND_IMAGES.react, BRAND_IMAGES.typescript, BRAND_IMAGES.nodejs, BRAND_IMAGES.mongodb, BRAND_IMAGES.git,
 			BRAND_IMAGES.docker, BRAND_IMAGES.springboot
 		]
-	},{
-		title : "Voxel Terrain Generator: Blast",
-		description : "Voxel terrain generator made in Rust with Vulkan. Status: Unfinished",
-		tools : [BRAND_IMAGES.vulkan, BRAND_IMAGES.git, BRAND_IMAGES.rustrover, BRAND_IMAGES.rust],
-		imgs : [
-			"src/pages/myprojects/res/imgs/blast/blast.gif",
-		],
-	} , {
-	title: "Chrome Extension - Job website search patcher",
+	}, {
+		title      : "Voxel Terrain Generator: Blast",
+		description: "Voxel terrain generator made in Rust with Vulkan. Status: Unfinished",
+		tools      : [BRAND_IMAGES.vulkan, BRAND_IMAGES.git, BRAND_IMAGES.rustrover, BRAND_IMAGES.rust],
+		imgs       : [
+			"src/pages/myprojects/res/imgs/blast/blast.gif"
+		]
+	}, {
+		title      : "Chrome Extension - Job website search patcher",
 		description: "Chrome extension that patches the search engine for the website welcome-to-nl.nl to allow boolean search, by default it has a bug that prevents it from working.",
-		tools: [BRAND_IMAGES.javascript, BRAND_IMAGES.html, BRAND_IMAGES.css, BRAND_IMAGES.git],
-		imgs: [
-			"src/pages/myprojects/res/imgs/welcome-to-nl-extension.png",
-		],
+		tools      : [BRAND_IMAGES.javascript, BRAND_IMAGES.html, BRAND_IMAGES.css, BRAND_IMAGES.git],
+		github     : "https://github.com/valydumitru01/WelcomeToNLPatcher",
+		site       : "https://chromewebstore.google.com/detail/gfdcnenpmkdnhgbmfbnemebmcpoahpon?utm_source=item-share-cp",
+		imgs       : [
+			"src/pages/myprojects/res/imgs/welcome-to-nl-extension.png"
+		]
 	}
 ]
