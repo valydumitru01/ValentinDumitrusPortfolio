@@ -218,5 +218,12 @@ DATA = [
 		imgs : [
 			"src/pages/myprojects/res/imgs/blast/blast.gif",
 		],
+	} , {
+	title: "Chrome Extension - Job website search patcher",
+		description: "Chrome extension that patches the search engine for the website welcome-to-nl.nl to allow boolean search, by default it has a bug that prevents it from working.",
+		tools: [BRAND_IMAGES.javascript, BRAND_IMAGES.html, BRAND_IMAGES.css, BRAND_IMAGES.git],
+		imgs: [
+			"src/pages/myprojects/res/imgs/welcome-to-nl-extension.png",
+		],
 	}
 ]
