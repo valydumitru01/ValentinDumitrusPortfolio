@@ -211,11 +211,11 @@ DATA = [
 			BRAND_IMAGES.docker, BRAND_IMAGES.springboot
 		]
 	}, {
-		title      : "Voxel Terrain Generator: Blast",
+		title      : "Voxel Terrain Generator: Burst",
 		description: "Voxel terrain generator made in Rust with Vulkan. Status: Unfinished",
 		tools      : [BRAND_IMAGES.vulkan, BRAND_IMAGES.git, BRAND_IMAGES.rustrover, BRAND_IMAGES.rust],
 		imgs       : [
-			"src/pages/myprojects/res/imgs/blast/blast.gif"
+			"src/pages/myprojects/res/imgs/burst/burst.gif"
 		]
 	}, {
 		title      : "Chrome Extension - Job website search patcher",

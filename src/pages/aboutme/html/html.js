@@ -127,7 +127,7 @@ function generate_page_aboutme(selector) {
 	const strengthsHtml = strengthsAndWeaknessesTemplate(strengthsRows);
 	
 	// If you want to include the Strengths & Weaknesses block on the same page:
-	const finalHtml = baseHtml + strengthsHtml;
+	const finalHtml = baseHtml;
 	// Otherwise, just use baseHtml if you only want the first part.
 	
 	$(selector).html(finalHtml);
