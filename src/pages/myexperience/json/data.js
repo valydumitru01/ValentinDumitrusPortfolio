@@ -39,15 +39,15 @@ DATA = [
 		period     : {
 			start   : "Feb. 2023",
 			end     : "Apr. 2023",
-			duration: "3 months"
+			duration: "1 year 6 months"
 		},
 		title      : "Electronic Arts - Part Time Contract",
 		subtitle   : "Game Engine Developer",
-		description: "- Assisted in developing and maintaining C++ engine modules for rendering and physics systems.\n"
-					 + "- Optimized engine subsystems to improve frame rate consistency and memory usage.\n"
-					 + "- Supported integration of new debugging and profiling tools for developers.\n"
-					 + "- Collaborated with gameplay and tools teams to resolve engine-related issues.\n"
-					 + "- Participated in code reviews and contributed to internal documentation."
+		description: "Assisted in developing and maintaining C++ engine modules for rendering and physics systems."
+					 + " Optimized engine subsystems to improve frame rate consistency and memory usage."
+					 + " Supported integration of new debugging and profiling tools for developers."
+					 + " Collaborated with gameplay and tools teams to resolve engine-related issues."
+					 + " Participated in code reviews and contributed to internal documentation."
 		
 	},
 	{
