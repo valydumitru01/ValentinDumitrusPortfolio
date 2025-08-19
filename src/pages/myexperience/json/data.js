@@ -8,11 +8,11 @@ DATA = [
 		},
 		title      : "Senior Rust Software Engineer",
 		description: "I am currently working as a Senior Rust Software Engineer at GMV, developing a rule engine from scratch."
-					 + "It includes parsing, compiling and designing rules, to then execute over a set of data."
-					 + "I am also in charge of designing the architecture of the system, and implementing the core features."
-					 + "I am also responsible for the performance and scalability of the system, ensuring the rules can be executed efficiently over large amounts of data."
-					 + "I am also dealing with a lot of informal requirements and communication, to then translate into formal code and documentation."
-					 + "Finally, I am also mentoring junior developers and helping them grow in their careers."
+					 + " It includes parsing, compiling and designing rules, to then execute over a set of data."
+					 + " I am also in charge of designing the architecture of the system, and implementing the core features."
+					 + " I am also responsible for the performance and scalability of the system, ensuring the rules can be executed efficiently over large amounts of data."
+					 + " I am also dealing with a lot of informal requirements and communication, to then translate into formal code and documentation."
+					 + " Finally, I am also mentoring junior developers and helping them grow in their careers."
 	},
 	{
 		icon       : "fa-briefcase",
