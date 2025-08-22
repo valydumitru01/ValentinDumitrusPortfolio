@@ -2,8 +2,8 @@ DATA = [
 	{
 		icon       : "fa-briefcase",
 		period     : {
-			start: "Jun. 2025",
-			end  : "Present",
+			start   : "Jun. 2025",
+			end     : "Present",
 			duration: "Present"
 		},
 		title      : "Senior Rust Software Engineer",
@@ -17,8 +17,8 @@ DATA = [
 	{
 		icon       : "fa-briefcase",
 		period     : {
-			start: "Dec. 2024",
-			end  : "Jun. 2025",
+			start   : "Dec. 2024",
+			end     : "Jun. 2025",
 			duration: "7 months"
 		},
 		title      : "C++ Software Engineer",
@@ -26,19 +26,8 @@ DATA = [
 	}, {
 		icon       : "fa-briefcase",
 		period     : {
-			start   : "Jul. 2022",
-			end     : "Jul. 2024",
-			duration: "2 years"
-		},
-		title      : "Game engine development (Personal Project)",
-		description: "I developed a game engine from scratch using C++ and OpenGL. It includes a graphic API abstraction, fully custom math library, a simple rendering, sound, input and physics system and some other features. GitHub repo <a href='https://github.com/valydumitru01/GLESC'> here</a>."
-		
-	},
-	{
-		icon       : "fa-briefcase",
-		period     : {
-			start   : "Feb. 2023",
-			end     : "Apr. 2023",
+			start   : "Jul. 2023",
+			end     : "Dec. 2024",
 			duration: "1 year 6 months"
 		},
 		title      : "Electronic Arts - Part Time Contract",
@@ -48,6 +37,16 @@ DATA = [
 					 + " Supported integration of new debugging and profiling tools for developers."
 					 + " Collaborated with gameplay and tools teams to resolve engine-related issues."
 					 + " Participated in code reviews and contributed to internal documentation."
+		
+	}, {
+		icon       : "fa-briefcase",
+		period     : {
+			start   : "Jul. 2022",
+			end     : "Jul. 2024",
+			duration: "2 years"
+		},
+		title      : "Game engine development (Personal Project)",
+		description: "I developed a game engine from scratch using C++ and OpenGL. It includes a graphic API abstraction, fully custom math library, a simple rendering, sound, input and physics system and some other features. GitHub repo <a href='https://github.com/valydumitru01/GLESC'> here</a>."
 		
 	},
 	{
